@@ -19,24 +19,25 @@ Algorithm Steps:
 
 #include <iostream>
 #include <cassert>
-#include "utils.h"
+#include "modulo.h"
+
 using namespace std;
 using ui = unsigned int;
 
 int main(int argc, char *argv[])
 {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+  ios_base::sync_with_stdio(false);
+  cin.tie(NULL);
 
-    // create a dynamic unsigned int array of size 10 to store numbers
-    ui *nums = new ui[10];
-    // read 10 numbers into nums array
-    read_data(nums, 10);
-    // create a dynamic boolean array of size 42 to store num % 42 flags
-    bool *flags = new bool[42];
-    init_flags(flags, 42);
-    update_flags(nums, flags, 10);
-    // FIXME3 - call count_flags function passing proper
-    // argument and print the result
-    return 0;
+  // create a dynamic unsigned int array of size 10 to store numbers
+  ui *nums = new ui[10];
+  // read 10 numbers into nums array
+  read_data(nums, 10);
+  // create a dynamic boolean array of size 42 to store num % 42 flags
+  bool *flags = new bool[42];
+  init_flags(flags, 42);
+  update_flags(nums, flags, 10);
+  // FIXME3 - call count_flags function passing proper
+  // argument and print the result
+  return 0;
 }

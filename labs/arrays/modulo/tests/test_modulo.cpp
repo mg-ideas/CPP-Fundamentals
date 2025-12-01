@@ -1,6 +1,6 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "../../../doctest/doctest.h" // FIXME7: adjust the path as needed
-#include "../src/utils.h"
+#include "../src/modulo.h"
 
 TEST_CASE("Testing init_flags function")
 {
