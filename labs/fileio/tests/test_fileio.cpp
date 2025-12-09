@@ -28,6 +28,7 @@ TEST_CASE("Testing find_min function")
     }
     // FIXME8: Write 2nd test case for find_min function
 }
+
 TEST_CASE("Testing find_range function")
 {
     SUBCASE("Sub Case 1: Distinct values")
@@ -39,6 +40,7 @@ TEST_CASE("Testing find_range function")
     }
     // FIXME9: Write 2nd test case for find_range function
 }
+
 TEST_CASE("Testing find_mean function")
 {
     SUBCASE("Sub Case 1: Distinct values")
@@ -50,6 +52,7 @@ TEST_CASE("Testing find_mean function")
     }
     // FIXME10: Write 2nd test case for find_mean function
 }
+
 TEST_CASE("Testing find_median function")
 {
     SUBCASE("Sub Case 1: Odd number of elements")
