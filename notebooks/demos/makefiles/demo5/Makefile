@@ -11,6 +11,7 @@ PROGRAM_NAME = hello.exe
 
 # rule using other rules
 # other rules must be written after the rule name on the same line separated by a space
+.PHONY: all build run clean
 all: build run clean
 	@echo "All Done!"
 
@@ -18,6 +19,7 @@ all: build run clean
 # rule for compiling and building program
 # make or make all or make build triggers the following rule
 # @ suppreses/hides the command itself from printing
+.PHONY: build
 build:
 	@# compile .cpp to object file .o
 	@echo "compiling..."
@@ -28,12 +30,15 @@ build:
 
 # rule for running binary program
 # make run triggers the following rule
+# PHONY tells `make` that this is not a file name
+.PHONY: run
 run:
 	@echo "running program..."
 	./$(PROGRAM_NAME)
 
 # rule for clean up
 # make clean triggers the following rule
+.PHONY: clean
 clean:
 	@echo "cleaning up..."
 	@rm -f $(PROGRAM_NAME) *.o *.out 2> /dev/null

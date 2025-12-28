@@ -17,7 +17,11 @@ CPPFILES = main.cpp util.cpp #FIXME
 # make all rule/default rule that'll be run when we run "make"
 # first compile each file to object file
 # then make a single binary/executable program
-all:
+
+
+all: build clean
+
+build:
 	$(CXX) $(CXXFLAGS) $(CPPFILES)
 	$(CXX) -o $(PROGRAM) *.o
 
