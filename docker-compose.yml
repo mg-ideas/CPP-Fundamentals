@@ -22,9 +22,9 @@ services:
       - 8888:8888
     command:
       [
-        "bash",
+        "sh",
         "-c",
-        "sudo chown user --recursive /home/user && tail -f /dev/null",
+        "sudo chown user --recursive /home/user; zsh && tail -f /dev/null",
       ]
 
 networks:

@@ -5,6 +5,8 @@ RUN apt update \
   build-essential sqlite3 time curl git nano dos2unix \
   net-tools iputils-ping iproute2 sudo gdb less \
   wget bzip2 ca-certificates \
+  python3 python3-pip python3-setuptools \
+  pandoc texlive-latex-recommended\
   && apt clean && \
   rm -rf /var/lib/apt/lists/*
 
@@ -32,13 +34,19 @@ ENV PATH=$CONDA_DIR/bin:$PATH
 
 # Create a Conda environment from an environment.yml file
 # Download and install Miniconda
-RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh && \
-  /bin/bash miniconda.sh -b -p $CONDA_DIR && \
-  rm miniconda.sh
+#RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh && \
+#  /bin/bash miniconda.sh -b -p $CONDA_DIR && \
+#  rm miniconda.sh
 
-COPY environment.yml ./
+RUN sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 1
+
+#COPY environment.yml ./
+#COPY requirements.txt ./
+#RUN conda env create -f environment.yml
+
+# install python packages from requirements.txt
 COPY requirements.txt ./
-RUN conda env create -f environment.yml
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Install zsh - use "Bira" theme with some customization. 
 RUN sh -c "$(wget -O- https://github.com/deluan/zsh-in-docker/releases/download/v1.1.5/zsh-in-docker.sh)" -- \
@@ -48,8 +56,8 @@ RUN sh -c "$(wget -O- https://github.com/deluan/zsh-in-docker/releases/download/
   -p https://github.com/zsh-users/zsh-autosuggestions \
   -p https://github.com/zsh-users/zsh-completions
 
-RUN conda init bash
-RUN conda init zsh
-RUN echo "conda init zsh\nconda activate cpp" >> ~/.zshrc
+#RUN conda init bash
+#RUN conda init zsh
+#RUN echo "conda init zsh\nconda activate cpp" >> ~/.zshrc
 
 ENV PATH="${HOME}/.local/bin:$PATH"

@@ -1,4 +1,3 @@
-pytest
 jupyter
 requests
 kattis-cli
