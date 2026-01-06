@@ -2,6 +2,8 @@
 - understanding how computer hardware and software work together is crucial for any programmer
 - this knowledge helps you write efficient code, debug issues, and optimize performance
 
+## External Resources
+
 ## Computer Hardware
 - **Central Processing Unit (CPU)**: the brain of the computer that executes instructions
 - **Memory (RAM)**: temporary storage for data and instructions that the CPU needs while executing
@@ -11,6 +13,7 @@
 - **Bus**: a communication system that transfers data between components inside a computer
 - **Cache**: a smaller, faster type of volatile memory that provides high-speed data access to the CPU
 - **Registers**: small storage locations within the CPU that hold data temporarily during processing
+
 ## Computer Software
 - **Operating System (OS)**: manages hardware resources and provides services for computer programs
 - **Application Software**: programs that perform specific tasks for users (e.g., web browsers, word processors)
@@ -32,7 +35,17 @@
     2. user space - user-mode applications are loaded
         - loaded in higher addresses
     
-- in C/C++ programs, user space is divided into 5 different areas, called segments:
+- in C/C++ programs, user space is divided into 5 different areas, called segments
+- from lower (at the top) to higher memory addresses (towards the bottom), the segments are:
+
+| Text - code segment          |
+|------------|
+| Data - initialized globals/static   |
+| BSS - uninitialized globals/static  |
+| Heap - dynamically allocated |
+| Stack - local variables      |
+
+- theText segment is at the lowest memory address, followed by Data, BSS, Heap, and Stack segments at the highest memory addresses
 
 <img src="./assets/MemorySegments.png">
 
@@ -42,25 +55,34 @@
 - also called scratch pad
 - function parameters, local variables, and other function-related register variables are stored
 - grows and shrinks based on program needs
+- Last In First Out (LIFO) data structure that grows from higher to lower memory addresses
+- stack overflow can occur when too much memory is used on the stack (e.g., infinite recursion, large local variables, etc.)
+- if more data is insecurely pushed/copied onto the stack than it can hold, it can overwrite adjacent memory locations, leading to unpredictable behavior, crashes or arbitrary code execution (stack buffer overflow attack)
+- stack size is normally much smaller compared to heap size
 
 ### Heap segment
 - dynamically allocated variables (using pointers) are allocated from this segment
 - Heap size is normally much larger compared to stack size
 - size (actual) grows and shrinks based on program needs
+- heap grows from lower to higher memory addresses
+- heap overflow can occur when too much memory is allocated on the heap (e.g., memory leaks, excessive allocations, etc.)
+- programer must manually manage memory allocation and deallocation using `new` and `delete` keywords in C++
     
 ### BSS segment (Block Started by Symbol)
-- also called the uninitialized data segment)
+- also called the uninitialized data segment
 - zero-initialized or uninitialized global and static variables are stored
+- overflow in this segment can occur if the program tries to copy more data than allocated for uninitialized global/static variables
     
 ### Data segment
 - also called the initialized data segment
 - initialized global and static variables are stored
+- overflow in this segment can occur if the program tries to copy more data than allocated for initialized global/static variables
 
 ### Text segment (also called a code segment)
 - compiled program/code is loaded
 - code segment is typically read-only.
 
-Programmers primarily focus on the heap and the stack, as that is where most of the interesting stuff takes place.
+Programmers primarily focus on the heap and the stack, as that is where most of the interesting stuff takes place where data is stored and manipulated during program execution.
 
 <a id="demo1"></a>
 
@@ -70,7 +92,7 @@ Programmers primarily focus on the heap and the stack, as that is where most of 
 - `size` command can be used to display the size of various segments in the compiled executable.
 
 
-```C++14
+```python
 ! cat demos/memory/memory_segments.cpp
 ```
 
@@ -114,12 +136,12 @@ Programmers primarily focus on the heap and the stack, as that is where most of 
     }
 
 
-```C++14
+```python
 ! g++ demos/memory/memory_segments.cpp -o memory_segments.exe
 ```
 
 
-```C++14
+```python
 ! ./memory_segments.exe
 ```
 
@@ -145,7 +167,7 @@ Programmers primarily focus on the heap and the stack, as that is where most of 
 
 
 
-```C++14
+```python
 
 ! size -m -l memory_segments.exe
 ```
@@ -171,7 +193,7 @@ Programmers primarily focus on the heap and the stack, as that is where most of 
 
 
 
-```C++14
+```python
 ! man size
 ```
 
