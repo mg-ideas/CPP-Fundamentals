@@ -7517,8 +7517,12 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Recursion">Recursion<a class="anchor-link" href="#Recursion">¶</a></h1><p><a href="https://colab.research.google.com/github/rambasnet/Python-Fundamentals/blob/master/notebooks/Ch13-Recursion.ipynb" target="_parent"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg"/></a></p>
-<img alt="No description has been provided for this image" src="./assets/russiandolls.png" width="50%"/>
+<h1 id="Recursion">Recursion<a class="anchor-link" href="#Recursion">¶</a></h1><h2 id="External-Resources">External Resources<a class="anchor-link" href="#External-Resources">¶</a></h2><ul>
+<li>YouTube Video - <a href="https://youtu.be/VvVlYK8pJl8">https://youtu.be/VvVlYK8pJl8</a></li>
+<li>YouTube Podcast - <a href="https://youtu.be/p04J7-oSnDQ">https://youtu.be/p04J7-oSnDQ</a></li>
+<li>NotebookLM learning materials - <a href="https://notebooklm.google.com/notebook/37a704cf-ca5c-4394-999f-f5f4831b72e6">https://notebooklm.google.com/notebook/37a704cf-ca5c-4394-999f-f5f4831b72e6</a></li>
+</ul>
+<h2 id="Overview">Overview<a class="anchor-link" href="#Overview">¶</a></h2><img alt="No description has been provided for this image" src="./assets/russiandolls.png" width="50%"/>
 <ul>
 <li>defining something in terms of itself usually at some smaller scale, perhaps multiple times, to achieve your objective<ul>
 <li>e.g., a human being is someone whose mother is a human being</li>
@@ -7563,12 +7567,12 @@ t makes the recursion stop</li>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;thread&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;chrono&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cassert&gt;</span>
+<div class="highlight hl-C++17"><pre><span></span>#include &lt;iostream&gt;
+#include &lt;thread&gt;
+#include &lt;chrono&gt;
+#include &lt;cassert&gt;
 
-<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+using namespace std;
 </pre></div>
 </div>
 </div>
@@ -7582,19 +7586,19 @@ t makes the recursion stop</li>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// Recursively print countdown from 10-1 and blast off!</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">countDown</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span>
-<span class="p">{</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// base case</span>
-<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Blast Off!"</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
-<span class="w">        </span><span class="n">this_thread</span><span class="o">::</span><span class="n">sleep_for</span><span class="p">(</span><span class="n">chrono</span><span class="o">::</span><span class="n">seconds</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
-<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// recursive/general case</span>
-<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
-<span class="w">        </span><span class="n">this_thread</span><span class="o">::</span><span class="n">sleep_for</span><span class="p">(</span><span class="n">chrono</span><span class="o">::</span><span class="n">seconds</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
-<span class="w">        </span><span class="n">countDown</span><span class="p">(</span><span class="n">n</span><span class="mi">-1</span><span class="p">);</span>
-<span class="w">        </span><span class="c1">//cout &lt;&lt; n &lt;&lt; endl;</span>
-<span class="w">      </span><span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight hl-C++17"><pre><span></span>// Recursively print countdown from 10-1 and blast off!
+void countDown(int n) 
+{
+    if (n == 0) { // base case
+        cout &lt;&lt; "Blast Off!" &lt;&lt; endl;
+        this_thread::sleep_for(chrono::seconds(1));
+    } else { // recursive/general case
+        cout &lt;&lt; n &lt;&lt; endl;
+        this_thread::sleep_for(chrono::seconds(1));
+        countDown(n-1);
+        //cout &lt;&lt; n &lt;&lt; endl;
+      }
+}
 </pre></div>
 </div>
 </div>
@@ -7608,7 +7612,7 @@ t makes the recursion stop</li>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="n">countDown</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+<div class="highlight hl-C++17"><pre><span></span>countDown(10);
 </pre></div>
 </div>
 </div>
@@ -7661,14 +7665,14 @@ Blast Off!
 <div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="kt">long</span><span class="w"> </span><span class="nf">first_sum</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span>
-<span class="p">{</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// base case</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// general case</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">first_sum</span><span class="p">(</span><span class="n">n</span><span class="mi">-1</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight hl-C++17"><pre><span></span>long first_sum(int n) 
+{
+    if (n == 1) { // base case
+        return 1;
+    } else { // general case
+        return n + first_sum(n-1);
+    }
+}
 </pre></div>
 </div>
 </div>
@@ -7682,7 +7686,7 @@ Blast Off!
 <div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Sum of first 10 positive integers is: "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">first_sum</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<div class="highlight hl-C++17"><pre><span></span>cout &lt;&lt; "Sum of first 10 positive integers is: " &lt;&lt; first_sum(100) &lt;&lt; endl;
 </pre></div>
 </div>
 </div>
@@ -7728,8 +7732,8 @@ Blast Off!
 <div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// Finding Fibonacci number in series</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">fib_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<div class="highlight hl-C++17"><pre><span></span>// Finding Fibonacci number in series
+int fib_count = 0;
 </pre></div>
 </div>
 </div>
@@ -7743,16 +7747,16 @@ Blast Off!
 <div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="kt">long</span><span class="w"> </span><span class="nf">fib</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="n">fib_count</span><span class="o">++</span><span class="p">;</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">long</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="mi">-2</span><span class="p">);</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">f</span><span class="p">;</span>
-<span class="p">}</span>
+<div class="highlight hl-C++17"><pre><span></span>long fib(unsigned int n)
+{
+    fib_count++;
+    if (n == 0)
+        return 0;
+    if (n == 1)
+        return 1;
+    long f = fib(n-1) + fib(n-2);
+    return f;
+}
 </pre></div>
 </div>
 </div>
@@ -7766,7 +7770,7 @@ Blast Off!
 <div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">fib</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<div class="highlight hl-C++17"><pre><span></span>cout &lt;&lt; fib(32) &lt;&lt; endl;
 </pre></div>
 </div>
 </div>
@@ -7793,7 +7797,7 @@ Blast Off!
 <div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Fibonacci function was called "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">fib_count</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" times."</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<div class="highlight hl-C++17"><pre><span></span>cout &lt;&lt; "Fibonacci function was called " &lt;&lt; fib_count &lt;&lt; " times." &lt;&lt; endl;
 </pre></div>
 </div>
 </div>
@@ -7850,7 +7854,7 @@ Blast Off!
 <div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="kt">size_t</span><span class="w"> </span><span class="n">fib_count_tail</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<div class="highlight hl-C++17"><pre><span></span>size_t fib_count_tail = 0;
 </pre></div>
 </div>
 </div>
@@ -7864,16 +7868,16 @@ Blast Off!
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// Tail Recursive Fibonacci optimized version</span>
-<span class="kt">long</span><span class="w"> </span><span class="nf">fib_tail</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">b</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="n">fib_count_tail</span><span class="o">++</span><span class="p">;</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">fib_tail</span><span class="p">(</span><span class="n">n</span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
-<span class="p">}</span>
+<div class="highlight hl-C++17"><pre><span></span>// Tail Recursive Fibonacci optimized version
+long fib_tail(unsigned int n, long a, long b)
+{
+    fib_count_tail++;
+    if (n == 0)
+        return a;
+    if (n == 1)
+        return b;
+    return fib_tail(n-1, b, a + b);
+}
 </pre></div>
 </div>
 </div>
@@ -7887,7 +7891,7 @@ Blast Off!
 <div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">fib_tail</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<div class="highlight hl-C++17"><pre><span></span>cout &lt;&lt; fib_tail(32, 0, 1) &lt;&lt; endl;
 </pre></div>
 </div>
 </div>
@@ -7914,7 +7918,7 @@ Blast Off!
 <div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"fib_tail function was called "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">fib_count_tail</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" times."</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<div class="highlight hl-C++17"><pre><span></span>cout &lt;&lt; "fib_tail function was called " &lt;&lt; fib_count_tail &lt;&lt; " times." &lt;&lt; endl;
 </pre></div>
 </div>
 </div>
@@ -7991,13 +7995,13 @@ gcd(125, 75) == 25
 <div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">moveDisks</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">helper</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">dst</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">moveDisks</span><span class="p">(</span><span class="n">n</span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="n">dst</span><span class="p">,</span><span class="w"> </span><span class="n">helper</span><span class="p">);</span>
-<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Move disk #"</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" from "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">src</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" to "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">dst</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
-<span class="w">        </span><span class="n">moveDisks</span><span class="p">(</span><span class="n">n</span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="n">helper</span><span class="p">,</span><span class="w"> </span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="n">dst</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight hl-C++17"><pre><span></span>void moveDisks(int n, char src, char helper, char dst) {
+    if (n &gt; 0) {
+        moveDisks(n-1, src, dst, helper);
+        cout &lt;&lt; "Move disk #" &lt;&lt; n &lt;&lt; " from " &lt;&lt; src &lt;&lt; " to " &lt;&lt; dst &lt;&lt; endl;
+        moveDisks(n-1, helper, src, dst);
+    }
+}
 </pre></div>
 </div>
 </div>
@@ -8011,7 +8015,7 @@ gcd(125, 75) == 25
 <div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="n">moveDisks</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="sc">'A'</span><span class="p">,</span><span class="w"> </span><span class="sc">'B'</span><span class="p">,</span><span class="w"> </span><span class="sc">'C'</span><span class="p">);</span>
+<div class="highlight hl-C++17"><pre><span></span>moveDisks(3, 'A', 'B', 'C');
 </pre></div>
 </div>
 </div>
@@ -8056,20 +8060,6 @@ Move disk #1 from A to C
 </ul>
 </li>
 </ul>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=b37b4542">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="w"> </span>
-</pre></div>
-</div>
 </div>
 </div>
 </div>

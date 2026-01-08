@@ -1,6 +1,12 @@
 # Recursion
-<a href="https://colab.research.google.com/github/rambasnet/Python-Fundamentals/blob/master/notebooks/Ch13-Recursion.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
+## External Resources
+
+- YouTube Video - [https://youtu.be/VvVlYK8pJl8](https://youtu.be/VvVlYK8pJl8)
+- YouTube Podcast - [https://youtu.be/p04J7-oSnDQ](https://youtu.be/p04J7-oSnDQ)
+- NotebookLM learning materials - [https://notebooklm.google.com/notebook/37a704cf-ca5c-4394-999f-f5f4831b72e6](https://notebooklm.google.com/notebook/37a704cf-ca5c-4394-999f-f5f4831b72e6)
+
+## Overview
 <img src="./assets/russiandolls.png" width="50%">
 
 - defining something in terms of itself usually at some smaller scale, perhaps multiple times, to achieve your objective

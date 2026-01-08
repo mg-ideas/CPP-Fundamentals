@@ -1,5 +1,12 @@
 # Pair and Tuples in C++
 
+## External Resources
+- C++ Reference for Pair: [https://en.cppreference.com/w/cpp/utility/pair](https://en.cppreference.com/w/cpp/utility/pair)
+- C++ Reference for Tuple: [https://en.cppreference.com/w/cpp/utility/tuple](https://en.cppreference.com/w/cpp/utility/tuple)
+- YouTube Video - [https://youtu.be/bA2ngITfSG8](https://youtu.be/bA2ngITfSG8)
+- YouTube Podcast - [https://youtu.be/_KQVEhuGVDc](https://youtu.be/_KQVEhuGVDc)
+- NotebookLM learning materials - [https://notebooklm.google.com/notebook/d97a4380-9d69-4d19-a06f-a9648d0339c9](https://notebooklm.google.com/notebook/d97a4380-9d69-4d19-a06f-a9648d0339c9)
+
 ## Pair
 
 - A **pair** in C++ is a simple container defined in the `<utility>` header that holds two values, which may be of different types. It is often used to group two related values together.

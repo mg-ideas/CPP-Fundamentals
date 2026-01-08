@@ -6,6 +6,14 @@
 - Defining and using union type
 - Demonstration of how union type works
 
+## External Resources
+
+- CPP Reference: [https://en.cppreference.com/w/cpp/language/union](https://en.cppreference.com/w/cpp/language/union)
+- YouTube Video: [https://youtu.be/thIiMmk6quE](https://youtu.be/thIiMmk6quE)
+- YouTube Podcast: [https://youtu.be/KabzR-J_ccE](https://youtu.be/KabzR-J_ccE)
+- NotebookLM learning materials: [https://notebooklm.google.com/notebook/c04b563b-c6f0-4780-9177-020553bbe82c](https://notebooklm.google.com/notebook/c04b563b-c6f0-4780-9177-020553bbe82c)
+
+
 ## Union
 
 - a union type is burrowed from C

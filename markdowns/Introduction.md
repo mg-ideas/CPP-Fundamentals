@@ -1,4 +1,4 @@
-# Introduction
+# Problems, Algorithms, and Programs - Introduction
 
 ## Topics
 - computer science fundamentals
@@ -10,9 +10,9 @@
 - errors and debugging
 
 ## External Resources
-- [YouTube Podcast: Problems, Algorithms and Programs](https://youtu.be/NCCfHKIPNZQ)
-- [YouTube Video: Problems, Algorithms and Programs](https://youtu.be/998pUimnHr0)
-- [Notebook LM Learning Materials - Quiz, Flashcards and More](https://notebooklm.google.com/notebook/787ebd5b-8581-401e-bd35-c24b9f52d586)
+- YouTube Podcast: Problems, Algorithms and Programs [https://youtu.be/NCCfHKIPNZQ](https://youtu.be/NCCfHKIPNZQ))
+- YouTube Video: Problems, Algorithms and Programs [https://youtu.be/998pUimnHr0](https://youtu.be/998pUimnHr0)
+- Notebook LM Learning Materials - Quiz, Flashcards and More: [https://notebooklm.google.com/notebook/787ebd5b-8581-401e-bd35-c24b9f52d586](https://notebooklm.google.com/notebook/787ebd5b-8581-401e-bd35-c24b9f52d586)
 
 ## Computer science (CS) fundamentals
 - the core is a disciplined ability to be logical and creative in a pragmatic way to solve problems in varieties of disciplines

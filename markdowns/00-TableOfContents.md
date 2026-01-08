@@ -1,7 +1,7 @@
 # C++ Fundamentals
 
 ## Contents
-- [**Introduction**](./Introduction.ipynb)
+- [**Problems, Algorithms, and Programs**](./Introduction.ipynb)
 - [**Project Organization, Code Refactoring & Header Files**](./RefactoringAndHeaderFiles.ipynb)
 - [**Data, Types and Variables**](./DataTypesAndVariables.ipynb)
 - [**Standard Input and Output**](./StdInputOutput.ipynb)
@@ -21,14 +21,14 @@
 - [**File Input and Output**](./FileIO.ipynb)
 - [**Pair and Tuples**](./PairAndTuples.ipynb)
 - [**Recursion**](./Recursion.ipynb)
-- [**Standard Template Library (STL)**](./STLIntroduction.ipynb)
-- [**Vectors**](./Vectors.ipynb)
-- [**Sequence Containers**](./SequenceContainers.ipynb)
-- [**Container Adapters**](./ContainerAdapters.ipynb)
-- [**Algorithms Library**](./AlgorithmsLibrary.ipynb)
-- [**Maps**](./Maps.ipynb)
-- [**Sets**](./Sets.ipynb)
-- [**Structures**](./Structures.ipynb)
+- [**Standard Template Library (STL) Overview**](./STLIntroduction.ipynb)
+- [**Vector Containers**](./Vectors.ipynb)
+- [**Sequence Containers: Deque, List, Forward List, Array**](./SequenceContainers.ipynb)
+- [**Container Adapters: Stack, Queue, Priority Queue**](./ContainerAdapters.ipynb)
+- [**Algorithms Library Overview**](./AlgorithmsLibrary.ipynb)
+- [**Maps and Unordered Maps**](./Maps.ipynb)
+- [**Sets and Unordered Sets**](./Sets.ipynb)
+- [**Data Structures**](./DataStructures.ipynb)
 - [**Classes and Objects**](./ClassesAndObjects.ipynb)
 - [**Union Datastructure**](./Unions.ipynb)
 

@@ -8,6 +8,9 @@
 
 ## External Resources
 - Basic Input and Output in C++: [https://cplusplus.com/doc/tutorial/basic_io/](https://cplusplus.com/doc/tutorial/basic_io/)
+- YouTube Video - C++ Input and Output: [https://youtu.be/MbWByGqMxhQ](https://youtu.be/MbWByGqMxhQ)
+- YouTube Podcast - C++ Input and Output: [https://youtu.be/JC8GCz7al6U](https://youtu.be/JC8GCz7al6U)
+- NotebookLM learning materials: [https://notebooklm.google.com/notebook/92272fe4-e457-4ef3-85a4-61c93632fb14](https://notebooklm.google.com/notebook/92272fe4-e457-4ef3-85a4-61c93632fb14)
 
 ## Input and output (IO)
 - IO operations are fundamental to computer programs

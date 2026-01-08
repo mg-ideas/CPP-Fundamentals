@@ -7,6 +7,12 @@
 - converting numbers to strings
 - converting char to numbers and numbers to chars
 
+## External Resources
+
+- YouTube Video - C++ Data Type Casting: [https://youtu.be/xqCg64Fvja0](https://youtu.be/xqCg64Fvja0)
+- YouTube Podcast - C++ Data Type Casting: [https://youtu.be/mybgevwCDYk](https://youtu.be/mybgevwCDYk)
+- NotebookLM learning materials: [https://notebooklm.google.com/notebook/bc8211a9-e35a-4745-923e-edc2bc9f0815](https://notebooklm.google.com/notebook/bc8211a9-e35a-4745-923e-edc2bc9f0815)
+
 ## Type casting
 - data values need to be converted from one type to another to get correct results
 - explictly converting one type into another is called **type casting**

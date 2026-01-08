@@ -3,6 +3,9 @@
 ## External Resources
 - Classes I - [https://cplusplus.com/doc/tutorial/classes/](https://cplusplus.com/doc/tutorial/classes/)
 - Classes II - [https://cplusplus.com/doc/tutorial/templates/](https://cplusplus.com/doc/tutorial/templates/)
+- YouTube Video - [https://youtu.be/-44fFS7atfI](https://youtu.be/-44fFS7atfI)
+- YouTube Podcast - [https://youtu.be/meW8VjjpUU0](https://youtu.be/meW8VjjpUU0)
+- NotebookLM learning materials - [https://notebooklm.google.com/notebook/1253861c-4628-4490-a2d1-99783cadcc11](https://notebooklm.google.com/notebook/1253861c-4628-4490-a2d1-99783cadcc11)
 
 ## Object Oriented Programming (OOP) Concepts
 

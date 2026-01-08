@@ -7,8 +7,12 @@
 
 ## External Resources
 
+- C++ Operators: [https://cplusplus.com/doc/tutorial/operators/](https://cplusplus.com/doc/tutorial/operators/)
 - Operators and precedence rule: [https://en.cppreference.com/w/cpp/language/operator_precedence](https://en.cppreference.com/w/cpp/language/operator_precedence)
 - Arithmetic operators: [https://en.cppreference.com/w/cpp/language/operator_arithmetic](https://en.cppreference.com/w/cpp/language/operator_arithmetic)
+- YouTube Video - C++ Basic Operators and Precedence: [https://youtu.be/II8_4Se9Pk0](https://youtu.be/II8_4Se9Pk0)
+- YouTube Podcast - C++ Basic Operators and Precedence: [https://youtu.be/vl4WC47TiKM](https://youtu.be/vl4WC47TiKM)
+- NotebookLM learning materials: [https://notebooklm.google.com/notebook/d8c4d430-f71f-4461-8c1e-b3ee7c714466](https://notebooklm.google.com/notebook/d8c4d430-f71f-4461-8c1e-b3ee7c714466)
 
 ## Operators
 - special symbols used to represent simple computations

@@ -7517,9 +7517,33 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Memory-segments">Memory segments<a class="anchor-link" href="#Memory-segments">¶</a></h1><h3 id="Table-of-Contents">Table of Contents<a class="anchor-link" href="#Table-of-Contents">¶</a></h3><ul>
-<li><a href="#segments">Memory segments</a></li>
-<li><a href="#demo1">Demo program</a></li>
+<h1 id="Computer-Hadware-and-Software-Fundamentals">Computer Hadware and Software Fundamentals<a class="anchor-link" href="#Computer-Hadware-and-Software-Fundamentals">¶</a></h1><ul>
+<li>understanding how computer hardware and software work together is crucial for any programmer</li>
+<li>this knowledge helps you write efficient code, debug issues, and optimize performance</li>
+</ul>
+<h2 id="External-Resources">External Resources<a class="anchor-link" href="#External-Resources">¶</a></h2><ul>
+<li>YouTube Podcast - C++ Memory Segments <a href="https://youtu.be/KbikT3YhOY4">https://youtu.be/KbikT3YhOY4</a></li>
+<li>YouTube Video - C++ Memory Segments <a href="https://youtu.be/9mHXkLwnShM">https://youtu.be/9mHXkLwnShM</a></li>
+<li>NotebookLM learning resrouces - <a href="https://notebooklm.google.com/notebook/fa2bccd7-eaeb-43bd-b240-6a043a219a52">https://notebooklm.google.com/notebook/fa2bccd7-eaeb-43bd-b240-6a043a219a52</a></li>
+</ul>
+<h2 id="Computer-Hardware">Computer Hardware<a class="anchor-link" href="#Computer-Hardware">¶</a></h2><ul>
+<li><strong>Central Processing Unit (CPU)</strong>: the brain of the computer that executes instructions</li>
+<li><strong>Memory (RAM)</strong>: temporary storage for data and instructions that the CPU needs while executing</li>
+<li><strong>Storage (HDD/SSD)</strong>: long-term/secondary storage for data and programs</li>
+<li><strong>Input/Output Devices</strong>: peripherals like keyboard, mouse, monitor, joystick, stylus, etc.</li>
+<li><strong>Motherboard</strong>: the main circuit board that connects all hardware components</li>
+<li><strong>Bus</strong>: a communication system that transfers data between components inside a computer</li>
+<li><strong>Cache</strong>: a smaller, faster type of volatile memory that provides high-speed data access to the CPU</li>
+<li><strong>Registers</strong>: small storage locations within the CPU that hold data temporarily during processing</li>
+</ul>
+<h2 id="Computer-Software">Computer Software<a class="anchor-link" href="#Computer-Software">¶</a></h2><ul>
+<li><strong>Operating System (OS)</strong>: manages hardware resources and provides services for computer programs</li>
+<li><strong>Application Software</strong>: programs that perform specific tasks for users (e.g., web browsers, word processors)</li>
+<li><strong>System Software</strong>: software that provides core functions like OS, utilities, and device drivers</li>
+<li><strong>Firmware</strong>: low-level software programmed into hardware devices to control their functions</li>
+<li><strong>Compilers/Interpreters</strong>: tools that translate high-level programming languages into machine code</li>
+<li><strong>Libraries</strong>: collections of pre-written code that developers can use to optimize tasks and improve efficiency</li>
+<li><strong>APIs (Application Programming Interfaces)</strong>: sets of protocols and tools for building software applications and enabling communication between different software components</li>
 </ul>
 </div>
 </div>
@@ -7542,7 +7566,9 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Memory-segments-in-C/C++-programs">Memory segments in C/C++ programs<a class="anchor-link" href="#Memory-segments-in-C/C++-programs">¶</a></h2><ul>
+<h1 id="Primary-Memory-segments-in-C/C++-programs">Primary Memory segments in C/C++ programs<a class="anchor-link" href="#Primary-Memory-segments-in-C/C++-programs">¶</a></h1><ul>
+<li><p>a program's memory is divided into different segments to store different types of data</p>
+</li>
 <li><p>main memory (RAM) is typically divided into 2 main spaces:</p>
 <ol>
 <li>kernel space - reserved for running the kernel (OS background processes, device drivers, etc.)<ul>
@@ -7555,8 +7581,34 @@ a.anchor-link {
 </li>
 </ol>
 </li>
-<li><p>in C/C++ programs, user space is divided into 5 different areas, called segments:</p>
+<li><p>in C/C++ programs, user space is divided into 5 different areas, called segments</p>
 </li>
+<li><p>from lower (at the top) to higher memory addresses (towards the bottom), the segments are:</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Text - code segment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data - initialized globals/static</td>
+</tr>
+<tr>
+<td>BSS - uninitialized globals/static</td>
+</tr>
+<tr>
+<td>Heap - dynamically allocated</td>
+</tr>
+<tr>
+<td>Stack - local variables</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>theText segment is at the lowest memory address, followed by Data, BSS, Heap, and Stack segments at the highest memory addresses</li>
 </ul>
 <img alt="No description has been provided for this image" src="./assets/MemorySegments.png"/>
 <ul>
@@ -7566,25 +7618,34 @@ a.anchor-link {
 <li>also called scratch pad</li>
 <li>function parameters, local variables, and other function-related register variables are stored</li>
 <li>grows and shrinks based on program needs</li>
+<li>Last In First Out (LIFO) data structure that grows from higher to lower memory addresses</li>
+<li>stack overflow can occur when too much memory is used on the stack (e.g., infinite recursion, large local variables, etc.)</li>
+<li>if more data is insecurely pushed/copied onto the stack than it can hold, it can overwrite adjacent memory locations, leading to unpredictable behavior, crashes or arbitrary code execution (stack buffer overflow attack)</li>
+<li>stack size is normally much smaller compared to heap size</li>
 </ul>
 <h3 id="Heap-segment">Heap segment<a class="anchor-link" href="#Heap-segment">¶</a></h3><ul>
 <li>dynamically allocated variables (using pointers) are allocated from this segment</li>
 <li>Heap size is normally much larger compared to stack size</li>
 <li>size (actual) grows and shrinks based on program needs</li>
+<li>heap grows from lower to higher memory addresses</li>
+<li>heap overflow can occur when too much memory is allocated on the heap (e.g., memory leaks, excessive allocations, etc.)</li>
+<li>programer must manually manage memory allocation and deallocation using <code>new</code> and <code>delete</code> keywords in C++</li>
 </ul>
 <h3 id="BSS-segment-(Block-Started-by-Symbol)">BSS segment (Block Started by Symbol)<a class="anchor-link" href="#BSS-segment-(Block-Started-by-Symbol)">¶</a></h3><ul>
-<li>also called the uninitialized data segment)</li>
+<li>also called the uninitialized data segment</li>
 <li>zero-initialized or uninitialized global and static variables are stored</li>
+<li>overflow in this segment can occur if the program tries to copy more data than allocated for uninitialized global/static variables</li>
 </ul>
 <h3 id="Data-segment">Data segment<a class="anchor-link" href="#Data-segment">¶</a></h3><ul>
 <li>also called the initialized data segment</li>
 <li>initialized global and static variables are stored</li>
+<li>overflow in this segment can occur if the program tries to copy more data than allocated for initialized global/static variables</li>
 </ul>
 <h3 id="Text-segment-(also-called-a-code-segment)">Text segment (also called a code segment)<a class="anchor-link" href="#Text-segment-(also-called-a-code-segment)">¶</a></h3><ul>
 <li>compiled program/code is loaded</li>
 <li>code segment is typically read-only.</li>
 </ul>
-<p>Programmers primarily focus on the heap and the stack, as that is where most of the interesting stuff takes place.</p>
+<p>Programmers primarily focus on the heap and the stack, as that is where most of the interesting stuff takes place where data is stored and manipulated during program execution.</p>
 </div>
 </div>
 </div>
@@ -7847,20 +7908,6 @@ BUGS
 
 Apple Computer, Inc.             July 28, 2005                         SIZE(1)
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
 </div>
 </div>
 </div>

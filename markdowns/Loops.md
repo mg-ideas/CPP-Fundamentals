@@ -1,10 +1,16 @@
-# Loops
+# Loops or Iterations
 
 ## Topics
 - increment and decrement operators
 - iteration and types of iterations
 - iteration applications
 - iterations inside functions
+
+## External Resources
+
+- YouTube Video - Loops or Iterations - [https://youtu.be/3TNLT_uRsuQ](https://youtu.be/3TNLT_uRsuQ)
+- YouTube Podcast - Loops or Iterations - [https://youtu.be/hEDrRI8jeAI](https://youtu.be/hEDrRI8jeAI)
+- NotebookLM learning materials - [https://notebooklm.google.com/notebook/860e5075-f57a-4267-a02d-78bac6926e4e](https://notebooklm.google.com/notebook/860e5075-f57a-4267-a02d-78bac6926e4e)
 
 ## Increment and decrement operators
 - in programming adding and subtracting an integer value by 1 is done frequently
@@ -26,7 +32,7 @@
     - hence: post increment or post decrement
 
 
-```c++
+```C++14
 // post increment example
 #include <iostream>
 using namespace std;
@@ -35,13 +41,13 @@ int x;
 ```
 
 
-```c++
+```C++14
 // store 10 in x
 x = 10;
 ```
 
 
-```c++
+```C++14
 // use the current value of x and then increment it
 cout << x++ << endl;
 ```
@@ -50,7 +56,7 @@ cout << x++ << endl;
 
 
 
-```c++
+```C++14
 // value of x should be incremented by 1
 cout << x;
 ```
@@ -58,7 +64,7 @@ cout << x;
     11
 
 
-```c++
+```C++14
 // post decrement
 x--
 ```
@@ -71,7 +77,7 @@ x--
 
 
 
-```c++
+```C++14
 x
 ```
 
@@ -96,13 +102,13 @@ x
     - hence: pre increment or pre decrement
 
 
-```c++
+```C++14
 // pre increment and decrement examples
 x = 10;
 ```
 
 
-```c++
+```C++14
 --x
 ```
 
@@ -114,7 +120,7 @@ x = 10;
 
 
 
-```c++
+```C++14
 ++x
 ```
 
@@ -169,7 +175,7 @@ x = 10;
 ![](resources/For-Loop.png)
 
 
-```c++
+```C++14
 // example 1 - the hard way of repeating code!
 // write a program that counts "Mississippi!" 10 times
 // if you didn't know loop, one could still do it, rather painfully!
@@ -213,7 +219,7 @@ cout << "10. Mississippi!\n";
 
 
 
-```c++
+```C++14
 // Let's make our life a little easier!
 // using for loop, let's tell the computer to repeatedly print "Mississippi!" 10 times 
 // so we don't have to type 10 different statements!
@@ -251,7 +257,7 @@ for(int i=1; i<=10; i++) {
 - happens when you forget to update the loop counter variable or use condition that is always true
 
 
-```c++
+```C++14
 // infinite loop example
 // if you run this, computer will not stop executing the loop body!
 // you've to manually interrupt the Kernel in Jupyter notebook
@@ -262,14 +268,14 @@ for( ; ; ) { // infinite loop; no condition that stops the for loop
 ```
 
 
-```c++
+```C++14
 // if the kernel restarts; must include all the libraries again
 #include <iostream>
 using namespace std;
 ```
 
 
-```c++
+```C++14
 // for loop with multiple statements for initialization; condition and updation
 for(int i=1, j=10; i<=10 && j>=1; i++, j--) {
     cout << i << " + " << j << " = " << i+j << endl;
@@ -298,7 +304,7 @@ for(int i=1, j=10; i<=10 && j>=1; i++, j--) {
     - with the reason to exit the loop body or continue with next iteration skipping the rest of the loop body
 
 
-```c++
+```C++14
 // example of break and continue
 // comment and uncomment break and continue to see how each works
 for(int i=1; i<=10; i++) {
@@ -313,7 +319,7 @@ for(int i=1; i<=10; i++) {
 
 
 
-```c++
+```C++14
 // break example
 cout << "before loop\n";
 for(int i=1; i<=10; i++) {
@@ -333,7 +339,7 @@ cout << "after loop... all done!\n";
 
 
 
-```c++
+```C++14
 // continue example
 // print odd numbers between 1 and 20
 cout << "before loop\n";
@@ -351,7 +357,7 @@ cout << "\nafter loop... all done!\n";
 
 
 
-```c++
+```C++14
 // breaking infinite loop!
 int i=1, j=10;
 for( ; ; ) { // you could write int i=1, j=10; as initialization
@@ -377,7 +383,7 @@ for( ; ; ) { // you could write int i=1, j=10; as initialization
 
 
 
-```c++
+```C++14
 // Countdown to Blast-off using for loop
 #include <iostream>
 #include <unistd.h>
@@ -387,7 +393,7 @@ using namespace std;
 ```
 
 
-```c++
+```C++14
 for(int i=10; i>=0; i--) {
     if (i == 0)
         cout << "Blast Off!!!" << endl;
@@ -429,7 +435,7 @@ for(int i=10; i>=0; i--) {
     - represents a suitalbe sequence of elements such as array or container with begin and end member functions
 
 
-```c++
+```C++14
 // example of range-based for loop
 cout << "before range-based loop...\n";
 for(int num: {1, 2, 4, 5, 6, 8, 9, 10}) {
@@ -450,13 +456,13 @@ cout << "after range-based loop... all done!";
     after range-based loop... all done!
 
 
-```c++
+```C++14
 // example 2: iterate over each character in string using range-based loop
 string text = "This is a sentence!";
 ```
 
 
-```c++
+```C++14
 #include <cstring> // touppper
 
 // recall: auto can be used to automatically determine type based on value assigned
@@ -487,7 +493,7 @@ for(auto ch: text) {
 
 
 
-```c++
+```C++14
 // convert text into uppercase
 string upper_text = ""; // variable to collect uppercase characters
 for(auto ch: text) {
@@ -518,7 +524,7 @@ cout << text << " -> " << upper_text << endl;
 ![](resources/While-Loop.png)
 
 
-```c++
+```C++14
 // example 1 - print a log table from 1 to 10
 #include <iostream>
 #include <cmath> // log, log2, log10
@@ -530,7 +536,7 @@ int x;
 ```
 
 
-```c++
+```C++14
 cout << "x\tlog(x)\tlog2(x)\tlog10(x)\n";
 cout << setw(35) << setfill('=') << "\n";
 cout << fixed << setprecision(4);
@@ -557,7 +563,7 @@ while(x <= 10) {
 
 
 
-```c++
+```C++14
 // example 2 - run around the track until you're tired
 int lapCount = 0;
 string tired_response;
@@ -565,7 +571,7 @@ bool tired = false; // while loop initialization
 ```
 
 
-```c++
+```C++14
 while(not tired) {
     lapCount += 1;
     cout << "lap count = " << lapCount << endl;
@@ -588,7 +594,7 @@ while(not tired) {
 
 
 
-```c++
+```C++14
 // using break and continue statements in while loop
 // NOTE: they don't have to be used together!
 lapCount = 0;
@@ -635,7 +641,7 @@ do {
 ![](resources/Do-While-Loop.png)
 
 
-```c++
+```C++14
 // example 1 - game play simulation
 // initialize loop variables
 int counter = 0; // keep track of no. of times game is played
@@ -643,7 +649,7 @@ string play_again; // player's response after each game
 ```
 
 
-```c++
+```C++14
 // play game at least once
 do {
     // call game() function or implement game here...
@@ -665,13 +671,13 @@ do {
 
 
 
-```c++
+```C++14
 // example 2 - input validation
 int input; // variable to store user input
 ```
 
 
-```c++
+```C++14
 do {
     cout << "Enter a whole number between 1 and 20: ";
     cin >> input;
@@ -700,7 +706,7 @@ do {
 
 
 
-```c++
+```C++14
 cout << "Great! You entered: " << input << endl;
 ```
 
@@ -731,7 +737,7 @@ cout << "Great! You entered: " << input << endl;
 ```
 
 
-```c++
+```C++14
 #include <iostream>
 #include <iomanip>
 
@@ -739,7 +745,7 @@ using namespace std;
 ```
 
 
-```c++
+```C++14
 // function that multiplies two numbers
 int multiply(int n1, int n2) {
     return n1*n2;
@@ -747,7 +753,7 @@ int multiply(int n1, int n2) {
 ```
 
 
-```c++
+```C++14
 // function prints multiples of N from 1 to 10
 void print_multiples(int N) {
     for(int i=1; i<=10; i++)
@@ -757,7 +763,7 @@ void print_multiples(int N) {
 ```
 
 
-```c++
+```C++14
 print_multiples(1);
 ```
 
@@ -765,7 +771,7 @@ print_multiples(1);
 
 
 
-```c++
+```C++14
 print_multiples(2);
 ```
 
@@ -773,7 +779,7 @@ print_multiples(2);
 
 
 
-```c++
+```C++14
 // now print_mutiples need to be called 10 times
 // print_multiples function is used as an inner loop
 void printMultipleTable() {
@@ -783,7 +789,7 @@ void printMultipleTable() {
 ```
 
 
-```c++
+```C++14
 printMultipleTable();
 ```
 
@@ -805,7 +811,7 @@ printMultipleTable();
 - a lot of advanced algorithms and problems require many nested double and even tripple loops
 
 
-```c++
+```C++14
 // function prints multiplication table using nested loop
 // print_multiples function is replaced with its actual code
 void multiplicationTable() {
@@ -818,7 +824,7 @@ void multiplicationTable() {
 ```
 
 
-```c++
+```C++14
 multiplicationTable();
 ```
 
@@ -846,7 +852,7 @@ multiplicationTable();
 ```
 
 
-```c++
+```C++14
 // solution
 void printTriangle(char ch, int height) {
     for(int i=1; i<=height; i++) { // could you start i from 0?
@@ -858,7 +864,7 @@ void printTriangle(char ch, int height) {
 ```
 
 
-```c++
+```C++14
 // call the function to manually test it
 printTriangle('*', 5);
 ```
@@ -1045,6 +1051,6 @@ printTriangle('*', 5);
 - exercise and example solutions
 
 
-```c++
+```C++14
 
 ```

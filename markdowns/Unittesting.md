@@ -8,6 +8,11 @@
 - $3^{rd}$ party frameworks such as doctest, googletest, etc. can be used for comprehensive unit testing
 - we can also do basic unit testing using **assert()** macro function provided in **&lt;cassert&gt;** library
 
+## External Resources
+- YouTube Video - Unit Testing in C++ [https://youtu.be/u6k04EkSXFI](https://youtu.be/u6k04EkSXFI)
+- YouTube Podcast - Unit Testing in C++ [https://youtu.be/R9_Cif-8sio](https://youtu.be/R9_Cif-8sio)
+- NotebookLM learning resources - [https://notebooklm.google.com/notebook/10ae29fb-db96-4b4f-891f-ae3a74f1c2c7](https://notebooklm.google.com/notebook/10ae29fb-db96-4b4f-891f-ae3a74f1c2c7)
+
 ## Debugging and unit testing with assert
 
 - assert can be used for basic debugging and testing

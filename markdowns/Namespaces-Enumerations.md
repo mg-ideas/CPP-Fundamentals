@@ -3,6 +3,10 @@
 ## External Resources
 
 - Namespaces in C++: [https://docs.microsoft.com/en-us/cpp/cpp/namespaces-cpp?view=msvc-160](https://docs.microsoft.com/en-us/cpp/cpp/namespaces-cpp?view=msvc-160)
+- YouTube Video - C++ Namespaces and Enumeration: [https://youtu.be/iLC4msZSRlU](https://youtu.be/iLC4msZSRlU)
+- YouTube Podcast - C++ Namespaces and Enumeration: [https://youtu.be/ZkryHCwZaEA](https://youtu.be/ZkryHCwZaEA)
+- NotebookLM learning materials: [https://notebooklm.google.com/notebook/220bdb20-95de-4ee1-a374-c2032e44fa9a](https://notebooklm.google.com/notebook/220bdb20-95de-4ee1-a374-c2032e44fa9a)
+
 
 ## What is a namespace?
 

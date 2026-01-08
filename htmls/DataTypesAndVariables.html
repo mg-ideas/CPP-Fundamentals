@@ -7517,7 +7517,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Data,-Types-and-Variables">Data, Types and Variables<a class="anchor-link" href="#Data,-Types-and-Variables">¶</a></h1><h2 id="Topics">Topics<a class="anchor-link" href="#Topics">¶</a></h2><ul>
+<h1 id="Data,-Types,-and-Variables">Data, Types, and Variables<a class="anchor-link" href="#Data,-Types,-and-Variables">¶</a></h1><h2 id="Topics">Topics<a class="anchor-link" href="#Topics">¶</a></h2><ul>
 <li>data and values</li>
 <li>C++ fundamental data types</li>
 <li>digital units and number systems</li>
@@ -7527,6 +7527,13 @@ a.anchor-link {
 <li>operators for numbers and strings</li>
 <li>constants</li>
 <li>type casting</li>
+</ul>
+<h2 id="External-Resources">External Resources<a class="anchor-link" href="#External-Resources">¶</a></h2><ul>
+<li>Variables and Data Types in C++: <a href="https://cplusplus.com/doc/tutorial/variables/">https://cplusplus.com/doc/tutorial/variables/</a></li>
+<li>C++ Data Types: <a href="https://en.cppreference.com/w/cpp/language/types">https://en.cppreference.com/w/cpp/language/types</a></li>
+<li>YouTube Video - C++ Data Types and Variables: <a href="https://youtu.be/r35nqBjxGDQ">https://youtu.be/r35nqBjxGDQ</a></li>
+<li>YouTube Podcast - C++ Data Types and Variables: <a href="https://youtu.be/3kYujfD0KTA">https://youtu.be/3kYujfD0KTA</a></li>
+<li>NotebookLM learning materials: <a href="https://notebooklm.google.com/notebook/22d7e69d-b42b-4d09-b285-59234a587d3b">https://notebooklm.google.com/notebook/22d7e69d-b42b-4d09-b285-59234a587d3b</a></li>
 </ul>
 </div>
 </div>
@@ -7676,7 +7683,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="k">sizeof</span><span class="p">(</span><span class="kt">bool</span><span class="p">)</span>
+<div class="highlight hl-C++17"><pre><span></span>sizeof(bool)
 </pre></div>
 </div>
 </div>
@@ -7702,7 +7709,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="k">sizeof</span><span class="p">(</span><span class="kt">char</span><span class="p">)</span>
+<div class="highlight hl-C++17"><pre><span></span>sizeof(char)
 </pre></div>
 </div>
 </div>
@@ -7728,7 +7735,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span>
+<div class="highlight hl-C++17"><pre><span></span>sizeof(int)
 </pre></div>
 </div>
 </div>
@@ -7754,7 +7761,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="k">sizeof</span><span class="p">(</span><span class="kt">long</span><span class="p">)</span>
+<div class="highlight hl-C++17"><pre><span></span>sizeof(long)
 </pre></div>
 </div>
 </div>
@@ -7780,7 +7787,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="k">sizeof</span><span class="p">(</span><span class="kt">float</span><span class="p">)</span>
+<div class="highlight hl-C++17"><pre><span></span>sizeof(float)
 </pre></div>
 </div>
 </div>
@@ -7806,7 +7813,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="k">sizeof</span><span class="p">(</span><span class="kt">double</span><span class="p">)</span>
+<div class="highlight hl-C++17"><pre><span></span>sizeof(double)
 </pre></div>
 </div>
 </div>
@@ -8145,7 +8152,7 @@ $\frac{1}{2}$  = quotient: $0$, remainder: $1$ <br/><br/></p>
 <div class="highlight"><pre><span></span><span class="n">type</span><span class="w"> </span><span class="n">varName</span><span class="p">;</span>
 <span class="n">type</span><span class="w"> </span><span class="n">varNam1</span><span class="p">,</span><span class="w"> </span><span class="n">varName2</span><span class="p">,</span><span class="w"> </span><span class="p">...;</span><span class="w"> </span><span class="c1">//declare several variables all of the same type</span>
 </pre></div>
-<p><img alt="" src="resources/VariablesAndMemory.png"/></p>
+<p><img alt="" src="assets/VariablesAndMemory.png"/></p>
 <h3 id="Rules-for-creating-variables">Rules for creating variables<a class="anchor-link" href="#Rules-for-creating-variables">¶</a></h3><ul>
 <li>variable names are case sensitive</li>
 <li>must declare variables before they can be used</li>
@@ -8182,17 +8189,17 @@ $\frac{1}{2}$  = quotient: $0$, remainder: $1$ <br/><br/></p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// examples of variable declaration</span>
-<span class="kt">bool</span><span class="w"> </span><span class="n">done</span><span class="p">;</span>
-<span class="kt">char</span><span class="w"> </span><span class="n">middleInitial</span><span class="p">;</span>
-<span class="kt">char</span><span class="w"> </span><span class="n">middleinitial</span><span class="p">;</span><span class="w"> </span><span class="c1">// hard to read all lowercase name</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">temperature</span><span class="p">;</span>
-<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
-<span class="kt">long</span><span class="w"> </span><span class="n">richest_persons_networth</span><span class="p">;</span>
-<span class="kt">float</span><span class="w"> </span><span class="n">interestRate</span><span class="p">;</span>
-<span class="kt">float</span><span class="w"> </span><span class="n">length</span><span class="p">;</span>
-<span class="kt">float</span><span class="w"> </span><span class="n">width</span><span class="p">;</span>
-<span class="kt">double</span><span class="w"> </span><span class="n">space_shuttle_velocity</span><span class="p">;</span>
+<div class="highlight hl-C++17"><pre><span></span>// examples of variable declaration
+bool done;
+char middleInitial;
+char middleinitial; // hard to read all lowercase name
+int temperature;
+unsigned int age;
+long richest_persons_networth;
+float interestRate;
+float length;
+float width;
+double space_shuttle_velocity;
 </pre></div>
 </div>
 </div>
@@ -8206,8 +8213,8 @@ $\frac{1}{2}$  = quotient: $0$, remainder: $1$ <br/><br/></p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// TODO:</span>
-<span class="c1">// Declare 10 variables of atleast 5 different types</span>
+<div class="highlight hl-C++17"><pre><span></span>// TODO:
+// Declare 10 variables of atleast 5 different types
 </pre></div>
 </div>
 </div>
@@ -8243,17 +8250,17 @@ $\frac{1}{2}$  = quotient: $0$, remainder: $1$ <br/><br/></p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// string variables</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
+<div class="highlight hl-C++17"><pre><span></span>// string variables
+#include &lt;string&gt;
 
-<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+using namespace std;
 
-<span class="n">string</span><span class="w"> </span><span class="n">fullName</span><span class="p">;</span>
-<span class="n">string</span><span class="w"> </span><span class="n">firstName</span><span class="p">;</span>
-<span class="n">string</span><span class="w"> </span><span class="n">address1</span><span class="p">;</span>
-<span class="n">string</span><span class="w"> </span><span class="n">country</span><span class="p">;</span>
-<span class="n">string</span><span class="w"> </span><span class="n">state_name</span><span class="p">;</span>
-<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">state_code</span><span class="p">;</span><span class="w"> </span><span class="c1">// :: name resolution operator</span>
+string fullName;
+string firstName;
+string address1;
+string country;
+string state_name;
+std::string state_code; // :: name resolution operator
 </pre></div>
 </div>
 </div>
@@ -8267,8 +8274,8 @@ $\frac{1}{2}$  = quotient: $0$, remainder: $1$ <br/><br/></p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// TODO:</span>
-<span class="c1">// Declare 5 string variables</span>
+<div class="highlight hl-C++17"><pre><span></span>// TODO:
+// Declare 5 string variables
 </pre></div>
 </div>
 </div>
@@ -8304,17 +8311,17 @@ $\frac{1}{2}$  = quotient: $0$, remainder: $1$ <br/><br/></p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// assignment examples</span>
-<span class="n">done</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
-<span class="n">middleInitial</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'J'</span><span class="p">;</span><span class="w"> </span><span class="c1">// character is represent using single quote</span>
-<span class="n">middleinitial</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'Q'</span><span class="p">;</span>
-<span class="n">temperature</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">73</span><span class="p">;</span>
-<span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">45</span><span class="p">;</span>
-<span class="n">richest_persons_networth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">120000000000</span><span class="p">;</span><span class="w"> </span><span class="c1">// 120 billion</span>
-<span class="n">interestRate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4.5</span><span class="p">;</span>
-<span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10.5</span><span class="p">;</span>
-<span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">99.99f</span><span class="p">;</span><span class="w"> </span><span class="c1">// number can end with f to represent as float</span>
-<span class="n">space_shuttle_velocity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">950.1234567891234567</span><span class="p">;</span><span class="w"> </span><span class="c1">// 16 decimal points</span>
+<div class="highlight hl-C++17"><pre><span></span>// assignment examples
+done = false;
+middleInitial = 'J'; // character is represent using single quote
+middleinitial = 'Q';
+temperature = 73;
+age = 45;
+richest_persons_networth = 120000000000; // 120 billion
+interestRate = 4.5;
+length = 10.5;
+width = 99.99f; // number can end with f to represent as float
+space_shuttle_velocity = 950.1234567891234567; // 16 decimal points
 </pre></div>
 </div>
 </div>
@@ -8340,13 +8347,13 @@ $\frac{1}{2}$  = quotient: $0$, remainder: $1$ <br/><br/></p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// string assignment examples</span>
-<span class="n">fullName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"John Doe"</span><span class="p">;</span>
-<span class="n">firstName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"John"</span><span class="p">;</span>
-<span class="n">address1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"1100 North Avenue"</span><span class="p">;</span><span class="w"> </span><span class="c1">// number as string</span>
-<span class="n">country</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"USA"</span><span class="p">;</span>
-<span class="n">state_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Colorado"</span><span class="p">;</span>
-<span class="n">state_code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"CO"</span><span class="p">;</span>
+<div class="highlight hl-C++17"><pre><span></span>// string assignment examples
+fullName = "John Doe";
+firstName = "John";
+address1 = "1100 North Avenue"; // number as string
+country = "USA";
+state_name = "Colorado";
+state_code = "CO";
 </pre></div>
 </div>
 </div>
@@ -8360,7 +8367,7 @@ $\frac{1}{2}$  = quotient: $0$, remainder: $1$ <br/><br/></p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// TODO: assign different values to variables defined above</span>
+<div class="highlight hl-C++17"><pre><span></span>// TODO: assign different values to variables defined above
 </pre></div>
 </div>
 </div>
@@ -8399,10 +8406,10 @@ $\frac{1}{2}$  = quotient: $0$, remainder: $1$ <br/><br/></p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// Copy initialization</span>
-<span class="kt">float</span><span class="w"> </span><span class="n">price</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2.99f</span><span class="p">;</span>
-<span class="kt">char</span><span class="w"> </span><span class="n">MI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'B'</span><span class="p">;</span><span class="w"> </span><span class="c1">//middle initial</span>
-<span class="n">string</span><span class="w"> </span><span class="n">school_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Grand Junction High"</span><span class="p">;</span>
+<div class="highlight hl-C++17"><pre><span></span>// Copy initialization
+float price = 2.99f;
+char MI = 'B'; //middle initial
+string school_name = "Grand Junction High";
 </pre></div>
 </div>
 </div>
@@ -8416,11 +8423,11 @@ $\frac{1}{2}$  = quotient: $0$, remainder: $1$ <br/><br/></p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// Value/uniform initialization</span>
-<span class="kt">char</span><span class="w"> </span><span class="n">some_letter</span><span class="p">{</span><span class="sc">'U'</span><span class="p">};</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">some_length</span><span class="p">{</span><span class="mi">100</span><span class="p">};</span>
-<span class="kt">float</span><span class="w"> </span><span class="n">some_float</span><span class="p">{</span><span class="mf">200.99</span><span class="p">};</span>
-<span class="n">string</span><span class="w"> </span><span class="n">some_string</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">"Hello World!"</span><span class="p">};</span><span class="w"> </span><span class="c1">// can also combine the two!</span>
+<div class="highlight hl-C++17"><pre><span></span>// Value/uniform initialization
+char some_letter{'U'};
+int some_length{100};
+float some_float{200.99};
+string some_string = {"Hello World!"}; // can also combine the two!
 </pre></div>
 </div>
 </div>
@@ -8452,11 +8459,11 @@ $\frac{1}{2}$  = quotient: $0$, remainder: $1$ <br/><br/></p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="n">price</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.99</span><span class="p">;</span>
-<span class="n">price</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.99</span><span class="p">;</span>
-<span class="n">MI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'Q'</span><span class="p">;</span>
-<span class="n">school_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Fruita Monument High"</span><span class="p">;</span>
-<span class="n">some_string</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Goodbye, World!"</span><span class="p">;</span>
+<div class="highlight hl-C++17"><pre><span></span>price = 3.99;
+price = 1.99;
+MI = 'Q';
+school_name = "Fruita Monument High";
+some_string = "Goodbye, World!";
 </pre></div>
 </div>
 </div>
@@ -8470,7 +8477,7 @@ $\frac{1}{2}$  = quotient: $0$, remainder: $1$ <br/><br/></p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="n">price</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"4.99"</span><span class="p">;</span><span class="w"> </span><span class="c1">// is this valid?</span>
+<div class="highlight hl-C++17"><pre><span></span>price = "4.99"; // is this valid?
 </pre></div>
 </div>
 </div>
@@ -8519,10 +8526,10 @@ Interpreter Error: </pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">var1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="c1">// integer</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">var2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">19.99f</span><span class="p">;</span><span class="w"> </span><span class="c1">// float</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">var3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">99.245</span><span class="p">;</span><span class="w"> </span><span class="c1">// double</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">var4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'@'</span><span class="p">;</span><span class="w"> </span><span class="c1">// char</span>
+<div class="highlight hl-C++17"><pre><span></span>auto var1 = 10; // integer
+auto var2 = 19.99f; // float
+auto var3 = 99.245; // double
+auto var4 = '@'; // char
 </pre></div>
 </div>
 </div>
@@ -8536,8 +8543,8 @@ Interpreter Error: </pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// char * (pointer) type and not string type</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">full_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"John Doe"</span><span class="p">;</span>
+<div class="highlight hl-C++17"><pre><span></span>// char * (pointer) type and not string type
+auto full_name = "John Doe";
 </pre></div>
 </div>
 </div>
@@ -8551,11 +8558,11 @@ Interpreter Error: </pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// can automatically declare string type</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
-<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<div class="highlight hl-C++17"><pre><span></span>// can automatically declare string type
+#include &lt;string&gt;
+using namespace std;
 
-<span class="k">auto</span><span class="w"> </span><span class="n">full_name1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">string</span><span class="p">(</span><span class="s">"Jake Smith"</span><span class="p">);</span><span class="w"> </span><span class="c1">// string type!</span>
+auto full_name1 = string("Jake Smith"); // string type!
 </pre></div>
 </div>
 </div>
@@ -8569,9 +8576,9 @@ Interpreter Error: </pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// use typeid function to find the name of the types</span>
-<span class="c1">// typeid is defined in typeinfo library</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;typeinfo&gt;</span>
+<div class="highlight hl-C++17"><pre><span></span>// use typeid function to find the name of the types
+// typeid is defined in typeinfo library
+#include &lt;typeinfo&gt;
 </pre></div>
 </div>
 </div>
@@ -8585,7 +8592,7 @@ Interpreter Error: </pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="k">typeid</span><span class="p">(</span><span class="n">full_name1</span><span class="p">).</span><span class="n">name</span><span class="p">()</span>
+<div class="highlight hl-C++17"><pre><span></span>typeid(full_name1).name()
 </pre></div>
 </div>
 </div>
@@ -8611,9 +8618,9 @@ Interpreter Error: </pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// should print "i" -&gt; short for integer</span>
-<span class="c1">// Note: may also print invalid memory address in Jupyter notebook!</span>
-<span class="k">typeid</span><span class="p">(</span><span class="n">var1</span><span class="p">).</span><span class="n">name</span><span class="p">()</span>
+<div class="highlight hl-C++17"><pre><span></span>// should print "i" -&gt; short for integer
+// Note: may also print invalid memory address in Jupyter notebook!
+typeid(var1).name()
 </pre></div>
 </div>
 </div>
@@ -8685,8 +8692,8 @@ Interpreter Error: </pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">pi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">22</span><span class="o">/</span><span class="mf">7.0</span><span class="p">;</span><span class="w"> </span><span class="c1">// evaluate 22/7.0 and use it as the const value for pi</span>
-<span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">earth_gravity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">9.8</span><span class="p">;</span><span class="w"> </span><span class="c1">// m/s^2 unit</span>
+<div class="highlight hl-C++17"><pre><span></span>const double pi = 22/7.0; // evaluate 22/7.0 and use it as the const value for pi
+const float earth_gravity = 9.8; // m/s^2 unit
 </pre></div>
 </div>
 </div>
@@ -8700,8 +8707,8 @@ Interpreter Error: </pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// try to assign different value to the constant pi</span>
-<span class="n">pi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.141592653589793238</span><span class="p">;</span>
+<div class="highlight hl-C++17"><pre><span></span>// try to assign different value to the constant pi
+pi = 3.141592653589793238;
 </pre></div>
 </div>
 </div>
@@ -8771,11 +8778,11 @@ Interpreter Error: </pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// string variables</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
+<div class="highlight hl-C++17"><pre><span></span>// string variables
+#include &lt;iostream&gt;
+#include &lt;string&gt;
 
-<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+using namespace std;
 </pre></div>
 </div>
 </div>
@@ -8789,7 +8796,7 @@ Interpreter Error: </pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="n">string</span><span class="w"> </span><span class="n">greeting</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"What's up</span><span class="se">\n</span><span class="s"> Shaq</span><span class="se">\t</span><span class="s">O'Neal?"</span>
+<div class="highlight hl-C++17"><pre><span></span>string greeting = "What's up\n Shaq\tO'Neal?"
 </pre></div>
 </div>
 </div>
@@ -8803,7 +8810,7 @@ Interpreter Error: </pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="n">greeting</span>
+<div class="highlight hl-C++17"><pre><span></span>greeting
 </pre></div>
 </div>
 </div>
@@ -8830,7 +8837,7 @@ Interpreter Error: </pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="kt">char</span><span class="w"> </span><span class="n">single_quote</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'\''</span>
+<div class="highlight hl-C++17"><pre><span></span>char single_quote = '\''
 </pre></div>
 </div>
 </div>
@@ -8844,7 +8851,7 @@ Interpreter Error: </pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="n">single_quote</span>
+<div class="highlight hl-C++17"><pre><span></span>single_quote
 </pre></div>
 </div>
 </div>
@@ -8870,7 +8877,7 @@ Interpreter Error: </pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="kt">char</span><span class="w"> </span><span class="n">double_quote</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'"'</span>
+<div class="highlight hl-C++17"><pre><span></span>char double_quote = '"'
 </pre></div>
 </div>
 </div>
@@ -8884,7 +8891,7 @@ Interpreter Error: </pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="n">double_quote</span>
+<div class="highlight hl-C++17"><pre><span></span>double_quote
 </pre></div>
 </div>
 </div>
@@ -8910,8 +8917,8 @@ Interpreter Error: </pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// need to scape the " inside strings</span>
-<span class="n">string</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"</span><span class="se">\"</span><span class="s">Oh no!</span><span class="se">\"</span><span class="s">, Alice exclaimed, </span><span class="se">\"</span><span class="s">Bob's bike is broken!</span><span class="se">\"</span><span class="s">"</span>
+<div class="highlight hl-C++17"><pre><span></span>// need to scape the " inside strings
+string line = "\"Oh no!\", Alice exclaimed, \"Bob's bike is broken!\""
 </pre></div>
 </div>
 </div>
@@ -8925,7 +8932,7 @@ Interpreter Error: </pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="n">line</span>
+<div class="highlight hl-C++17"><pre><span></span>line
 </pre></div>
 </div>
 </div>
@@ -8951,7 +8958,7 @@ Interpreter Error: </pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"how many back slashes will be printed? </span><span class="se">\\\\</span><span class="s">"</span><span class="p">;</span>
+<div class="highlight hl-C++17"><pre><span></span>cout &lt;&lt; "how many back slashes will be printed? \\\\";
 </pre></div>
 </div>
 </div>
@@ -9135,7 +9142,7 @@ Interpreter Error: </pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="w"> </span>
+<div class="highlight hl-C++17"><pre><span></span> 
 </pre></div>
 </div>
 </div>

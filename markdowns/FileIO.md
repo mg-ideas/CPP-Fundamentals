@@ -7,6 +7,12 @@
 - reading unstructured and structured text files
 - formatting file output
 
+## External Resources
+
+- YouTube Video - [https://youtu.be/qkgJiNRuwZw](https://youtu.be/qkgJiNRuwZw)
+- YouTube Podcast - [https://youtu.be/O8Tp7Rg3Hgw](https://youtu.be/O8Tp7Rg3Hgw)
+- NotebookLM learning materials - [https://notebooklm.google.com/notebook/7aea471a-e249-4446-9bfc-ee7660f334fd](https://notebooklm.google.com/notebook/7aea471a-e249-4446-9bfc-ee7660f334fd)
+
 ## Streams
 - a **stream** is an abstract object that represents the flow of data from a source like keyboard or a file to a destination like the screen or a file
 - we've learned about standard io streams in earlier chapters

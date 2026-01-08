@@ -1,4 +1,4 @@
-# C++ Strings
+# C++ Strings and C-strings
 
 ## Topics
 - string library
@@ -7,6 +7,12 @@
 - slicing string
 - string traversal
 - comparing and updating strings
+
+## External Resources
+- Documentaion - C++ Strings - [https://www.cppreference.com/w/cpp/string.html](https://www.cppreference.com/w/cpp/string.html)
+- YouTube Video - C++ Strings - [https://youtu.be/7t0-c0kXT6Y](https://youtu.be/7t0-c0kXT6Y)
+- YouTube Podcast - C++ Strings - [https://youtu.be/9G-HvgrijOw](https://youtu.be/9G-HvgrijOw)
+- NotebookLM learning materials - [https://notebooklm.google.com/notebook/e203371b-f739-4383-852d-1e810072202a](https://notebooklm.google.com/notebook/e203371b-f739-4383-852d-1e810072202a)
 
 ## String review
 - we've used string library to declare string variables in earlier chapters

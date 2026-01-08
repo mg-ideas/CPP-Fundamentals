@@ -1,5 +1,13 @@
 # STL - Standard Template Library
 
+## External Resources
+
+- YouTube Video - [https://youtu.be/_-lxEMtPaQA](https://youtu.be/_-lxEMtPaQA)
+- YouTube Podcast - [https://youtu.be/2pysE4rZNHI](https://youtu.be/2pysE4rZNHI)
+- C++ Reference for STL: [https://en.cppreference.com/w/cpp/container.html](https://en.cppreference.com/w/cpp/container.html)
+- NotebookLM learning materials - [https://notebooklm.google.com/notebook/bfc775dc-bb80-453d-b984-3ee2a2d4e902](https://notebooklm.google.com/notebook/bfc775dc-bb80-453d-b984-3ee2a2d4e902)
+
+## Overview
 - The Standard Template Library (STL) is a powerful set of C++ template classes to provide general-purpose classes and functions with templates that implement many popular and commonly used algorithms and data structures like vectors, lists, queues, and stacks.
 - The STL provides several benefits, including:
   - Reusability: You can use pre-written code for common data structures and algorithms.

@@ -1,17 +1,20 @@
-# Data Structures
+# Data Structures and Records in C++
 
 ## Topics
 - compound and heterogeneous types
-- structrues and records types
+- structures and record types
 - examples of structures and objects
 - aggregate operations on objects
 - passing structure to and and returing from functions
 - array of structures
-- structures in another structures
+- structures in another structure
 
 ## External Resources
 
 - Data Structures Tutorial - [https://cplusplus.com/doc/tutorial/structures/](https://cplusplus.com/doc/tutorial/structures/)
+- YouTube Video - [https://youtu.be/11o1KpaHGVQ](https://youtu.be/11o1KpaHGVQ)
+- YouTube Podcast - [https://youtu.be/pYadFY6oSXI](https://youtu.be/pYadFY6oSXI)
+- NotebookLM learning materials - [https://notebooklm.google.com/notebook/de5fe6ff-2f39-4f7a-b024-33c0a738509c](https://notebooklm.google.com/notebook/de5fe6ff-2f39-4f7a-b024-33c0a738509c)
 
 ## Compound and heterogeneous types
 

@@ -10,6 +10,12 @@
 - logical operators
 - passing arguments to `main()` and using them
 
+## External Resources
+
+- YouTube Video - Conditionals and Logic - [https://youtu.be/V5C0kXvcljM](https://youtu.be/V5C0kXvcljM)
+- YouTube Podcast - Conditionals and Logic - [https://youtu.be/SjrD1c8a9to](https://youtu.be/SjrD1c8a9to)
+- NotebookLM learning materials - [https://notebooklm.google.com/notebook/b2e09014-62d2-46ac-aa6c-29ee3d5e46b2](https://notebooklm.google.com/notebook/b2e09014-62d2-46ac-aa6c-29ee3d5e46b2)
+
 ## Conditional execution
 - so far, our programs executed top to bottom starting from **main( )**
     - statement by statement
@@ -44,7 +50,7 @@
     - where, **1** -> true and **0** -> false
 
 
-```python
+```C++17
 #include <iostream> // for std io
 #include <cassert> // for assert()
 #include <string> // for C++ string
@@ -52,7 +58,7 @@ using namespace std;
 ```
 
 
-```python
+```C++17
 // comparison operators examples
 1 == 1
 ```
@@ -65,13 +71,13 @@ using namespace std;
 
 
 
-```python
+```C++17
 int x = 10;
 int y = 20;
 ```
 
 
-```python
+```C++17
 // is x eqal to y?
 cout << (x == y);
 ```
@@ -79,7 +85,7 @@ cout << (x == y);
     0
 
 
-```python
+```C++17
 // let's print true of false using io manipulator
 // is x not equal to y?
 cout << boolalpha << (x != y);
@@ -88,28 +94,28 @@ cout << boolalpha << (x != y);
     true
 
 
-```python
+```C++17
 cout << (x > y);
 ```
 
     false
 
 
-```python
+```C++17
 cout << (x < y);
 ```
 
     true
 
 
-```python
+```C++17
 cout << (x >= y);
 ```
 
     false
 
 
-```python
+```C++17
 cout << (x <= y);
 ```
 
@@ -139,7 +145,7 @@ cout << (x <= y);
 
 
 
-```python
+```C++17
 // examples
 cout << "stuff before if\n";
 if (true) { // true is always true; same as true == true
@@ -154,7 +160,7 @@ cout << "stuff after if\n";
 
 
 
-```python
+```C++17
 cout << "stuff before if\n";
 if (false) { // false always evaluates to false; same as false == true
     cout << "body of if\n";
@@ -167,13 +173,13 @@ cout << "stuff after if\n";
 
 
 
-```python
+```C++17
 // check if a given number is positive
 int num;
 ```
 
 
-```python
+```C++17
 cout << "enter a whole number: ";
 cin >> num;
 if (num > 0) {
@@ -209,7 +215,7 @@ cout << "Good bye!";
 
 
 
-```python
+```C++17
 // determine if the given number is positive or negative
 cout << "Enter a whole number: ";
 cin >> num;
@@ -271,7 +277,7 @@ cout << "Good bye!";
 - since the condition is checked from top to bottom, the order of checking condition matters in some problems!
 
 
-```python
+```C++17
 // determine if a given number is 0, positive, or negative
 cout << "enter a whole number: ";
 cin >> num;
@@ -302,13 +308,13 @@ cout << "Good bye!";
 ```
 
 
-```python
+```C++17
 // variable to store the numeric grade
 float grade;
 ```
 
 
-```python
+```C++17
 // Implementation I
 // does this solution give correct answer?
 // order of checking condition matters!
@@ -334,7 +340,7 @@ cout << "Good bye!";
     Good bye!
 
 
-```python
+```C++17
 // Implementation II
 // how about this solution; does this give correct answer?
 cout << "Enter a grade: ";
@@ -371,7 +377,7 @@ cout << "Good bye!\n";
 
 
 
-```python
+```C++17
 // Implementation III - using function
 char find_letter_grade(float grade) {
     if (grade >= 90)
@@ -388,7 +394,7 @@ char find_letter_grade(float grade) {
 ```
 
 
-```python
+```C++17
 // manually test find_letter_grade function
 cout << "Enter a numeric grade: ";
 cin >> grade;
@@ -403,7 +409,7 @@ if (l_grade == 'A')
 
 
 
-```python
+```C++17
 // automatically test find_letter_grade function
 void test_find_letter_grade() {
     assert(find_letter_grade(100) == 'A');
@@ -415,7 +421,7 @@ void test_find_letter_grade() {
 ```
 
 
-```python
+```C++17
 test_find_letter_grade();
 ```
 
@@ -452,7 +458,7 @@ test_find_letter_grade();
 ```
 
 
-```python
+```C++17
 // a program that determines if a given number is 0, even or odd and positive or negative
 // the order of condition doesn't matter in this example
 cout << "enter a whole number: ";
@@ -486,7 +492,7 @@ cout << "Good bye!";
 ### Visualize nested conditional execution in [pythontutor.com](http://pythontutor.com/cpp.html#code=//%20program%20to%20determine%20day%20of%20the%20week%20given%20number%0A//%201-7%20%28sunday%20to%20saturday%29%0A%23include%20%3Ciostream%3E%0Ausing%20namespace%20std%3B%0A%0Aint%20main%28%29%20%7B%0A%20%20int%20num%20%3D%20-99%3B%0A%20%20if%20%28num%20%3E%200%29%20%7B%0A%20%20%20%20cout%20%3C%3C%20num%20%3C%3C%20%22%20is%20positive%20%22%3B%0A%20%20%20%20//%20check%20if%20the%20number%20is%20even%20or%20odd%0A%20%20%20%20if%20%28num%20%252%20%3D%3D%200%29%0A%20%20%20%20%20%20%20%20cout%20%3C%3C%20%22and%20even%5Cn%22%3B%0A%20%20%20%20else%0A%20%20%20%20%20%20%20%20cout%20%3C%3C%20%22and%20odd%5Cn%22%3B%0A%20%20%7D%0A%20%20else%20if%20%28num%20%3C%200%29%20%7B%0A%20%20%20%20%20%20cout%20%3C%3C%20num%20%3C%3C%20%22%20is%20negative%20%22%3B%0A%20%20%20%20%20%20//%20check%20if%20the%20number%20is%20even%20or%20odd%0A%20%20%20%20%20%20if%20%28num%20%252%20%3D%3D%200%29%0A%20%20%20%20%20%20%20%20%20%20cout%20%3C%3C%20%22and%20even%5Cn%22%3B%0A%20%20%20%20%20%20else%0A%20%20%20%20%20%20%20%20%20%20cout%20%3C%3C%20%22and%20odd%5Cn%22%3B%0A%20%20%7D%0A%20%20else%0A%20%20%20%20%20%20cout%20%3C%3C%20%22the%20entered%20number%20is%200%5Cn%22%3B%0A%20%20%20%20%0A%20%20%20%20cout%20%3C%3C%20%22Good%20bye!%22%3B%0A%20%20return%200%3B%0A%7D&curInstr=0&mode=display&origin=opt-frontend.js&py=cpp&rawInputLstJSON=%5B%5D)
 
 
-```python
+```C++17
 // TODO: Convert the above program as a function
 ```
 
@@ -512,7 +518,7 @@ cout << "Good bye!";
 ```
 
 
-```python
+```C++17
 // application of conditional operator
 // write a program that determines if a given number is odd or even
 
@@ -523,12 +529,12 @@ using namespace std;
 ```
 
 
-```python
+```C++17
 int number;
 ```
 
 
-```python
+```C++17
 cout << "Enter an Integer number: ";
 cin >> number;
 cout << number << " is " << ((number%2 == 0) ? "even" : "odd");
@@ -583,7 +589,7 @@ cout << number << " is " << ((number%2 == 0) ? "even" : "odd");
 - complete C++ operator precedence order can be found here: https://en.cppreference.com/w/cpp/language/operator_precedence
 
 
-```python
+```C++17
 // && examples
 // determine if a number is even and positve
 cout << "enter a whole number: ";
@@ -599,7 +605,7 @@ else
 
 
 
-```python
+```C++17
 // || or example
 // write a program that determines if somone can retire.
 // if a person owns a Ferrari or has 1 Million dollors in savings then the person can retire
@@ -608,7 +614,7 @@ long savings;
 ```
 
 
-```python
+```C++17
 cout << "Do you own a Ferarrai? Enter [y|yes]: ";
 cin >> has_ferrari;
 cout << "How much in savings do you have in dollars? ";
@@ -625,7 +631,7 @@ else
 
 
 
-```python
+```C++17
 // ! example
 // redo retirement calculator
 cout << "Do you own a Ferarrai? Enter [y|yes]: ";
@@ -705,14 +711,14 @@ else
 
 
 
-```python
+```C++17
 // e.g. of a switch statement
 // determine name of the day given the number 1-7
 unsigned int day;
 ```
 
 
-```python
+```C++17
 cout << "Enter day of the week 1-7: ";
 cin >> day;
 ```
@@ -721,7 +727,7 @@ cin >> day;
 
 
 
-```python
+```C++17
 // comment out break; and see the result
 switch(day) {
     case 1: 
@@ -764,7 +770,7 @@ switch(day) {
 ### write a menu-driven C++ program that calculates various statistics of any 2 numbers
 
 
-```python
+```C++17
 #include <iostream>
 #include <string>
 #include <cassert>
@@ -776,7 +782,7 @@ using namespace std;
 ```
 
 
-```python
+```C++17
 template<class T>
 T add(T val1, T val2) {
     return val1 + val2;
@@ -784,7 +790,7 @@ T add(T val1, T val2) {
 ```
 
 
-```python
+```C++17
 template<class T>
 T subtract(T val1, T val2) {
     return val1 - val2;
@@ -792,7 +798,7 @@ T subtract(T val1, T val2) {
 ```
 
 
-```python
+```C++17
 template<class T>
 T larger(T val1, T val2) {
     return val1 >= val2 ? val1 : val2;
@@ -800,7 +806,7 @@ T larger(T val1, T val2) {
 ```
 
 
-```python
+```C++17
 template<class T>
 double average(T val1, T val2) {
     return add(val1, val2)/2.0;
@@ -808,7 +814,7 @@ double average(T val1, T val2) {
 ```
 
 
-```python
+```C++17
 int getMenuOption() {
     // A Smiple CLI-based calculator
     int option;
@@ -825,7 +831,7 @@ int getMenuOption() {
 ```
 
 
-```python
+```C++17
 void program() {
     float n1, n2;
     int option;
@@ -857,7 +863,7 @@ void program() {
 ```
 
 
-```python
+```C++17
 // TODO: run this many times...
 program();
 ```
@@ -901,7 +907,7 @@ program();
 5. Write a function day_name that converts an integer number 0 to 6 into the name of a day. Assume day 0 is "Sunday". Return "Invalid Day" if the argument to the function is not valid.
 
 
-```python
+```C++17
 // code stub for Exercise 5
 string day_name(int day) {
     // FIXME - complete the rest
@@ -910,7 +916,7 @@ string day_name(int day) {
 ```
 
 
-```python
+```C++17
 // Here are some tests that should pass for day_name function defined above
 void test_day_name() {
     assert(day_name(3) == "Wednesday");
@@ -925,7 +931,7 @@ void test_day_name() {
 7. Write a function that helps answer questions like "Today is Wednesday. I leave on holiday in 19 days time. What day will that be?" So, the function must take a day name and a delta argument (the number of days to add) and should return the resulting day name.
 
 
-```python
+```C++17
 // Exercise 6 hints
 string day_add(string dayName, int delta) {
     // FIXME
@@ -933,7 +939,7 @@ string day_add(string dayName, int delta) {
 ```
 
 
-```python
+```C++17
 // Exercise 6 test function
 // here are some tests that should pass
 void test_day_add() {
@@ -1015,8 +1021,3 @@ void test_day_add() {
 - learned about comparision and logical operators; order of precedence
 - learned passing and using arguments to main( )
 - finally, exercise and sample solutions
-
-
-```python
-
-```

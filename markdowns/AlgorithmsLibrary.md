@@ -1,6 +1,13 @@
 # Algorithms Library
 
-- https://www.cppreference.com/w/cpp/algorithm.html
+## External Resources
+
+- YouTube Video - [https://youtu.be/yldnuWfZcW4](https://youtu.be/yldnuWfZcW4)
+- YouTube Podcast - [https://youtu.be/_bM3KR1Ms14](https://youtu.be/_bM3KR1Ms14)
+- C++ Reference for Algorithms: [https://en.cppreference.com/w/cpp/algorithm](https://en.cppreference.com/w/cpp/algorithm)
+- NotebookLM learning materials - [https://notebooklm.google.com/notebook/d2e20c24-dd73-4264-bdde-88b9cf6d343e](https://notebooklm.google.com/notebook/d2e20c24-dd73-4264-bdde-88b9cf6d343e)
+
+## Overview
 - The standard library provides implementations of various algorithms in C++. 
 - Some commonly used algorithms include sorting, searching, and manipulating sequences of elements.
 

@@ -9,6 +9,11 @@
 - debugging and automatically testing functions
 - scopes and name resolution process
 
+## External Resources
+- YouTube Podcast - User Defined Functions [https://youtu.be/-8eoUGNT1wo](https://youtu.be/-8eoUGNT1wo)
+- YouTube Video - User Defined Functions [https://youtu.be/KqPq2CqGUU8](https://youtu.be/KqPq2CqGUU8)
+- NotebookLM learning resources - [https://notebooklm.google.com/notebook/2b778673-804f-41a4-9f9e-72daa165f2e1](https://notebooklm.google.com/notebook/2b778673-804f-41a4-9f9e-72daa165f2e1)
+
 ## Adding new functions
 
 - we've used several functions provided in various standard libraries

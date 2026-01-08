@@ -7517,8 +7517,13 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Namespaces">Namespaces<a class="anchor-link" href="#Namespaces">¶</a></h1><ul>
-<li><a href="https://docs.microsoft.com/en-us/cpp/cpp/namespaces-cpp?view=msvc-160">https://docs.microsoft.com/en-us/cpp/cpp/namespaces-cpp?view=msvc-160</a></li>
+<h1 id="Namespaces">Namespaces<a class="anchor-link" href="#Namespaces">¶</a></h1><h2 id="External-Resources">External Resources<a class="anchor-link" href="#External-Resources">¶</a></h2><ul>
+<li>Namespaces in C++: <a href="https://docs.microsoft.com/en-us/cpp/cpp/namespaces-cpp?view=msvc-160">https://docs.microsoft.com/en-us/cpp/cpp/namespaces-cpp?view=msvc-160</a></li>
+<li>YouTube Video - C++ Namespaces and Enumeration: <a href="https://youtu.be/iLC4msZSRlU">https://youtu.be/iLC4msZSRlU</a></li>
+<li>YouTube Podcast - C++ Namespaces and Enumeration: <a href="https://youtu.be/ZkryHCwZaEA">https://youtu.be/ZkryHCwZaEA</a></li>
+<li>NotebookLM learning materials: <a href="https://notebooklm.google.com/notebook/220bdb20-95de-4ee1-a374-c2032e44fa9a">https://notebooklm.google.com/notebook/220bdb20-95de-4ee1-a374-c2032e44fa9a</a></li>
+</ul>
+<h2 id="What-is-a-namespace?">What is a namespace?<a class="anchor-link" href="#What-is-a-namespace?">¶</a></h2><ul>
 <li>a declarative region that provides a scope to the intentifiers (variables, constants, functions, etc.)</li>
 <li>used to organize code into logical groups to prevent name collisions that can occur especially when your code base includes multiple libraries</li>
 <li>we've used C++ builtin <code>std namespace</code> in the previous chapters, e.g.</li>
@@ -7591,6 +7596,7 @@ a.anchor-link {
 </li>
 </ol>
 </li>
+<li>first two methods are preferred and are best practice to avoid name collisions</li>
 </ul>
 </div>
 </div>
@@ -7632,14 +7638,14 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre><span class="ansi-bold">input_line_11:3:9: </span><span class="ansi-red-intense-fg ansi-bold">error: </span><span class="ansi-bold">use of undeclared identifier 'PI'; did you mean 'MY_SPACE::PI'?</span>
+<pre>input_line_11:3:9: error: use of undeclared identifier 'PI'; did you mean 'MY_SPACE::PI'?
 cout &lt;&lt; PI;
-<span class="ansi-green-intense-fg ansi-bold">        ^~
-</span><span class="ansi-green-fg">        MY_SPACE::PI
-</span><span class="ansi-bold">input_line_9:2:17: </span><span class="ansi-black-intense-fg ansi-bold">note: </span>'MY_SPACE::PI' declared here
+        ^~
+        MY_SPACE::PI
+input_line_9:2:17: note: 'MY_SPACE::PI' declared here
     const float PI = 3.14156;
-<span class="ansi-green-intense-fg ansi-bold">                ^
-</span></pre>
+                ^
+</pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
@@ -7836,7 +7842,7 @@ Interpreter Error: </pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-c++"><pre><span></span><span class="k">enum</span><span class="w"> </span><span class="nc">Suit</span><span class="w"> </span><span class="p">{</span><span class="n">Diamonds</span><span class="p">,</span><span class="w"> </span><span class="n">Hearts</span><span class="p">,</span><span class="w"> </span><span class="n">Clubs</span><span class="p">,</span><span class="w"> </span><span class="n">Spades</span><span class="p">};</span>
@@ -7851,7 +7857,7 @@ Interpreter Error: </pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-c++"><pre><span></span><span class="k">enum</span><span class="w"> </span><span class="nc">SUIT</span><span class="w"> </span><span class="p">{</span><span class="n">Diamonds</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">Hearts</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="n">Clubs</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="n">Spades</span><span class="o">=</span><span class="mi">40</span><span class="p">};</span>
@@ -7882,7 +7888,7 @@ Interpreter Error: </pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-c++"><pre><span></span><span class="c1">// since enumeration names are same in Suit and SUIT enum types,</span>
@@ -7898,7 +7904,7 @@ Interpreter Error: </pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-c++"><pre><span></span><span class="n">SUIT</span><span class="w"> </span><span class="n">best_suite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SUIT</span><span class="o">::</span><span class="n">Spades</span><span class="p">;</span>
@@ -7912,7 +7918,7 @@ Interpreter Error: </pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-c++"><pre><span></span><span class="n">COLOR</span><span class="w"> </span><span class="n">my_favColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RED</span><span class="p">;</span>
@@ -7926,10 +7932,10 @@ Interpreter Error: </pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// try assigning integer value</span>
+<div class="highlight hl-c++"><pre><span></span><span class="c1">// let's see what happens if we try assigning integer value</span>
 <span class="n">COLOR</span><span class="w"> </span><span class="n">some_color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -7943,10 +7949,10 @@ Interpreter Error: </pre>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre><span class="ansi-bold">input_line_15:3:7: </span><span class="ansi-red-intense-fg ansi-bold">error: </span><span class="ansi-bold">cannot initialize a variable of type 'COLOR' with an rvalue of type 'int'</span>
+<pre>input_line_27:3:7: error: cannot initialize a variable of type 'COLOR' with an rvalue of type 'int'
 COLOR some_color = 0;
-<span class="ansi-green-intense-fg ansi-bold">      ^            ~
-</span></pre>
+      ^            ~
+</pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
@@ -7963,7 +7969,7 @@ Interpreter Error: </pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-c++"><pre><span></span><span class="c1">// must explictly cast type to a valid enumeration value</span>
@@ -7978,7 +7984,7 @@ Interpreter Error: </pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-c++"><pre><span></span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">a_colr</span><span class="p">;</span>
@@ -8004,7 +8010,7 @@ Interpreter Error: </pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-c++"><pre><span></span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">myCard</span><span class="p">;</span>
@@ -8030,7 +8036,7 @@ Interpreter Error: </pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-c++"><pre><span></span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">best_suite</span><span class="p">;</span>
@@ -8056,7 +8062,7 @@ Interpreter Error: </pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-c++"><pre><span></span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">my_favColor</span><span class="p">;</span>
@@ -8082,7 +8088,7 @@ Interpreter Error: </pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-c++"><pre><span></span><span class="c1">// switch and enum work together very well as both need integral type</span>
@@ -8122,20 +8128,6 @@ Interpreter Error: </pre>
 <li>namespaces and enumeration types are cruical in large-scale software development using C++</li>
 <li>use these concepts as much as possible to learn and be familiar with them</li>
 </ul>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="w"> </span>
-</pre></div>
-</div>
 </div>
 </div>
 </div>

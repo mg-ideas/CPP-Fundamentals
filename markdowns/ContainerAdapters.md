@@ -1,5 +1,12 @@
-# Container Adapters in C++
+# Container Adapters: Stack, Queue, Priority Queue
 
+## External Resources
+- C++ Reference for Container Adapters: [https://en.cppreference.com/w/cpp/container.html](https://en.cppreference.com/w/cpp/container.html)
+- YouTube Podcast - [https://youtu.be/_8LsIm9rwk0](https://youtu.be/_8LsIm9rwk0)
+- YouTube Video - [https://youtu.be/zAdiE1fPrO0](https://youtu.be/zAdiE1fPrO0)
+- NotebookLM learning materials - [https://notebooklm.google.com/notebook/f1bcefe5-531e-4606-80eb-9e4bc1059fe0](https://notebooklm.google.com/notebook/f1bcefe5-531e-4606-80eb-9e4bc1059fe0)
+
+## Overview
 - Container adapters are special types of containers in C++ that provide a specific interface for data storage and retrieval, built on top of other standard containers. 
 - The most commonly used container adapters are `stack`, `queue`, and `priority_queue`. These adapters restrict the way elements can be accessed and modified, providing a more controlled interface.
 - Here are brief descriptions of each:

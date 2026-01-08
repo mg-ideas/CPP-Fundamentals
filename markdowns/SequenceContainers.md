@@ -1,4 +1,13 @@
-# Sequence Containers
+# Sequence Containers: Deque, List, Forward List, Array
+
+## External Resources
+
+- YouTube Video - [https://youtu.be/yzKwJHzsITA](https://youtu.be/yzKwJHzsITA)
+- YouTube Podcast - [https://youtu.be/yzKwJHzsITA](https://youtu.be/yzKwJHzsITA)
+- C++ Reference for Sequence Containers: [https://en.cppreference.com/w/cpp/container.html](https://en.cppreference.com/w/cpp/container.html)
+- NotebookLM learning materials - [https://notebooklm.google.com/notebook/f5c6a64a-bb9a-4a25-9ce4-828330bca12c](https://notebooklm.google.com/notebook/f5c6a64a-bb9a-4a25-9ce4-828330bca12c)
+
+## Overview
 - Sequence containers store elements in a linear order. Examples include:
 - **vector**: A dynamic array that can resize itself automatically when elements are added or removed.
     - [Vectors.ipynb](./Vectors.ipynb) Chapter provides detailed information about vectors.
@@ -178,7 +187,7 @@ for (auto rit = words2.rbegin(); rit != words2.rend(); ++rit)
     jumps fox brown scary quick the A 
 
 ## Forward List
-- https://www.cppreference.com/w/cpp/container/forward_list.html
+- Documentation - [https://www.cppreference.com/w/cpp/container/forward_list.html](https://www.cppreference.com/w/cpp/container/forward_list.html)
 - singly linked list that allows for fast insertion and deletion of elements at any position in the list
 - Each element in a forward list is stored in a separate node that contains a pointer to the next node in the list
 - This allows for efficient insertion and deletion of elements, as only the pointers need to be updated, rather than shifting elements as in a vector or deque

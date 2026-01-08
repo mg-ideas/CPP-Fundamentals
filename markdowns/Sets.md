@@ -1,7 +1,9 @@
-# Sets - Associative Containers
+# Sets and Unordered Sets - Associative Containers
 
-External Resources
+## External Resources
 - C++ Reference for Set Associative Containers: [https://en.cppreference.com/w/cpp/container.html](https://en.cppreference.com/w/cpp/container.html)
+- YouTube Video - [https://youtu.be/cHdo1y3oPWA](https://youtu.be/cHdo1y3oPWA)
+- YouTube Podcast - [https://youtu.be/bJrbqhLTbfU](https://youtu.be/bJrbqhLTbfU)
 - NotebookLM learning materials - [https://notebooklm.google.com/notebook/d0b8dfd3-cbf9-4808-8dd5-07b2870b1eb1](https://notebooklm.google.com/notebook/d0b8dfd3-cbf9-4808-8dd5-07b2870b1eb1)
 
 ## Ordered Set

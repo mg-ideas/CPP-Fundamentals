@@ -1,6 +1,9 @@
-# Maps - Associative Containers
+# Maps and Unordered Maps - Associative Containers
 
 ## External Resources
+
+- YouTube Video - [https://youtu.be/lPL7ItkiyVA](https://youtu.be/lPL7ItkiyVA)
+- YouTube Podcast - [https://youtu.be/h7FfD6kOhhk](https://youtu.be/h7FfD6kOhhk)
 - C++ Reference for Map Associative Containers [https://en.cppreference.com/w/cpp/container.html](https://en.cppreference.com/w/cpp/container.html)
 - NotebookLM learning materials - [https://notebooklm.google.com/notebook/6afcc53d-54f3-43e1-9f76-0cb9f71b19b1](https://notebooklm.google.com/notebook/6afcc53d-54f3-43e1-9f76-0cb9f71b19b1)
 
@@ -16,6 +19,8 @@
 
 
 ## Map
+
+- Map Documentation: [https://en.cppreference.com/w/cpp/container/map.html](https://en.cppreference.com/w/cpp/container/map.html)
 - in previous chapters we have seen various sequence containers such as **array**, **vector**, **deque**, **list**, etc.
 - those containers are linear and the keys are fixed integer indices or positions specifying the location of elements in the container
 - at times problems may require a dictionary like data-structure where you need to select your own key that is associated with some value

@@ -1,9 +1,16 @@
-# Library and Function
+# Standard Libraries and Tools
 
 ## Topics
 
 - some common C++ libraries and how to use them
 - iostream, string, numerics, iomanip, cmath, stdlib, sstream, etc.
+
+## External Resources
+
+- C++ Standard Library - [https://en.cppreference.com/w/cpp/header](https://en.cppreference.com/w/cpp/header)
+- YouTube Video - C++ Standard Libraries [https://youtu.be/og9moZmm0Mc](https://youtu.be/og9moZmm0Mc)
+- YouTube Podcast - C++ Standard Libraries [https://youtu.be/LMDsDD5sngM](https://youtu.be/LMDsDD5sngM)
+- NotebookLM learning resources - [https://notebooklm.google.com/notebook/41fb6242-726b-4329-be0d-3b78757c1d78](https://notebooklm.google.com/notebook/41fb6242-726b-4329-be0d-3b78757c1d78)
 
 ## Library
 - C++ provides a rich set of standard libraries: https://en.cppreference.com/w/cpp/header

@@ -3,6 +3,9 @@
 - this knowledge helps you write efficient code, debug issues, and optimize performance
 
 ## External Resources
+- YouTube Podcast - C++ Memory Segments [https://youtu.be/KbikT3YhOY4](https://youtu.be/KbikT3YhOY4)
+- YouTube Video - C++ Memory Segments [https://youtu.be/9mHXkLwnShM](https://youtu.be/9mHXkLwnShM)
+- NotebookLM learning resrouces - [https://notebooklm.google.com/notebook/fa2bccd7-eaeb-43bd-b240-6a043a219a52](https://notebooklm.google.com/notebook/fa2bccd7-eaeb-43bd-b240-6a043a219a52)
 
 ## Computer Hardware
 - **Central Processing Unit (CPU)**: the brain of the computer that executes instructions

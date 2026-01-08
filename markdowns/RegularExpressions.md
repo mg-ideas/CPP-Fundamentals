@@ -1,7 +1,11 @@
 # Regular Expressions
 
-## CPP Regex Reference
-https://en.cppreference.com/w/cpp/regex.html
+## External Resources
+
+- C++ Reference for Regular Expressions: [https://en.cppreference.com/w/cpp/regex.html](https://en.cppreference.com/w/cpp/regex.html)
+- YouTube Video - Regular Expressions - [https://youtu.be/xxOq9YE466w](https://youtu.be/xxOq9YE466w)
+- YouTube Podcast - Regular Expressions - [https://youtu.be/xDOTiIwtHXI](https://youtu.be/xDOTiIwtHXI)
+- NotebookLM learning materials - [https://notebooklm.google.com/notebook/bfb466f1-6060-4b1a-8406-b50508f3c035](https://notebooklm.google.com/notebook/bfb466f1-6060-4b1a-8406-b50508f3c035)
 
 ## Overview
 - A regular expression (regex or regexp) is a sequence of characters that forms a search pattern. It can be used for string matching and manipulation.

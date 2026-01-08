@@ -7517,11 +7517,16 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Loops">Loops<a class="anchor-link" href="#Loops">¶</a></h1><h2 id="Topics">Topics<a class="anchor-link" href="#Topics">¶</a></h2><ul>
+<h1 id="Loops-or-Iterations">Loops or Iterations<a class="anchor-link" href="#Loops-or-Iterations">¶</a></h1><h2 id="Topics">Topics<a class="anchor-link" href="#Topics">¶</a></h2><ul>
 <li>increment and decrement operators</li>
 <li>iteration and types of iterations</li>
 <li>iteration applications</li>
 <li>iterations inside functions</li>
+</ul>
+<h2 id="External-Resources">External Resources<a class="anchor-link" href="#External-Resources">¶</a></h2><ul>
+<li>YouTube Video - Loops or Iterations - <a href="https://youtu.be/3TNLT_uRsuQ">https://youtu.be/3TNLT_uRsuQ</a></li>
+<li>YouTube Podcast - Loops or Iterations - <a href="https://youtu.be/hEDrRI8jeAI">https://youtu.be/hEDrRI8jeAI</a></li>
+<li>NotebookLM learning materials - <a href="https://notebooklm.google.com/notebook/860e5075-f57a-4267-a02d-78bac6926e4e">https://notebooklm.google.com/notebook/860e5075-f57a-4267-a02d-78bac6926e4e</a></li>
 </ul>
 <h2 id="Increment-and-decrement-operators">Increment and decrement operators<a class="anchor-link" href="#Increment-and-decrement-operators">¶</a></h2><ul>
 <li>in programming adding and subtracting an integer value by 1 is done frequently</li>
@@ -7558,11 +7563,11 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// post increment example</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<div class="highlight hl-C++14"><pre><span></span>// post increment example
+#include &lt;iostream&gt;
+using namespace std;
 
-<span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+int x;
 </pre></div>
 </div>
 </div>
@@ -7576,8 +7581,8 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// store 10 in x</span>
-<span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<div class="highlight hl-C++14"><pre><span></span>// store 10 in x
+x = 10;
 </pre></div>
 </div>
 </div>
@@ -7591,8 +7596,8 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// use the current value of x and then increment it</span>
-<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">x</span><span class="o">++</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<div class="highlight hl-C++14"><pre><span></span>// use the current value of x and then increment it
+cout &lt;&lt; x++ &lt;&lt; endl;
 </pre></div>
 </div>
 </div>
@@ -7619,8 +7624,8 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// value of x should be incremented by 1</span>
-<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<div class="highlight hl-C++14"><pre><span></span>// value of x should be incremented by 1
+cout &lt;&lt; x;
 </pre></div>
 </div>
 </div>
@@ -7646,8 +7651,8 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// post decrement</span>
-<span class="n">x</span><span class="o">--</span>
+<div class="highlight hl-C++14"><pre><span></span>// post decrement
+x--
 </pre></div>
 </div>
 </div>
@@ -7673,7 +7678,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="n">x</span>
+<div class="highlight hl-C++14"><pre><span></span>x
 </pre></div>
 </div>
 </div>
@@ -7723,8 +7728,8 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// pre increment and decrement examples</span>
-<span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<div class="highlight hl-C++14"><pre><span></span>// pre increment and decrement examples
+x = 10;
 </pre></div>
 </div>
 </div>
@@ -7738,7 +7743,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="o">--</span><span class="n">x</span>
+<div class="highlight hl-C++14"><pre><span></span>--x
 </pre></div>
 </div>
 </div>
@@ -7764,7 +7769,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="o">++</span><span class="n">x</span>
+<div class="highlight hl-C++14"><pre><span></span>++x
 </pre></div>
 </div>
 </div>
@@ -7850,27 +7855,27 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// example 1 - the hard way of repeating code!</span>
-<span class="c1">// write a program that counts "Mississippi!" 10 times</span>
-<span class="c1">// if you didn't know loop, one could still do it, rather painfully!</span>
-<span class="c1">// typing one statement at a time for 10 times!</span>
+<div class="highlight hl-C++14"><pre><span></span>// example 1 - the hard way of repeating code!
+// write a program that counts "Mississippi!" 10 times
+// if you didn't know loop, one could still do it, rather painfully!
+// typing one statement at a time for 10 times!
 
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+#include &lt;iostream&gt;
 
-<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+using namespace std;
 
-<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"1. Mississippi!</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
-<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"2. Mississippi!</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
-<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"3. Mississippi!</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
-<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"4. Mississippi!</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
-<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"5. Mississippi!</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
-<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"6. Mississippi!</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
-<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"7. Mississippi!</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
-<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"8. Mississippi!</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
-<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"9. Mississippi!</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
-<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"10. Mississippi!</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
-<span class="c1">// phew... gets worse, when you need to do it for 100 or 1000 or more times... Yikes!!</span>
-<span class="c1">// you might just quit programming right now!</span>
+cout &lt;&lt; "1. Mississippi!\n";
+cout &lt;&lt; "2. Mississippi!\n";
+cout &lt;&lt; "3. Mississippi!\n";
+cout &lt;&lt; "4. Mississippi!\n";
+cout &lt;&lt; "5. Mississippi!\n";
+cout &lt;&lt; "6. Mississippi!\n";
+cout &lt;&lt; "7. Mississippi!\n";
+cout &lt;&lt; "8. Mississippi!\n";
+cout &lt;&lt; "9. Mississippi!\n";
+cout &lt;&lt; "10. Mississippi!\n";
+// phew... gets worse, when you need to do it for 100 or 1000 or more times... Yikes!!
+// you might just quit programming right now!
 </pre></div>
 </div>
 </div>
@@ -7912,15 +7917,15 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// Let's make our life a little easier!</span>
-<span class="c1">// using for loop, let's tell the computer to repeatedly print "Mississippi!" 10 times </span>
-<span class="c1">// so we don't have to type 10 different statements!</span>
-<span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;=</span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// it's common practice that i, j, k are used as loop counter variables</span>
-<span class="w">    </span><span class="c1">// you can use any identifier</span>
-<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w">  </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">". Mississippi!</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="c1">// how about counting "Mississippi!" 100 times or even 1000 and more?</span>
+<div class="highlight hl-C++14"><pre><span></span>// Let's make our life a little easier!
+// using for loop, let's tell the computer to repeatedly print "Mississippi!" 10 times 
+// so we don't have to type 10 different statements!
+for(int i=1; i&lt;=10; i++) {
+    // it's common practice that i, j, k are used as loop counter variables
+    // you can use any identifier
+    cout &lt;&lt;  i &lt;&lt; ". Mississippi!\n";
+}
+// how about counting "Mississippi!" 100 times or even 1000 and more?
 </pre></div>
 </div>
 </div>
@@ -7979,13 +7984,13 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// infinite loop example</span>
-<span class="c1">// if you run this, computer will not stop executing the loop body!</span>
-<span class="c1">// you've to manually interrupt the Kernel in Jupyter notebook</span>
-<span class="c1">// Click Kernel -&gt; Interrput</span>
-<span class="k">for</span><span class="p">(</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// infinite loop; no condition that stops the for loop</span>
-<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Hello World!"</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
-<span class="p">}</span>
+<div class="highlight hl-C++14"><pre><span></span>// infinite loop example
+// if you run this, computer will not stop executing the loop body!
+// you've to manually interrupt the Kernel in Jupyter notebook
+// Click Kernel -&gt; Interrput
+for( ; ; ) { // infinite loop; no condition that stops the for loop
+    cout &lt;&lt; "Hello World!" &lt;&lt; endl;
+}
 </pre></div>
 </div>
 </div>
@@ -7999,9 +8004,9 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// if the kernel restarts; must include all the libraries again</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<div class="highlight hl-C++14"><pre><span></span>// if the kernel restarts; must include all the libraries again
+#include &lt;iostream&gt;
+using namespace std;
 </pre></div>
 </div>
 </div>
@@ -8015,10 +8020,10 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// for loop with multiple statements for initialization; condition and updation</span>
-<span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="o">=</span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;=</span><span class="mi">10</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">j</span><span class="o">&gt;=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="o">--</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" + "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" = "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
-<span class="p">}</span>
+<div class="highlight hl-C++14"><pre><span></span>// for loop with multiple statements for initialization; condition and updation
+for(int i=1, j=10; i&lt;=10 &amp;&amp; j&gt;=1; i++, j--) {
+    cout &lt;&lt; i &lt;&lt; " + " &lt;&lt; j &lt;&lt; " = " &lt;&lt; i+j &lt;&lt; endl;
+}
 </pre></div>
 </div>
 </div>
@@ -8079,14 +8084,14 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// example of break and continue</span>
-<span class="c1">// comment and uncomment break and continue to see how each works</span>
-<span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;=</span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w">  </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">". Mississippi!</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
-<span class="w">    </span><span class="k">break</span><span class="p">;</span>
-<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">". Hello World!</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
-<span class="w">    </span><span class="c1">// continue;</span>
-<span class="p">}</span>
+<div class="highlight hl-C++14"><pre><span></span>// example of break and continue
+// comment and uncomment break and continue to see how each works
+for(int i=1; i&lt;=10; i++) {
+    cout &lt;&lt;  i &lt;&lt; ". Mississippi!\n";
+    break;
+    cout &lt;&lt; i &lt;&lt; ". Hello World!\n";
+    // continue;
+}
 </pre></div>
 </div>
 </div>
@@ -8113,14 +8118,14 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// break example</span>
-<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"before loop</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
-<span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;=</span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span>
-<span class="w">        </span><span class="k">break</span><span class="p">;</span>
-<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">". Hello World!"</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"after loop... all done!</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+<div class="highlight hl-C++14"><pre><span></span>// break example
+cout &lt;&lt; "before loop\n";
+for(int i=1; i&lt;=10; i++) {
+    if (i == 5)
+        break;
+    cout &lt;&lt; i &lt;&lt; ". Hello World!" &lt;&lt; endl;
+}
+cout &lt;&lt; "after loop... all done!\n";
 </pre></div>
 </div>
 </div>
@@ -8152,15 +8157,15 @@ after loop... all done!
 <div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// continue example</span>
-<span class="c1">// print odd numbers between 1 and 20</span>
-<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"before loop</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
-<span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;=</span><span class="mi">20</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="o">%</span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="c1">// skip every even i</span>
-<span class="w">        </span><span class="k">continue</span><span class="p">;</span>
-<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" "</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"</span><span class="se">\n</span><span class="s">after loop... all done!</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+<div class="highlight hl-C++14"><pre><span></span>// continue example
+// print odd numbers between 1 and 20
+cout &lt;&lt; "before loop\n";
+for(int i=1; i&lt;=20; i++) {
+    if (i%2 == 0) // skip every even i
+        continue;
+    cout &lt;&lt; i &lt;&lt; " ";
+}
+cout &lt;&lt; "\nafter loop... all done!\n";
 </pre></div>
 </div>
 </div>
@@ -8189,16 +8194,16 @@ after loop... all done!
 <div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// breaking infinite loop!</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="o">=</span><span class="mi">10</span><span class="p">;</span>
-<span class="k">for</span><span class="p">(</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// you could write int i=1, j=10; as initialization</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="o">&lt;=</span><span class="mi">10</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">j</span><span class="o">&gt;=</span><span class="mi">1</span><span class="p">)</span>
-<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" + "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" = "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
-<span class="w">    </span><span class="k">else</span>
-<span class="w">        </span><span class="k">break</span><span class="p">;</span>
-<span class="w">    </span>
-<span class="w">    </span><span class="n">i</span><span class="o">++</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="o">--</span><span class="p">;</span>
-<span class="p">}</span>
+<div class="highlight hl-C++14"><pre><span></span>// breaking infinite loop!
+int i=1, j=10;
+for( ; ; ) { // you could write int i=1, j=10; as initialization
+    if (i&lt;=10 &amp;&amp; j&gt;=1)
+        cout &lt;&lt; i &lt;&lt; " + " &lt;&lt; j &lt;&lt; " = " &lt;&lt; i+j &lt;&lt; endl;
+    else
+        break;
+    
+    i++, j--;
+}
 </pre></div>
 </div>
 </div>
@@ -8234,11 +8239,11 @@ after loop... all done!
 <div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// Countdown to Blast-off using for loop</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;unistd.h&gt;</span>
+<div class="highlight hl-C++14"><pre><span></span>// Countdown to Blast-off using for loop
+#include &lt;iostream&gt;
+#include &lt;unistd.h&gt;
 
-<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+using namespace std;
 </pre></div>
 </div>
 </div>
@@ -8252,14 +8257,14 @@ after loop... all done!
 <div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">--</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
-<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Blast Off!!!"</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
-<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
-<span class="w">        </span><span class="n">usleep</span><span class="p">(</span><span class="mi">1000000</span><span class="p">);</span><span class="w"> </span><span class="c1">// sleep for 1e6 microseconds = 1 second </span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight hl-C++14"><pre><span></span>for(int i=10; i&gt;=0; i--) {
+    if (i == 0)
+        cout &lt;&lt; "Blast Off!!!" &lt;&lt; endl;
+    else {
+        cout &lt;&lt; i &lt;&lt; endl;
+        usleep(1000000); // sleep for 1e6 microseconds = 1 second 
+    }
+}
 </pre></div>
 </div>
 </div>
@@ -8339,12 +8344,12 @@ Blast Off!!!
 <div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// example of range-based for loop</span>
-<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"before range-based loop...</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
-<span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">})</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">". Mississippi!</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"after range-based loop... all done!"</span><span class="p">;</span>
+<div class="highlight hl-C++14"><pre><span></span>// example of range-based for loop
+cout &lt;&lt; "before range-based loop...\n";
+for(int num: {1, 2, 4, 5, 6, 8, 9, 10}) {
+    cout &lt;&lt; num &lt;&lt; ". Mississippi!\n";
+}
+cout &lt;&lt; "after range-based loop... all done!";
 </pre></div>
 </div>
 </div>
@@ -8379,8 +8384,8 @@ after range-based loop... all done!</pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// example 2: iterate over each character in string using range-based loop</span>
-<span class="n">string</span><span class="w"> </span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"This is a sentence!"</span><span class="p">;</span>
+<div class="highlight hl-C++14"><pre><span></span>// example 2: iterate over each character in string using range-based loop
+string text = "This is a sentence!";
 </pre></div>
 </div>
 </div>
@@ -8394,12 +8399,12 @@ after range-based loop... all done!</pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstring&gt;</span><span class="c1"> // touppper</span>
+<div class="highlight hl-C++14"><pre><span></span>#include &lt;cstring&gt; // touppper
 
-<span class="c1">// recall: auto can be used to automatically determine type based on value assigned</span>
-<span class="k">for</span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">ch</span><span class="o">:</span><span class="w"> </span><span class="n">text</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">ch</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" -&gt; ASCII: "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="kt">int</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" UPPER: "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="kt">char</span><span class="p">(</span><span class="n">toupper</span><span class="p">(</span><span class="n">ch</span><span class="p">))</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
-<span class="p">}</span>
+// recall: auto can be used to automatically determine type based on value assigned
+for(auto ch: text) {
+    cout &lt;&lt; ch &lt;&lt; " -&gt; ASCII: " &lt;&lt; int(ch) &lt;&lt; " UPPER: " &lt;&lt; char(toupper(ch)) &lt;&lt; endl;
+}
 </pre></div>
 </div>
 </div>
@@ -8444,12 +8449,12 @@ e -&gt; ASCII: 101 UPPER: E
 <div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// convert text into uppercase</span>
-<span class="n">string</span><span class="w"> </span><span class="n">upper_text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">""</span><span class="p">;</span><span class="w"> </span><span class="c1">// variable to collect uppercase characters</span>
-<span class="k">for</span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">ch</span><span class="o">:</span><span class="w"> </span><span class="n">text</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">upper_text</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="kt">char</span><span class="p">(</span><span class="n">toupper</span><span class="p">(</span><span class="n">ch</span><span class="p">));</span>
-<span class="p">}</span>
-<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">text</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" -&gt; "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">upper_text</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<div class="highlight hl-C++14"><pre><span></span>// convert text into uppercase
+string upper_text = ""; // variable to collect uppercase characters
+for(auto ch: text) {
+    upper_text += char(toupper(ch));
+}
+cout &lt;&lt; text &lt;&lt; " -&gt; " &lt;&lt; upper_text &lt;&lt; endl;
 </pre></div>
 </div>
 </div>
@@ -8508,14 +8513,14 @@ e -&gt; ASCII: 101 UPPER: E
 <div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// example 1 - print a log table from 1 to 10</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cmath&gt;</span><span class="c1"> // log, log2, log10</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iomanip&gt;</span>
+<div class="highlight hl-C++14"><pre><span></span>// example 1 - print a log table from 1 to 10
+#include &lt;iostream&gt;
+#include &lt;cmath&gt; // log, log2, log10
+#include &lt;iomanip&gt;
 
-<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+using namespace std;
 
-<span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+int x;
 </pre></div>
 </div>
 </div>
@@ -8529,15 +8534,15 @@ e -&gt; ASCII: 101 UPPER: E
 <div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"x</span><span class="se">\t</span><span class="s">log(x)</span><span class="se">\t</span><span class="s">log2(x)</span><span class="se">\t</span><span class="s">log10(x)</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
-<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">setw</span><span class="p">(</span><span class="mi">35</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">setfill</span><span class="p">(</span><span class="sc">'='</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
-<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">fixed</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">setprecision</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
-<span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// while loop initialization</span>
-<span class="k">while</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// natural log base e, base 2 and base 10</span>
-<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">'\t'</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">log</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">'\t'</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">log2</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">'\t'</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">log10</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
-<span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// update loop variable</span>
-<span class="p">}</span>
+<div class="highlight hl-C++14"><pre><span></span>cout &lt;&lt; "x\tlog(x)\tlog2(x)\tlog10(x)\n";
+cout &lt;&lt; setw(35) &lt;&lt; setfill('=') &lt;&lt; "\n";
+cout &lt;&lt; fixed &lt;&lt; setprecision(4);
+x = 1; // while loop initialization
+while(x &lt;= 10) {
+    // natural log base e, base 2 and base 10
+    cout &lt;&lt; x &lt;&lt; '\t' &lt;&lt; log(x) &lt;&lt; '\t' &lt;&lt; log2(x) &lt;&lt; '\t' &lt;&lt; log10(x) &lt;&lt; endl;
+    x += 1; // update loop variable
+}
 </pre></div>
 </div>
 </div>
@@ -8575,10 +8580,10 @@ e -&gt; ASCII: 101 UPPER: E
 <div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// example 2 - run around the track until you're tired</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">lapCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="n">string</span><span class="w"> </span><span class="n">tired_response</span><span class="p">;</span>
-<span class="kt">bool</span><span class="w"> </span><span class="n">tired</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"> </span><span class="c1">// while loop initialization</span>
+<div class="highlight hl-C++14"><pre><span></span>// example 2 - run around the track until you're tired
+int lapCount = 0;
+string tired_response;
+bool tired = false; // while loop initialization
 </pre></div>
 </div>
 </div>
@@ -8592,14 +8597,14 @@ e -&gt; ASCII: 101 UPPER: E
 <div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="k">while</span><span class="p">(</span><span class="k">not</span><span class="w"> </span><span class="n">tired</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">lapCount</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"lap count = "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">lapCount</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
-<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Are you tired yet? [y|yes] or [n</span><span class="se">\n</span><span class="s">o]: "</span><span class="p">;</span>
-<span class="w">    </span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">tired_response</span><span class="p">;</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">tired_response</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">"y"</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">tired_response</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">"yes"</span><span class="p">)</span>
-<span class="w">        </span><span class="n">tired</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"> </span><span class="c1">// update loop variable</span>
-<span class="p">}</span>
+<div class="highlight hl-C++14"><pre><span></span>while(not tired) {
+    lapCount += 1;
+    cout &lt;&lt; "lap count = " &lt;&lt; lapCount &lt;&lt; endl;
+    cout &lt;&lt; "Are you tired yet? [y|yes] or [n\no]: ";
+    cin &gt;&gt; tired_response;
+    if (tired_response == "y" or tired_response == "yes")
+        tired = true; // update loop variable
+}
 </pre></div>
 </div>
 </div>
@@ -8634,18 +8639,18 @@ o]: yes
 <div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// using break and continue statements in while loop</span>
-<span class="c1">// NOTE: they don't have to be used together!</span>
-<span class="n">lapCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="k">while</span><span class="p">(</span><span class="nb">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">lapCount</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">lapCount</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">continue</span><span class="p">;</span><span class="w"> </span><span class="c1">// skip the rest of the code</span>
-<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"lap count = "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">lapCount</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
-<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Are you tired yet? [y|yes] or [n</span><span class="se">\n</span><span class="s">o]: "</span><span class="p">;</span>
-<span class="w">    </span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">tired_response</span><span class="p">;</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">tired_response</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">"y"</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">tired_response</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">"yes"</span><span class="p">)</span>
-<span class="w">        </span><span class="k">break</span><span class="p">;</span>
-<span class="p">}</span>
+<div class="highlight hl-C++14"><pre><span></span>// using break and continue statements in while loop
+// NOTE: they don't have to be used together!
+lapCount = 0;
+while(true) {
+    lapCount += 1;
+    if (lapCount == 2) continue; // skip the rest of the code
+    cout &lt;&lt; "lap count = " &lt;&lt; lapCount &lt;&lt; endl;
+    cout &lt;&lt; "Are you tired yet? [y|yes] or [n\no]: ";
+    cin &gt;&gt; tired_response;
+    if (tired_response == "y" or tired_response == "yes")
+        break;
+}
 </pre></div>
 </div>
 </div>
@@ -8723,10 +8728,10 @@ o]: yes
 <div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// example 1 - game play simulation</span>
-<span class="c1">// initialize loop variables</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">counter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// keep track of no. of times game is played</span>
-<span class="n">string</span><span class="w"> </span><span class="n">play_again</span><span class="p">;</span><span class="w"> </span><span class="c1">// player's response after each game</span>
+<div class="highlight hl-C++14"><pre><span></span>// example 1 - game play simulation
+// initialize loop variables
+int counter = 0; // keep track of no. of times game is played
+string play_again; // player's response after each game
 </pre></div>
 </div>
 </div>
@@ -8740,16 +8745,16 @@ o]: yes
 <div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// play game at least once</span>
-<span class="k">do</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// call game() function or implement game here...</span>
-<span class="w">    </span><span class="n">counter</span><span class="o">++</span><span class="p">;</span>
-<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"played "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">counter</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" times.</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
-<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"want to play again? [y|n]: "</span><span class="p">;</span>
-<span class="w">    </span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">play_again</span><span class="p">;</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">play_again</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s">"y"</span><span class="p">)</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
-<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">continue</span><span class="p">;</span><span class="w"> </span><span class="c1">// not necessary!</span>
-<span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nb">true</span><span class="p">);</span>
+<div class="highlight hl-C++14"><pre><span></span>// play game at least once
+do {
+    // call game() function or implement game here...
+    counter++;
+    cout &lt;&lt; "played " &lt;&lt; counter &lt;&lt; " times.\n";
+    cout &lt;&lt; "want to play again? [y|n]: ";
+    cin &gt;&gt; play_again;
+    if (play_again != "y") break;
+    else continue; // not necessary!
+} while (true);
 </pre></div>
 </div>
 </div>
@@ -8781,8 +8786,8 @@ want to play again? [y|n]: n
 <div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// example 2 - input validation</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">input</span><span class="p">;</span><span class="w"> </span><span class="c1">// variable to store user input</span>
+<div class="highlight hl-C++14"><pre><span></span>// example 2 - input validation
+int input; // variable to store user input
 </pre></div>
 </div>
 </div>
@@ -8796,20 +8801,20 @@ want to play again? [y|n]: n
 <div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="k">do</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Enter a whole number between 1 and 20: "</span><span class="p">;</span>
-<span class="w">    </span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">input</span><span class="p">;</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cin</span><span class="p">.</span><span class="n">fail</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// if cin failed; wrong type is entered e.g.</span>
-<span class="w">        </span><span class="n">cin</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span><span class="w"> </span><span class="c1">// clear the error flag</span>
-<span class="w">        </span><span class="n">cin</span><span class="p">.</span><span class="n">ignore</span><span class="p">(</span><span class="n">INT_MAX</span><span class="p">,</span><span class="w"> </span><span class="sc">'\n'</span><span class="p">);</span><span class="w"> </span><span class="c1">// extract and discard upto INT_MAX characters or upto '\n' in std input stream</span>
-<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Invalid input. Try again!</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
-<span class="w">        </span><span class="k">continue</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">input</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"input must be a whole number between 1 and 20</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
-<span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nb">true</span><span class="p">);</span>
+<div class="highlight hl-C++14"><pre><span></span>do {
+    cout &lt;&lt; "Enter a whole number between 1 and 20: ";
+    cin &gt;&gt; input;
+    if (cin.fail()) { // if cin failed; wrong type is entered e.g.
+        cin.clear(); // clear the error flag
+        cin.ignore(INT_MAX, '\n'); // extract and discard upto INT_MAX characters or upto '\n' in std input stream
+        cout &lt;&lt; "Invalid input. Try again!\n";
+        continue;
+    }
+    else if (input &lt; 1 || input &gt; 20) {
+        cout &lt;&lt; "input must be a whole number between 1 and 20\n";
+    }
+    else break;
+} while (true);
 </pre></div>
 </div>
 </div>
@@ -8844,7 +8849,7 @@ Enter a whole number between 1 and 20: 15
 <div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Great! You entered: "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<div class="highlight hl-C++14"><pre><span></span>cout &lt;&lt; "Great! You entered: " &lt;&lt; input &lt;&lt; endl;
 </pre></div>
 </div>
 </div>
@@ -8910,10 +8915,10 @@ Enter a whole number between 1 and 20: 15
 <div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iomanip&gt;</span>
+<div class="highlight hl-C++14"><pre><span></span>#include &lt;iostream&gt;
+#include &lt;iomanip&gt;
 
-<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+using namespace std;
 </pre></div>
 </div>
 </div>
@@ -8927,10 +8932,10 @@ Enter a whole number between 1 and 20: 15
 <div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// function that multiplies two numbers</span>
-<span class="kt">int</span><span class="w"> </span><span class="nf">multiply</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">n1</span><span class="o">*</span><span class="n">n2</span><span class="p">;</span>
-<span class="p">}</span>
+<div class="highlight hl-C++14"><pre><span></span>// function that multiplies two numbers
+int multiply(int n1, int n2) {
+    return n1*n2;
+}
 </pre></div>
 </div>
 </div>
@@ -8944,12 +8949,12 @@ Enter a whole number between 1 and 20: 15
 <div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// function prints multiples of N from 1 to 10</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">print_multiples</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;=</span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">setw</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">multiply</span><span class="p">(</span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
-<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
-<span class="p">}</span>
+<div class="highlight hl-C++14"><pre><span></span>// function prints multiples of N from 1 to 10
+void print_multiples(int N) {
+    for(int i=1; i&lt;=10; i++)
+        cout &lt;&lt; setw(5) &lt;&lt; multiply(N, i);
+    cout &lt;&lt; endl;
+}
 </pre></div>
 </div>
 </div>
@@ -8963,7 +8968,7 @@ Enter a whole number between 1 and 20: 15
 <div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="n">print_multiples</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<div class="highlight hl-C++14"><pre><span></span>print_multiples(1);
 </pre></div>
 </div>
 </div>
@@ -8990,7 +8995,7 @@ Enter a whole number between 1 and 20: 15
 <div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="n">print_multiples</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<div class="highlight hl-C++14"><pre><span></span>print_multiples(2);
 </pre></div>
 </div>
 </div>
@@ -9017,12 +9022,12 @@ Enter a whole number between 1 and 20: 15
 <div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// now print_mutiples need to be called 10 times</span>
-<span class="c1">// print_multiples function is used as an inner loop</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">printMultipleTable</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;=</span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-<span class="w">        </span><span class="n">print_multiples</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
-<span class="p">}</span>
+<div class="highlight hl-C++14"><pre><span></span>// now print_mutiples need to be called 10 times
+// print_multiples function is used as an inner loop
+void printMultipleTable() {
+    for(int i=1; i&lt;=10; i++)
+        print_multiples(i);
+}
 </pre></div>
 </div>
 </div>
@@ -9036,7 +9041,7 @@ Enter a whole number between 1 and 20: 15
 <div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="n">printMultipleTable</span><span class="p">();</span>
+<div class="highlight hl-C++14"><pre><span></span>printMultipleTable();
 </pre></div>
 </div>
 </div>
@@ -9087,15 +9092,15 @@ Enter a whole number between 1 and 20: 15
 <div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// function prints multiplication table using nested loop</span>
-<span class="c1">// print_multiples function is replaced with its actual code</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">multiplicationTable</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;=</span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// for each i... (row)</span>
-<span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">&lt;=</span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="c1">// for each column</span>
-<span class="w">            </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">setw</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">multiply</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">);</span>
-<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight hl-C++14"><pre><span></span>// function prints multiplication table using nested loop
+// print_multiples function is replaced with its actual code
+void multiplicationTable() {
+    for(int i=1; i&lt;=10; i++) { // for each i... (row)
+        for(int j=1; j&lt;=10; j++) // for each column
+            cout &lt;&lt; setw(5) &lt;&lt; multiply(i, j);
+        cout &lt;&lt; endl;
+    }
+}
 </pre></div>
 </div>
 </div>
@@ -9109,7 +9114,7 @@ Enter a whole number between 1 and 20: 15
 <div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="n">multiplicationTable</span><span class="p">();</span>
+<div class="highlight hl-C++14"><pre><span></span>multiplicationTable();
 </pre></div>
 </div>
 </div>
@@ -9164,14 +9169,14 @@ Enter a whole number between 1 and 20: 15
 <div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// solution</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">printTriangle</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="n">ch</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;=</span><span class="n">height</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// could you start i from 0?</span>
-<span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">&lt;=</span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
-<span class="w">            </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">ch</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" "</span><span class="p">;</span>
-<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight hl-C++14"><pre><span></span>// solution
+void printTriangle(char ch, int height) {
+    for(int i=1; i&lt;=height; i++) { // could you start i from 0?
+        for(int j=1; j&lt;=i; j++)
+            cout &lt;&lt; ch &lt;&lt; " ";
+        cout &lt;&lt; endl;
+    }
+}
 </pre></div>
 </div>
 </div>
@@ -9185,8 +9190,8 @@ Enter a whole number between 1 and 20: 15
 <div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="c1">// call the function to manually test it</span>
-<span class="n">printTriangle</span><span class="p">(</span><span class="sc">'*'</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
+<div class="highlight hl-C++14"><pre><span></span>// call the function to manually test it
+printTriangle('*', 5);
 </pre></div>
 </div>
 </div>
@@ -9500,7 +9505,7 @@ Enter a whole number between 1 and 20: 15
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-c++"><pre><span></span><span class="w"> </span>
+<div class="highlight hl-C++14"><pre><span></span> 
 </pre></div>
 </div>
 </div>

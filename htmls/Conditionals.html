@@ -7527,6 +7527,11 @@ a.anchor-link {
 <li>logical operators</li>
 <li>passing arguments to <code>main()</code> and using them</li>
 </ul>
+<h2 id="External-Resources">External Resources<a class="anchor-link" href="#External-Resources">¶</a></h2><ul>
+<li>YouTube Video - Conditionals and Logic - <a href="https://youtu.be/V5C0kXvcljM">https://youtu.be/V5C0kXvcljM</a></li>
+<li>YouTube Podcast - Conditionals and Logic - <a href="https://youtu.be/SjrD1c8a9to">https://youtu.be/SjrD1c8a9to</a></li>
+<li>NotebookLM learning materials - <a href="https://notebooklm.google.com/notebook/b2e09014-62d2-46ac-aa6c-29ee3d5e46b2">https://notebooklm.google.com/notebook/b2e09014-62d2-46ac-aa6c-29ee3d5e46b2</a></li>
+</ul>
 <h2 id="Conditional-execution">Conditional execution<a class="anchor-link" href="#Conditional-execution">¶</a></h2><ul>
 <li>so far, our programs executed top to bottom starting from <strong>main( )</strong><ul>
 <li>statement by statement</li>
@@ -7615,55 +7620,13 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="c1">#include &lt;iostream&gt; // for std io</span>
-<span class="c1">#include &lt;cassert&gt; // for assert()</span>
-<span class="c1">#include &lt;string&gt; // for C++ string</span>
-<span class="n">using</span> <span class="n">namespace</span> <span class="n">std</span><span class="p">;</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="o">//</span> <span class="n">comparison</span> <span class="n">operators</span> <span class="n">examples</span>
-<span class="mi">1</span> <span class="o">==</span> <span class="mi">1</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>true</pre>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="nb">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
-<span class="nb">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+<div class="highlight hl-C++17"><pre><span></span>#include &lt;iostream&gt; // for std io
+#include &lt;cassert&gt; // for assert()
+#include &lt;string&gt; // for C++ string
+using namespace std;
 </pre></div>
 </div>
 </div>
@@ -7677,8 +7640,50 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="o">//</span> <span class="ow">is</span> <span class="n">x</span> <span class="n">eqal</span> <span class="n">to</span> <span class="n">y</span><span class="err">?</span>
-<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="n">y</span><span class="p">);</span>
+<div class="highlight hl-C++17"><pre><span></span>// comparison operators examples
+1 == 1
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>true</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-C++17"><pre><span></span>int x = 10;
+int y = 20;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-C++17"><pre><span></span>// is x eqal to y?
+cout &lt;&lt; (x == y);
 </pre></div>
 </div>
 </div>
@@ -7704,9 +7709,9 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="o">//</span> <span class="n">let</span><span class="s1">'s print true of false using io manipulator</span>
-<span class="o">//</span> <span class="ow">is</span> <span class="n">x</span> <span class="ow">not</span> <span class="n">equal</span> <span class="n">to</span> <span class="n">y</span><span class="err">?</span>
-<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">boolalpha</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">x</span> <span class="o">!=</span> <span class="n">y</span><span class="p">);</span>
+<div class="highlight hl-C++17"><pre><span></span>// let's print true of false using io manipulator
+// is x not equal to y?
+cout &lt;&lt; boolalpha &lt;&lt; (x != y);
 </pre></div>
 </div>
 </div>
@@ -7732,7 +7737,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">);</span>
+<div class="highlight hl-C++17"><pre><span></span>cout &lt;&lt; (x &gt; y);
 </pre></div>
 </div>
 </div>
@@ -7758,7 +7763,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span><span class="p">);</span>
+<div class="highlight hl-C++17"><pre><span></span>cout &lt;&lt; (x &lt; y);
 </pre></div>
 </div>
 </div>
@@ -7784,7 +7789,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;=</span> <span class="n">y</span><span class="p">);</span>
+<div class="highlight hl-C++17"><pre><span></span>cout &lt;&lt; (x &gt;= y);
 </pre></div>
 </div>
 </div>
@@ -7810,7 +7815,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;=</span> <span class="n">y</span><span class="p">);</span>
+<div class="highlight hl-C++17"><pre><span></span>cout &lt;&lt; (x &lt;= y);
 </pre></div>
 </div>
 </div>
@@ -7871,12 +7876,12 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="o">//</span> <span class="n">examples</span>
-<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"stuff before if</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">true</span><span class="p">)</span> <span class="p">{</span> <span class="o">//</span> <span class="n">true</span> <span class="ow">is</span> <span class="n">always</span> <span class="n">true</span><span class="p">;</span> <span class="n">same</span> <span class="k">as</span> <span class="n">true</span> <span class="o">==</span> <span class="n">true</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"body of if</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"stuff after if</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+<div class="highlight hl-C++17"><pre><span></span>// examples
+cout &lt;&lt; "stuff before if\n";
+if (true) { // true is always true; same as true == true
+    cout &lt;&lt; "body of if\n";
+}
+cout &lt;&lt; "stuff after if\n";
 </pre></div>
 </div>
 </div>
@@ -7905,11 +7910,11 @@ stuff after if
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"stuff before if</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">false</span><span class="p">)</span> <span class="p">{</span> <span class="o">//</span> <span class="n">false</span> <span class="n">always</span> <span class="n">evaluates</span> <span class="n">to</span> <span class="n">false</span><span class="p">;</span> <span class="n">same</span> <span class="k">as</span> <span class="n">false</span> <span class="o">==</span> <span class="n">true</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"body of if</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"stuff after if</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+<div class="highlight hl-C++17"><pre><span></span>cout &lt;&lt; "stuff before if\n";
+if (false) { // false always evaluates to false; same as false == true
+    cout &lt;&lt; "body of if\n";
+}
+cout &lt;&lt; "stuff after if\n";
 </pre></div>
 </div>
 </div>
@@ -7937,8 +7942,8 @@ stuff after if
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="o">//</span> <span class="n">check</span> <span class="k">if</span> <span class="n">a</span> <span class="n">given</span> <span class="n">number</span> <span class="ow">is</span> <span class="n">positive</span>
-<span class="nb">int</span> <span class="n">num</span><span class="p">;</span>
+<div class="highlight hl-C++17"><pre><span></span>// check if a given number is positive
+int num;
 </pre></div>
 </div>
 </div>
@@ -7952,12 +7957,12 @@ stuff after if
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"enter a whole number: "</span><span class="p">;</span>
-<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">num</span><span class="p">;</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">num</span> <span class="o">&lt;&lt;</span> <span class="s2">" is positive</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"Good bye!"</span><span class="p">;</span>
+<div class="highlight hl-C++17"><pre><span></span>cout &lt;&lt; "enter a whole number: ";
+cin &gt;&gt; num;
+if (num &gt; 0) {
+    cout &lt;&lt; num &lt;&lt; " is positive\n";
+}
+cout &lt;&lt; "Good bye!";
 </pre></div>
 </div>
 </div>
@@ -8016,17 +8021,17 @@ Good bye!</pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="o">//</span> <span class="n">determine</span> <span class="k">if</span> <span class="n">the</span> <span class="n">given</span> <span class="n">number</span> <span class="ow">is</span> <span class="n">positive</span> <span class="ow">or</span> <span class="n">negative</span>
-<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"Enter a whole number: "</span><span class="p">;</span>
-<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">num</span><span class="p">;</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">num</span> <span class="o">&lt;&lt;</span> <span class="s2">" is positive</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="k">else</span> <span class="p">{</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">num</span> <span class="o">&lt;&lt;</span> <span class="s2">" is negative</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"Good bye!"</span><span class="p">;</span>
-<span class="o">//</span> <span class="n">run</span> <span class="n">it</span> <span class="n">few</span> <span class="n">times</span> <span class="n">providing</span> <span class="o">+</span><span class="n">ve</span> <span class="ow">and</span> <span class="o">-</span><span class="n">ve</span> <span class="n">numbers</span>
+<div class="highlight hl-C++17"><pre><span></span>// determine if the given number is positive or negative
+cout &lt;&lt; "Enter a whole number: ";
+cin &gt;&gt; num;
+if (num &gt; 0) {
+    cout &lt;&lt; num &lt;&lt; " is positive\n";
+}
+else {
+    cout &lt;&lt; num &lt;&lt; " is negative\n";
+}
+cout &lt;&lt; "Good bye!";
+// run it few times providing +ve and -ve numbers
 </pre></div>
 </div>
 </div>
@@ -8110,18 +8115,18 @@ Good bye!</pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="o">//</span> <span class="n">determine</span> <span class="k">if</span> <span class="n">a</span> <span class="n">given</span> <span class="n">number</span> <span class="ow">is</span> <span class="mi">0</span><span class="p">,</span> <span class="n">positive</span><span class="p">,</span> <span class="ow">or</span> <span class="n">negative</span>
-<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"enter a whole number: "</span><span class="p">;</span>
-<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">num</span><span class="p">;</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
-    <span class="o">//</span> <span class="k">if</span> <span class="n">a</span> <span class="n">block</span> <span class="n">has</span> <span class="n">only</span> <span class="n">one</span> <span class="n">statment</span><span class="p">;</span> <span class="p">{}</span> <span class="n">can</span> <span class="n">be</span> <span class="n">ignored</span><span class="err">!</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">num</span> <span class="o">&lt;&lt;</span> <span class="s2">" is positive</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">num</span> <span class="o">&lt;&lt;</span> <span class="s2">" is negative</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-<span class="k">else</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"the entered number is 0</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+<div class="highlight hl-C++17"><pre><span></span>// determine if a given number is 0, positive, or negative
+cout &lt;&lt; "enter a whole number: ";
+cin &gt;&gt; num;
+if (num &gt; 0)
+    // if a block has only one statment; {} can be ignored!
+    cout &lt;&lt; num &lt;&lt; " is positive\n";
+else if (num &lt; 0)
+    cout &lt;&lt; num &lt;&lt; " is negative\n";
+else
+    cout &lt;&lt; "the entered number is 0\n";
 
-<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"Good bye!"</span><span class="p">;</span>
+cout &lt;&lt; "Good bye!";
 </pre></div>
 </div>
 </div>
@@ -8169,8 +8174,8 @@ Good bye!</pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="o">//</span> <span class="n">variable</span> <span class="n">to</span> <span class="n">store</span> <span class="n">the</span> <span class="n">numeric</span> <span class="n">grade</span>
-<span class="nb">float</span> <span class="n">grade</span><span class="p">;</span>
+<div class="highlight hl-C++17"><pre><span></span>// variable to store the numeric grade
+float grade;
 </pre></div>
 </div>
 </div>
@@ -8184,24 +8189,24 @@ Good bye!</pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="o">//</span> <span class="n">Implementation</span> <span class="n">I</span>
-<span class="o">//</span> <span class="n">does</span> <span class="n">this</span> <span class="n">solution</span> <span class="n">give</span> <span class="n">correct</span> <span class="n">answer</span><span class="err">?</span>
-<span class="o">//</span> <span class="n">order</span> <span class="n">of</span> <span class="n">checking</span> <span class="n">condition</span> <span class="n">matters</span><span class="err">!</span>
-<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"Enter a grade: "</span><span class="p">;</span>
-<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">grade</span><span class="p">;</span>
+<div class="highlight hl-C++17"><pre><span></span>// Implementation I
+// does this solution give correct answer?
+// order of checking condition matters!
+cout &lt;&lt; "Enter a grade: ";
+cin &gt;&gt; grade;
 
-<span class="k">if</span> <span class="p">(</span><span class="n">grade</span> <span class="o">&lt;</span> <span class="mi">60</span><span class="p">)</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">grade</span> <span class="o">&lt;&lt;</span> <span class="s2">"is an F!</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">)</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">grade</span> <span class="o">&lt;&lt;</span> <span class="s2">" is a D.</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">70</span><span class="p">)</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">grade</span> <span class="o">&lt;&lt;</span> <span class="s2">"is a C.</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">80</span><span class="p">)</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">grade</span> <span class="o">&lt;&lt;</span> <span class="s2">" is a B.</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">90</span><span class="p">)</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">grade</span> <span class="o">&lt;&lt;</span> <span class="s2">" is an A!</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+if (grade &lt; 60)
+    cout &lt;&lt; grade &lt;&lt; "is an F!\n";
+else if(grade &gt;= 60)
+    cout &lt;&lt; grade &lt;&lt; " is a D.\n";
+else if(grade &gt;= 70)
+    cout &lt;&lt; grade &lt;&lt; "is a C.\n";
+else if (grade &gt;= 80)
+    cout &lt;&lt; grade &lt;&lt; " is a B.\n";
+else if (grade &gt;= 90)
+    cout &lt;&lt; grade &lt;&lt; " is an A!\n";
 
-<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"Good bye!"</span><span class="p">;</span>
+cout &lt;&lt; "Good bye!";
 </pre></div>
 </div>
 </div>
@@ -8229,33 +8234,33 @@ Good bye!</pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="o">//</span> <span class="n">Implementation</span> <span class="n">II</span>
-<span class="o">//</span> <span class="n">how</span> <span class="n">about</span> <span class="n">this</span> <span class="n">solution</span><span class="p">;</span> <span class="n">does</span> <span class="n">this</span> <span class="n">give</span> <span class="n">correct</span> <span class="n">answer</span><span class="err">?</span>
-<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"Enter a grade: "</span><span class="p">;</span>
-<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">grade</span><span class="p">;</span>
+<div class="highlight hl-C++17"><pre><span></span>// Implementation II
+// how about this solution; does this give correct answer?
+cout &lt;&lt; "Enter a grade: ";
+cin &gt;&gt; grade;
 
-<span class="k">if</span> <span class="p">(</span><span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">90</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">grade</span> <span class="o">&lt;&lt;</span> <span class="s2">" is an A! :))</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"Awesome job!</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">80</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">grade</span> <span class="o">&lt;&lt;</span> <span class="s2">" is a B. :)</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"Great job! So close to acing... keep working!</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">70</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">grade</span> <span class="o">&lt;&lt;</span> <span class="s2">" is a C. :|</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"Good job! work harder to get a B or an A</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">grade</span> <span class="o">&lt;&lt;</span> <span class="s2">" is a D. :(</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"Sorry, D isn't good enought to move on to CS2</span><span class="se">\n</span><span class="s2">. Work very hard!"</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="k">else</span> <span class="p">{</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">grade</span> <span class="o">&lt;&lt;</span> <span class="s2">" is an F. :((</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"Sorry, that's a fail. Work really really hard to pass!!</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-<span class="p">}</span>
+if (grade &gt;= 90) {
+    cout &lt;&lt; grade &lt;&lt; " is an A! :))\n";
+    cout &lt;&lt; "Awesome job!\n";
+}
+else if(grade &gt;= 80) {
+    cout &lt;&lt; grade &lt;&lt; " is a B. :)\n";
+    cout &lt;&lt; "Great job! So close to acing... keep working!\n";
+}
+else if(grade &gt;= 70) {
+    cout &lt;&lt; grade &lt;&lt; " is a C. :|\n";
+    cout &lt;&lt; "Good job! work harder to get a B or an A\n";
+}
+else if(grade &gt;= 60) {
+    cout &lt;&lt; grade &lt;&lt; " is a D. :(\n";
+    cout &lt;&lt; "Sorry, D isn't good enought to move on to CS2\n. Work very hard!";
+}
+else {
+    cout &lt;&lt; grade &lt;&lt; " is an F. :((\n";
+    cout &lt;&lt; "Sorry, that's a fail. Work really really hard to pass!!\n";
+}
 
-<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"Good bye!</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+cout &lt;&lt; "Good bye!\n";
 </pre></div>
 </div>
 </div>
@@ -8285,19 +8290,19 @@ Good bye!
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="o">//</span> <span class="n">Implementation</span> <span class="n">III</span> <span class="o">-</span> <span class="n">using</span> <span class="n">function</span>
-<span class="n">char</span> <span class="n">find_letter_grade</span><span class="p">(</span><span class="nb">float</span> <span class="n">grade</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">90</span><span class="p">)</span>
-        <span class="k">return</span> <span class="s1">'A'</span><span class="p">;</span>
-    <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">80</span><span class="p">)</span>
-        <span class="k">return</span> <span class="s1">'B'</span><span class="p">;</span>
-    <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">70</span><span class="p">)</span>
-        <span class="k">return</span> <span class="s1">'C'</span><span class="p">;</span>
-    <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">)</span>
-        <span class="k">return</span> <span class="s1">'D'</span><span class="p">;</span>
-    <span class="k">else</span>
-        <span class="k">return</span> <span class="s1">'F'</span><span class="p">;</span>
-<span class="p">}</span>
+<div class="highlight hl-C++17"><pre><span></span>// Implementation III - using function
+char find_letter_grade(float grade) {
+    if (grade &gt;= 90)
+        return 'A';
+    else if(grade &gt;= 80)
+        return 'B';
+    else if(grade &gt;= 70)
+        return 'C';
+    else if(grade &gt;= 60)
+        return 'D';
+    else
+        return 'F';
+}
 </pre></div>
 </div>
 </div>
@@ -8311,13 +8316,13 @@ Good bye!
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="o">//</span> <span class="n">manually</span> <span class="n">test</span> <span class="n">find_letter_grade</span> <span class="n">function</span>
-<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"Enter a numeric grade: "</span><span class="p">;</span>
-<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">grade</span><span class="p">;</span>
-<span class="n">char</span> <span class="n">l_grade</span> <span class="o">=</span> <span class="n">find_letter_grade</span><span class="p">(</span><span class="n">grade</span><span class="p">);</span>
-<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">grade</span> <span class="o">&lt;&lt;</span> <span class="s2">" is equivalent to "</span> <span class="o">&lt;&lt;</span> <span class="n">l_grade</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">l_grade</span> <span class="o">==</span> <span class="s1">'A'</span><span class="p">)</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"Awesome job! :))</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+<div class="highlight hl-C++17"><pre><span></span>// manually test find_letter_grade function
+cout &lt;&lt; "Enter a numeric grade: ";
+cin &gt;&gt; grade;
+char l_grade = find_letter_grade(grade);
+cout &lt;&lt; grade &lt;&lt; " is equivalent to " &lt;&lt; l_grade &lt;&lt; endl;
+if (l_grade == 'A')
+    cout &lt;&lt; "Awesome job! :))\n";
 </pre></div>
 </div>
 </div>
@@ -8345,14 +8350,14 @@ Good bye!
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="o">//</span> <span class="n">automatically</span> <span class="n">test</span> <span class="n">find_letter_grade</span> <span class="n">function</span>
-<span class="n">void</span> <span class="n">test_find_letter_grade</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">assert</span><span class="p">(</span><span class="n">find_letter_grade</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="o">==</span> <span class="s1">'A'</span><span class="p">);</span>
-    <span class="k">assert</span><span class="p">(</span><span class="n">find_letter_grade</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span> <span class="o">==</span> <span class="s1">'F'</span><span class="p">);</span>
-    <span class="k">assert</span><span class="p">(</span><span class="n">find_letter_grade</span><span class="p">(</span><span class="mi">89</span><span class="p">)</span> <span class="o">==</span> <span class="s1">'B'</span><span class="p">);</span>
-    <span class="o">//</span> <span class="n">TODO</span><span class="p">:</span> <span class="n">test</span> <span class="k">for</span> <span class="n">every</span> <span class="n">possible</span> <span class="n">outcome</span>
-    <span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="s2">"all test casses passed!"</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-<span class="p">}</span>
+<div class="highlight hl-C++17"><pre><span></span>// automatically test find_letter_grade function
+void test_find_letter_grade() {
+    assert(find_letter_grade(100) == 'A');
+    assert(find_letter_grade(40) == 'F');
+    assert(find_letter_grade(89) == 'B');
+    // TODO: test for every possible outcome
+    cerr &lt;&lt; "all test casses passed!" &lt;&lt; endl;
+}
 </pre></div>
 </div>
 </div>
@@ -8366,7 +8371,7 @@ Good bye!
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="n">test_find_letter_grade</span><span class="p">();</span>
+<div class="highlight hl-C++17"><pre><span></span>test_find_letter_grade();
 </pre></div>
 </div>
 </div>
@@ -8439,30 +8444,30 @@ Good bye!
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="o">//</span> <span class="n">a</span> <span class="n">program</span> <span class="n">that</span> <span class="n">determines</span> <span class="k">if</span> <span class="n">a</span> <span class="n">given</span> <span class="n">number</span> <span class="ow">is</span> <span class="mi">0</span><span class="p">,</span> <span class="n">even</span> <span class="ow">or</span> <span class="n">odd</span> <span class="ow">and</span> <span class="n">positive</span> <span class="ow">or</span> <span class="n">negative</span>
-<span class="o">//</span> <span class="n">the</span> <span class="n">order</span> <span class="n">of</span> <span class="n">condition</span> <span class="n">doesn</span><span class="s1">'t matter in this example</span>
-<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"enter a whole number: "</span><span class="p">;</span>
-<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">num</span><span class="p">;</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">num</span> <span class="o">&lt;&lt;</span> <span class="s2">" is positive "</span><span class="p">;</span>
-    <span class="o">//</span> <span class="n">check</span> <span class="k">if</span> <span class="n">the</span> <span class="n">number</span> <span class="ow">is</span> <span class="n">even</span> <span class="ow">or</span> <span class="n">odd</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
-        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"and even</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-    <span class="k">else</span>
-        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"and odd</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">num</span> <span class="o">&lt;&lt;</span> <span class="s2">" is negative "</span><span class="p">;</span>
-    <span class="o">//</span> <span class="n">check</span> <span class="k">if</span> <span class="n">the</span> <span class="n">number</span> <span class="ow">is</span> <span class="n">even</span> <span class="ow">or</span> <span class="n">odd</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
-        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"and even</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-    <span class="k">else</span>
-        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"and odd</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="k">else</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"the entered number is 0</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+<div class="highlight hl-C++17"><pre><span></span>// a program that determines if a given number is 0, even or odd and positive or negative
+// the order of condition doesn't matter in this example
+cout &lt;&lt; "enter a whole number: ";
+cin &gt;&gt; num;
+if (num &gt; 0) {
+    cout &lt;&lt; num &lt;&lt; " is positive ";
+    // check if the number is even or odd
+    if (num %2 == 0)
+        cout &lt;&lt; "and even\n";
+    else
+        cout &lt;&lt; "and odd\n";
+}
+else if (num &lt; 0) {
+    cout &lt;&lt; num &lt;&lt; " is negative ";
+    // check if the number is even or odd
+    if (num %2 == 0)
+        cout &lt;&lt; "and even\n";
+    else
+        cout &lt;&lt; "and odd\n";
+}
+else
+    cout &lt;&lt; "the entered number is 0\n";
 
-<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"Good bye!"</span><span class="p">;</span>
+cout &lt;&lt; "Good bye!";
 </pre></div>
 </div>
 </div>
@@ -8501,7 +8506,7 @@ Good bye!</pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="o">//</span> <span class="n">TODO</span><span class="p">:</span> <span class="n">Convert</span> <span class="n">the</span> <span class="n">above</span> <span class="n">program</span> <span class="k">as</span> <span class="n">a</span> <span class="n">function</span>
+<div class="highlight hl-C++17"><pre><span></span>// TODO: Convert the above program as a function
 </pre></div>
 </div>
 </div>
@@ -8545,12 +8550,12 @@ Good bye!</pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="o">//</span> <span class="n">application</span> <span class="n">of</span> <span class="n">conditional</span> <span class="n">operator</span>
-<span class="o">//</span> <span class="n">write</span> <span class="n">a</span> <span class="n">program</span> <span class="n">that</span> <span class="n">determines</span> <span class="k">if</span> <span class="n">a</span> <span class="n">given</span> <span class="n">number</span> <span class="ow">is</span> <span class="n">odd</span> <span class="ow">or</span> <span class="n">even</span>
+<div class="highlight hl-C++17"><pre><span></span>// application of conditional operator
+// write a program that determines if a given number is odd or even
 
-<span class="c1">#include &lt;iostream&gt;</span>
-<span class="c1">#include &lt;string&gt;</span>
-<span class="n">using</span> <span class="n">namespace</span> <span class="n">std</span><span class="p">;</span>
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
 </pre></div>
 </div>
 </div>
@@ -8564,7 +8569,7 @@ Good bye!</pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="nb">int</span> <span class="n">number</span><span class="p">;</span>
+<div class="highlight hl-C++17"><pre><span></span>int number;
 </pre></div>
 </div>
 </div>
@@ -8578,9 +8583,9 @@ Good bye!</pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"Enter an Integer number: "</span><span class="p">;</span>
-<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">number</span><span class="p">;</span>
-<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">number</span> <span class="o">&lt;&lt;</span> <span class="s2">" is "</span> <span class="o">&lt;&lt;</span> <span class="p">((</span><span class="n">number</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="err">?</span> <span class="s2">"even"</span> <span class="p">:</span> <span class="s2">"odd"</span><span class="p">);</span>
+<div class="highlight hl-C++17"><pre><span></span>cout &lt;&lt; "Enter an Integer number: ";
+cin &gt;&gt; number;
+cout &lt;&lt; number &lt;&lt; " is " &lt;&lt; ((number%2 == 0) ? "even" : "odd");
 </pre></div>
 </div>
 </div>
@@ -8753,14 +8758,14 @@ Good bye!</pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="o">//</span> <span class="o">&amp;&amp;</span> <span class="n">examples</span>
-<span class="o">//</span> <span class="n">determine</span> <span class="k">if</span> <span class="n">a</span> <span class="n">number</span> <span class="ow">is</span> <span class="n">even</span> <span class="ow">and</span> <span class="n">positve</span>
-<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"enter a whole number: "</span><span class="p">;</span>
-<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">num</span><span class="p">;</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">num</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"number is even and positve</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-<span class="k">else</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"I don't know much about "</span> <span class="o">&lt;&lt;</span> <span class="n">num</span> <span class="o">&lt;&lt;</span> <span class="s2">" except that it's an integer</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+<div class="highlight hl-C++17"><pre><span></span>// &amp;&amp; examples
+// determine if a number is even and positve
+cout &lt;&lt; "enter a whole number: ";
+cin &gt;&gt; num;
+if (num &gt; 0 and num%2 == 0)
+    cout &lt;&lt; "number is even and positve\n";
+else
+    cout &lt;&lt; "I don't know much about " &lt;&lt; num &lt;&lt; " except that it's an integer\n";
 </pre></div>
 </div>
 </div>
@@ -8788,11 +8793,11 @@ number is even and positve
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="o">//</span> <span class="o">||</span> <span class="ow">or</span> <span class="n">example</span>
-<span class="o">//</span> <span class="n">write</span> <span class="n">a</span> <span class="n">program</span> <span class="n">that</span> <span class="n">determines</span> <span class="k">if</span> <span class="n">somone</span> <span class="n">can</span> <span class="n">retire</span><span class="o">.</span>
-<span class="o">//</span> <span class="k">if</span> <span class="n">a</span> <span class="n">person</span> <span class="n">owns</span> <span class="n">a</span> <span class="n">Ferrari</span> <span class="ow">or</span> <span class="n">has</span> <span class="mi">1</span> <span class="n">Million</span> <span class="n">dollors</span> <span class="ow">in</span> <span class="n">savings</span> <span class="n">then</span> <span class="n">the</span> <span class="n">person</span> <span class="n">can</span> <span class="n">retire</span>
-<span class="n">string</span> <span class="n">has_ferrari</span><span class="p">;</span>
-<span class="n">long</span> <span class="n">savings</span><span class="p">;</span>
+<div class="highlight hl-C++17"><pre><span></span>// || or example
+// write a program that determines if somone can retire.
+// if a person owns a Ferrari or has 1 Million dollors in savings then the person can retire
+string has_ferrari;
+long savings;
 </pre></div>
 </div>
 </div>
@@ -8806,14 +8811,14 @@ number is even and positve
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"Do you own a Ferarrai? Enter [y|yes]: "</span><span class="p">;</span>
-<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">has_ferrari</span><span class="p">;</span>
-<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"How much in savings do you have in dollars? "</span><span class="p">;</span>
-<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">savings</span><span class="p">;</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">has_ferrari</span> <span class="o">==</span> <span class="s2">"yes"</span> <span class="ow">or</span> <span class="n">has_ferrari</span> <span class="o">==</span> <span class="s2">"y"</span> <span class="ow">or</span> <span class="n">savings</span> <span class="o">&gt;=</span> <span class="mi">1000000</span><span class="p">)</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"Congratulations, you can retire now!</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-<span class="k">else</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"Sorry, no cigar! Keep working...</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+<div class="highlight hl-C++17"><pre><span></span>cout &lt;&lt; "Do you own a Ferarrai? Enter [y|yes]: ";
+cin &gt;&gt; has_ferrari;
+cout &lt;&lt; "How much in savings do you have in dollars? ";
+cin &gt;&gt; savings;
+if (has_ferrari == "yes" or has_ferrari == "y" or savings &gt;= 1000000)
+    cout &lt;&lt; "Congratulations, you can retire now!\n";
+else
+    cout &lt;&lt; "Sorry, no cigar! Keep working...\n";
 </pre></div>
 </div>
 </div>
@@ -8842,16 +8847,16 @@ Congratulations, you can retire now!
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="o">//</span> <span class="err">!</span> <span class="n">example</span>
-<span class="o">//</span> <span class="n">redo</span> <span class="n">retirement</span> <span class="n">calculator</span>
-<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"Do you own a Ferarrai? Enter [y|yes]: "</span><span class="p">;</span>
-<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">has_ferrari</span><span class="p">;</span>
-<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"How much in savings do you have in dollars? "</span><span class="p">;</span>
-<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">savings</span><span class="p">;</span>
-<span class="k">if</span> <span class="p">(</span><span class="err">!</span><span class="p">(</span><span class="n">has_ferrari</span> <span class="o">==</span> <span class="s2">"yes"</span> <span class="o">||</span> <span class="n">has_ferrari</span> <span class="o">==</span> <span class="s2">"y"</span> <span class="ow">or</span> <span class="n">savings</span> <span class="o">&gt;=</span> <span class="mi">1000000</span><span class="p">))</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"Sorry, no cigar! Keep working...</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-<span class="k">else</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"Congratulations, you can retire now!</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+<div class="highlight hl-C++17"><pre><span></span>// ! example
+// redo retirement calculator
+cout &lt;&lt; "Do you own a Ferarrai? Enter [y|yes]: ";
+cin &gt;&gt; has_ferrari;
+cout &lt;&lt; "How much in savings do you have in dollars? ";
+cin &gt;&gt; savings;
+if (!(has_ferrari == "yes" || has_ferrari == "y" or savings &gt;= 1000000))
+    cout &lt;&lt; "Sorry, no cigar! Keep working...\n";
+else
+    cout &lt;&lt; "Congratulations, you can retire now!\n";
 </pre></div>
 </div>
 </div>
@@ -8958,9 +8963,9 @@ Sorry, no cigar! Keep working...
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="o">//</span> <span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> <span class="n">of</span> <span class="n">a</span> <span class="n">switch</span> <span class="n">statement</span>
-<span class="o">//</span> <span class="n">determine</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">day</span> <span class="n">given</span> <span class="n">the</span> <span class="n">number</span> <span class="mi">1</span><span class="o">-</span><span class="mi">7</span>
-<span class="n">unsigned</span> <span class="nb">int</span> <span class="n">day</span><span class="p">;</span>
+<div class="highlight hl-C++17"><pre><span></span>// e.g. of a switch statement
+// determine name of the day given the number 1-7
+unsigned int day;
 </pre></div>
 </div>
 </div>
@@ -8974,8 +8979,8 @@ Sorry, no cigar! Keep working...
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"Enter day of the week 1-7: "</span><span class="p">;</span>
-<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">day</span><span class="p">;</span>
+<div class="highlight hl-C++17"><pre><span></span>cout &lt;&lt; "Enter day of the week 1-7: ";
+cin &gt;&gt; day;
 </pre></div>
 </div>
 </div>
@@ -9002,33 +9007,33 @@ Sorry, no cigar! Keep working...
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="o">//</span> <span class="n">comment</span> <span class="n">out</span> <span class="k">break</span><span class="p">;</span> <span class="ow">and</span> <span class="n">see</span> <span class="n">the</span> <span class="n">result</span>
-<span class="n">switch</span><span class="p">(</span><span class="n">day</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">case</span> <span class="mi">1</span><span class="p">:</span> 
-        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"Day is Sunday</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-        <span class="k">break</span><span class="p">;</span>
-    <span class="k">case</span> <span class="mi">2</span><span class="p">:</span>
-        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"Day is Monday</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-        <span class="k">break</span><span class="p">;</span>
-    <span class="k">case</span> <span class="mi">3</span><span class="p">:</span>
-        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"Day is Tuesday</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-        <span class="k">break</span><span class="p">;</span>
-    <span class="k">case</span> <span class="mi">4</span><span class="p">:</span>
-        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"Day is Wednesday</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-        <span class="k">break</span><span class="p">;</span>
-    <span class="k">case</span> <span class="mi">5</span><span class="p">:</span>
-        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"Day is Thursday</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-        <span class="k">break</span><span class="p">;</span>
-    <span class="k">case</span> <span class="mi">6</span><span class="p">:</span>
-        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"Day is Friday</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-        <span class="k">break</span><span class="p">;</span>
-    <span class="k">case</span> <span class="mi">7</span><span class="p">:</span>
-        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"Day is Saturday</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-        <span class="k">break</span><span class="p">;</span>
-    <span class="n">default</span><span class="p">:</span>
-        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">day</span> <span class="o">&lt;&lt;</span> <span class="s2">" is not a valid day!</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-        <span class="o">//</span><span class="k">break</span><span class="p">;</span> <span class="ow">not</span> <span class="n">required</span><span class="err">!</span>
-<span class="p">}</span>
+<div class="highlight hl-C++17"><pre><span></span>// comment out break; and see the result
+switch(day) {
+    case 1: 
+        cout &lt;&lt; "Day is Sunday\n";
+        break;
+    case 2:
+        cout &lt;&lt; "Day is Monday\n";
+        break;
+    case 3:
+        cout &lt;&lt; "Day is Tuesday\n";
+        break;
+    case 4:
+        cout &lt;&lt; "Day is Wednesday\n";
+        break;
+    case 5:
+        cout &lt;&lt; "Day is Thursday\n";
+        break;
+    case 6:
+        cout &lt;&lt; "Day is Friday\n";
+        break;
+    case 7:
+        cout &lt;&lt; "Day is Saturday\n";
+        break;
+    default:
+        cout &lt;&lt; day &lt;&lt; " is not a valid day!\n";
+        //break; not required!
+}
 </pre></div>
 </div>
 </div>
@@ -9076,14 +9081,14 @@ Sorry, no cigar! Keep working...
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="c1">#include &lt;iostream&gt;</span>
-<span class="c1">#include &lt;string&gt;</span>
-<span class="c1">#include &lt;cassert&gt;</span>
-<span class="c1">#include &lt;cmath&gt;</span>
-<span class="c1">#include &lt;iomanip&gt;</span>
-<span class="c1">#include &lt;sstream&gt;</span>
+<div class="highlight hl-C++17"><pre><span></span>#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;cassert&gt;
+#include &lt;cmath&gt;
+#include &lt;iomanip&gt;
+#include &lt;sstream&gt;
 
-<span class="n">using</span> <span class="n">namespace</span> <span class="n">std</span><span class="p">;</span>
+using namespace std;
 </pre></div>
 </div>
 </div>
@@ -9097,10 +9102,10 @@ Sorry, no cigar! Keep working...
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="n">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
-<span class="n">T</span> <span class="n">add</span><span class="p">(</span><span class="n">T</span> <span class="n">val1</span><span class="p">,</span> <span class="n">T</span> <span class="n">val2</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="n">val1</span> <span class="o">+</span> <span class="n">val2</span><span class="p">;</span>
-<span class="p">}</span>
+<div class="highlight hl-C++17"><pre><span></span>template&lt;class T&gt;
+T add(T val1, T val2) {
+    return val1 + val2;
+}
 </pre></div>
 </div>
 </div>
@@ -9114,10 +9119,10 @@ Sorry, no cigar! Keep working...
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="n">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
-<span class="n">T</span> <span class="n">subtract</span><span class="p">(</span><span class="n">T</span> <span class="n">val1</span><span class="p">,</span> <span class="n">T</span> <span class="n">val2</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="n">val1</span> <span class="o">-</span> <span class="n">val2</span><span class="p">;</span>
-<span class="p">}</span>
+<div class="highlight hl-C++17"><pre><span></span>template&lt;class T&gt;
+T subtract(T val1, T val2) {
+    return val1 - val2;
+}
 </pre></div>
 </div>
 </div>
@@ -9131,10 +9136,10 @@ Sorry, no cigar! Keep working...
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="n">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
-<span class="n">T</span> <span class="n">larger</span><span class="p">(</span><span class="n">T</span> <span class="n">val1</span><span class="p">,</span> <span class="n">T</span> <span class="n">val2</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="n">val1</span> <span class="o">&gt;=</span> <span class="n">val2</span> <span class="err">?</span> <span class="n">val1</span> <span class="p">:</span> <span class="n">val2</span><span class="p">;</span>
-<span class="p">}</span>
+<div class="highlight hl-C++17"><pre><span></span>template&lt;class T&gt;
+T larger(T val1, T val2) {
+    return val1 &gt;= val2 ? val1 : val2;
+}
 </pre></div>
 </div>
 </div>
@@ -9148,10 +9153,10 @@ Sorry, no cigar! Keep working...
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="n">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
-<span class="n">double</span> <span class="n">average</span><span class="p">(</span><span class="n">T</span> <span class="n">val1</span><span class="p">,</span> <span class="n">T</span> <span class="n">val2</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="n">add</span><span class="p">(</span><span class="n">val1</span><span class="p">,</span> <span class="n">val2</span><span class="p">)</span><span class="o">/</span><span class="mf">2.0</span><span class="p">;</span>
-<span class="p">}</span>
+<div class="highlight hl-C++17"><pre><span></span>template&lt;class T&gt;
+double average(T val1, T val2) {
+    return add(val1, val2)/2.0;
+}
 </pre></div>
 </div>
 </div>
@@ -9165,19 +9170,19 @@ Sorry, no cigar! Keep working...
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="nb">int</span> <span class="n">getMenuOption</span><span class="p">()</span> <span class="p">{</span>
-    <span class="o">//</span> <span class="n">A</span> <span class="n">Smiple</span> <span class="n">CLI</span><span class="o">-</span><span class="n">based</span> <span class="n">calculator</span>
-    <span class="nb">int</span> <span class="n">option</span><span class="p">;</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"Enter one of the following menu options: [1-6]</span><span class="se">\n</span><span class="s2">"</span>
-        <span class="s2">"1 -&gt; Add</span><span class="se">\n</span><span class="s2">"</span>
-        <span class="o">&lt;&lt;</span> <span class="s2">"2 -&gt; Subtract</span><span class="se">\n</span><span class="s2">"</span>
-        <span class="o">&lt;&lt;</span> <span class="s2">"3 -&gt; Larger</span><span class="se">\n</span><span class="s2">"</span>
-        <span class="o">&lt;&lt;</span> <span class="s2">"4 -&gt; Average</span><span class="se">\n</span><span class="s2">"</span>
-        <span class="o">&lt;&lt;</span> <span class="s2">"5 -&gt; Multiply</span><span class="se">\n</span><span class="s2">"</span>
-        <span class="o">&lt;&lt;</span> <span class="s2">"6 -&gt; Quit</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">option</span><span class="p">;</span>
-    <span class="k">return</span> <span class="n">option</span><span class="p">;</span>
-<span class="p">}</span>
+<div class="highlight hl-C++17"><pre><span></span>int getMenuOption() {
+    // A Smiple CLI-based calculator
+    int option;
+    cout &lt;&lt; "Enter one of the following menu options: [1-6]\n"
+        "1 -&gt; Add\n"
+        &lt;&lt; "2 -&gt; Subtract\n"
+        &lt;&lt; "3 -&gt; Larger\n"
+        &lt;&lt; "4 -&gt; Average\n"
+        &lt;&lt; "5 -&gt; Multiply\n"
+        &lt;&lt; "6 -&gt; Quit\n";
+    cin &gt;&gt; option;
+    return option;
+}
 </pre></div>
 </div>
 </div>
@@ -9191,34 +9196,34 @@ Sorry, no cigar! Keep working...
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="n">void</span> <span class="n">program</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nb">float</span> <span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">;</span>
-    <span class="nb">int</span> <span class="n">option</span><span class="p">;</span>
-    <span class="n">option</span> <span class="o">=</span> <span class="n">getMenuOption</span><span class="p">();</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">option</span> <span class="o">==</span> <span class="mi">6</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"Good bye...</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-        <span class="k">return</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"Enter two numbers separated by space: "</span><span class="p">;</span>
-    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n1</span> <span class="o">&gt;&gt;</span> <span class="n">n2</span><span class="p">;</span>
-    <span class="n">switch</span><span class="p">(</span><span class="n">option</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
-            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">n1</span> <span class="o">&lt;&lt;</span> <span class="s2">" + "</span> <span class="o">&lt;&lt;</span> <span class="n">n2</span> <span class="o">&lt;&lt;</span> <span class="s2">" = "</span> <span class="o">&lt;&lt;</span> <span class="n">add</span><span class="o">&lt;</span><span class="nb">float</span><span class="o">&gt;</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-            <span class="k">break</span><span class="p">;</span> <span class="o">//</span> <span class="n">terminate</span> <span class="n">switch</span>
-        <span class="k">case</span> <span class="mi">2</span><span class="p">:</span>
-            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">n1</span> <span class="o">&lt;&lt;</span> <span class="s2">" - "</span> <span class="o">&lt;&lt;</span> <span class="n">n2</span> <span class="o">&lt;&lt;</span> <span class="s2">" = "</span> <span class="o">&lt;&lt;</span> <span class="n">subtract</span><span class="o">&lt;</span><span class="nb">float</span><span class="o">&gt;</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-            <span class="k">break</span><span class="p">;</span>
-        <span class="k">case</span> <span class="mi">3</span><span class="p">:</span>
-            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"larger between: "</span> <span class="o">&lt;&lt;</span> <span class="n">n1</span> <span class="o">&lt;&lt;</span> <span class="s2">" and "</span> <span class="o">&lt;&lt;</span> <span class="n">n2</span> <span class="o">&lt;&lt;</span> <span class="s2">" is "</span> <span class="o">&lt;&lt;</span> <span class="n">larger</span><span class="o">&lt;</span><span class="nb">float</span><span class="o">&gt;</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-            <span class="k">break</span><span class="p">;</span>
-        <span class="k">case</span> <span class="mi">4</span><span class="p">:</span>
-            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"average of "</span> <span class="o">&lt;&lt;</span> <span class="n">n1</span> <span class="o">&lt;&lt;</span> <span class="s2">" and "</span> <span class="o">&lt;&lt;</span> <span class="n">n2</span> <span class="o">&lt;&lt;</span> <span class="s2">" = "</span> <span class="o">&lt;&lt;</span> <span class="n">average</span><span class="o">&lt;</span><span class="nb">float</span><span class="o">&gt;</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-            <span class="k">break</span><span class="p">;</span>
-        <span class="n">default</span><span class="p">:</span>
-            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">n1</span> <span class="o">&lt;&lt;</span> <span class="s2">" x "</span> <span class="o">&lt;&lt;</span> <span class="n">n2</span> <span class="o">&lt;&lt;</span> <span class="s2">" = "</span> <span class="o">&lt;&lt;</span> <span class="n">n1</span><span class="o">*</span><span class="n">n2</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-            <span class="k">break</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight hl-C++17"><pre><span></span>void program() {
+    float n1, n2;
+    int option;
+    option = getMenuOption();
+    if (option == 6) {
+        cout &lt;&lt; "Good bye...\n";
+        return;
+    }
+    cout &lt;&lt; "Enter two numbers separated by space: ";
+    cin &gt;&gt; n1 &gt;&gt; n2;
+    switch(option) {
+        case 1:
+            cout &lt;&lt; n1 &lt;&lt; " + " &lt;&lt; n2 &lt;&lt; " = " &lt;&lt; add&lt;float&gt;(n1, n2) &lt;&lt; endl;
+            break; // terminate switch
+        case 2:
+            cout &lt;&lt; n1 &lt;&lt; " - " &lt;&lt; n2 &lt;&lt; " = " &lt;&lt; subtract&lt;float&gt;(n1, n2) &lt;&lt; endl;
+            break;
+        case 3:
+            cout &lt;&lt; "larger between: " &lt;&lt; n1 &lt;&lt; " and " &lt;&lt; n2 &lt;&lt; " is " &lt;&lt; larger&lt;float&gt;(n1, n2) &lt;&lt; endl;
+            break;
+        case 4:
+            cout &lt;&lt; "average of " &lt;&lt; n1 &lt;&lt; " and " &lt;&lt; n2 &lt;&lt; " = " &lt;&lt; average&lt;float&gt;(n1, n2) &lt;&lt; endl;
+            break;
+        default:
+            cout &lt;&lt; n1 &lt;&lt; " x " &lt;&lt; n2 &lt;&lt; " = " &lt;&lt; n1*n2 &lt;&lt; endl;
+            break;
+    }
+}
 </pre></div>
 </div>
 </div>
@@ -9232,8 +9237,8 @@ Sorry, no cigar! Keep working...
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="o">//</span> <span class="n">TODO</span><span class="p">:</span> <span class="n">run</span> <span class="n">this</span> <span class="n">many</span> <span class="n">times</span><span class="o">...</span>
-<span class="n">program</span><span class="p">();</span>
+<div class="highlight hl-C++17"><pre><span></span>// TODO: run this many times...
+program();
 </pre></div>
 </div>
 </div>
@@ -9313,11 +9318,11 @@ Enter two numbers separated by space: 3 105
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="o">//</span> <span class="n">code</span> <span class="n">stub</span> <span class="k">for</span> <span class="n">Exercise</span> <span class="mi">5</span>
-<span class="n">string</span> <span class="n">day_name</span><span class="p">(</span><span class="nb">int</span> <span class="n">day</span><span class="p">)</span> <span class="p">{</span>
-    <span class="o">//</span> <span class="n">FIXME</span> <span class="o">-</span> <span class="n">complete</span> <span class="n">the</span> <span class="n">rest</span>
-    <span class="k">return</span> <span class="s2">""</span><span class="p">;</span>
-<span class="p">}</span>
+<div class="highlight hl-C++17"><pre><span></span>// code stub for Exercise 5
+string day_name(int day) {
+    // FIXME - complete the rest
+    return "";
+}
 </pre></div>
 </div>
 </div>
@@ -9331,13 +9336,13 @@ Enter two numbers separated by space: 3 105
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="o">//</span> <span class="n">Here</span> <span class="n">are</span> <span class="n">some</span> <span class="n">tests</span> <span class="n">that</span> <span class="n">should</span> <span class="k">pass</span> <span class="k">for</span> <span class="n">day_name</span> <span class="n">function</span> <span class="n">defined</span> <span class="n">above</span>
-<span class="n">void</span> <span class="n">test_day_name</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">assert</span><span class="p">(</span><span class="n">day_name</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="s2">"Wednesday"</span><span class="p">);</span>
-    <span class="k">assert</span><span class="p">(</span><span class="n">day_name</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span> <span class="o">==</span> <span class="s2">"Saturday"</span><span class="p">);</span>
-    <span class="k">assert</span><span class="p">(</span><span class="n">day_name</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span> <span class="o">==</span> <span class="s2">"Invalid Day"</span><span class="p">);</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"all test cases passed for day_name()</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-<span class="p">}</span>
+<div class="highlight hl-C++17"><pre><span></span>// Here are some tests that should pass for day_name function defined above
+void test_day_name() {
+    assert(day_name(3) == "Wednesday");
+    assert(day_name(6) == "Saturday");
+    assert(day_name(42) == "Invalid Day");
+    cout &lt;&lt; "all test cases passed for day_name()\n";
+}
 </pre></div>
 </div>
 </div>
@@ -9377,10 +9382,10 @@ Enter two numbers separated by space: 3 105
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="o">//</span> <span class="n">Exercise</span> <span class="mi">6</span> <span class="n">hints</span>
-<span class="n">string</span> <span class="n">day_add</span><span class="p">(</span><span class="n">string</span> <span class="n">dayName</span><span class="p">,</span> <span class="nb">int</span> <span class="n">delta</span><span class="p">)</span> <span class="p">{</span>
-    <span class="o">//</span> <span class="n">FIXME</span>
-<span class="p">}</span>
+<div class="highlight hl-C++17"><pre><span></span>// Exercise 6 hints
+string day_add(string dayName, int delta) {
+    // FIXME
+}
 </pre></div>
 </div>
 </div>
@@ -9394,18 +9399,18 @@ Enter two numbers separated by space: 3 105
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="o">//</span> <span class="n">Exercise</span> <span class="mi">6</span> <span class="n">test</span> <span class="n">function</span>
-<span class="o">//</span> <span class="n">here</span> <span class="n">are</span> <span class="n">some</span> <span class="n">tests</span> <span class="n">that</span> <span class="n">should</span> <span class="k">pass</span>
-<span class="n">void</span> <span class="n">test_day_add</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">assert</span><span class="p">(</span><span class="n">day_add</span><span class="p">(</span><span class="s2">"Monday"</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="o">==</span>  <span class="s2">"Friday"</span><span class="p">);</span>
-    <span class="k">assert</span><span class="p">(</span><span class="n">day_add</span><span class="p">(</span><span class="s2">"Tuesday"</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="s2">"Tuesday"</span><span class="p">);</span>
-    <span class="k">assert</span><span class="p">(</span><span class="n">day_add</span><span class="p">(</span><span class="s2">"Tuesday"</span><span class="p">,</span> <span class="mi">14</span><span class="p">)</span> <span class="o">==</span> <span class="s2">"Tuesday"</span><span class="p">);</span>
-    <span class="k">assert</span><span class="p">(</span><span class="n">day_add</span><span class="p">(</span><span class="s2">"Sunday"</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="o">==</span> <span class="s2">"Tuesday"</span><span class="p">);</span>
-    <span class="k">assert</span><span class="p">(</span><span class="n">day_add</span><span class="p">(</span><span class="s2">"Sunday"</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="s2">"Saturday"</span><span class="p">);</span>
-    <span class="k">assert</span><span class="p">(</span><span class="n">day_add</span><span class="p">(</span><span class="s2">"Sunday"</span><span class="p">,</span> <span class="o">-</span><span class="mi">7</span><span class="p">)</span> <span class="o">==</span> <span class="s2">"Sunday"</span><span class="p">);</span>
-    <span class="k">assert</span><span class="p">(</span><span class="n">day_add</span><span class="p">(</span><span class="s2">"Tuesday"</span><span class="p">,</span> <span class="o">-</span><span class="mi">100</span><span class="p">)</span> <span class="o">==</span> <span class="s2">"Sunday"</span><span class="p">);</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">"all test cases passed for day_add()"</span><span class="p">;</span>
-<span class="p">}</span>
+<div class="highlight hl-C++17"><pre><span></span>// Exercise 6 test function
+// here are some tests that should pass
+void test_day_add() {
+    assert(day_add("Monday", 4) ==  "Friday");
+    assert(day_add("Tuesday", 0) == "Tuesday");
+    assert(day_add("Tuesday", 14) == "Tuesday");
+    assert(day_add("Sunday", 100) == "Tuesday");
+    assert(day_add("Sunday", -1) == "Saturday");
+    assert(day_add("Sunday", -7) == "Sunday");
+    assert(day_add("Tuesday", -100) == "Sunday");
+    cout &lt;&lt; "all test cases passed for day_add()";
+}
 </pre></div>
 </div>
 </div>
@@ -9531,20 +9536,6 @@ Enter two numbers separated by space: 3 105
 <li>learned passing and using arguments to main( )</li>
 <li>finally, exercise and sample solutions</li>
 </ul>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span> 
-</pre></div>
-</div>
 </div>
 </div>
 </div>

@@ -1,4 +1,4 @@
-# Arrays
+# Arrays, C-Strings, and Stack Overflow
 
 ## Topics
 - C-array introduction
@@ -10,6 +10,12 @@
 - buffer overflow security flaw
 - sorting data
 - 2-d array and tic-tac-toe game
+
+
+## External Resources
+- YouTube Video - Arrays, C-Strings, and Stack Overflow - [https://youtu.be/mEHEXNaqXEk](https://youtu.be/mEHEXNaqXEk)
+- YouTube Podcast - Arrays, C-Strings, and Stack Overflow - [https://youtu.be/qwwSKXVwUVg](https://youtu.be/qwwSKXVwUVg)
+- NotebookLM learning materials - [https://notebooklm.google.com/notebook/769aba1f-c864-46f0-ab65-a2499454998d](https://notebooklm.google.com/notebook/769aba1f-c864-46f0-ab65-a2499454998d)
 
 ## Array
 - dictionary defintion of array is a range of a particular type of thing
@@ -45,7 +51,7 @@ type arrayName[size];
 - `size` must be a positive integer (size_t type) - literal or variable
 - the following figure depicts computer memory when an array of `int` is declared
 
-![](resources/array.png)
+![](assets/array.png)
 
 - each member of the array is called an element
 - each element has same type and share same array name but different index
@@ -54,7 +60,7 @@ type arrayName[size];
 ### Visualize array using [pythontutor.com](http://pythontutor.com/cpp.html#code=//%20pass%20by%20value%20demo%0A%23include%20%3Ciostream%3E%0Ausing%20namespace%20std%3B%0A%0Aint%20main%28%29%20%7B%0A%20%20int%20nums%5B5%5D%3B%0A%20%20nums%5B0%5D%20%3D%2010%3B%0A%20%20nums%5B1%5D%20%3D%2020%3B%0A%20%20nums%5B2%5D%20%3D%2030%3B%0A%20%20nums%5B3%5D%20%3D%2040%3B%0A%20%20nums%5B4%5D%20%3D%2050%3B%0A%20%20nums%5B1%5D%20%3D%20nums%5B2%5D%20%2B%20nums%5B3%5D%3B%0A%20%20for%28int%20i%3D0%3B%20i%3C5%3B%20i%2B%2B%29%0A%20%20%20%20cout%20%3C%3C%20nums%5Bi%5D%20%3C%3C%20endl%3B%0A%20%20return%200%3B%0A%7D&curInstr=0&mode=display&origin=opt-frontend.js&py=cpp&rawInputLstJSON=%5B%5D)
 
 
-```C++17
+```python
 #include <iostream>
 #include <string>
 
@@ -62,7 +68,7 @@ using namespace std;
 ```
 
 
-```C++17
+```python
 // nums array to store 5 integers
 int nums[5];
 ```
@@ -74,7 +80,7 @@ int nums[5];
     - only aggregate operation allowed is during array initialization
 
 
-```C++17
+```python
 // access and store values into each element
 nums[0] = 10;
 nums[1] = 20;
@@ -84,7 +90,7 @@ nums[4] = 50;
 ```
 
 
-```C++17
+```python
 // access some element
 cout << nums[0];
 ```
@@ -92,13 +98,13 @@ cout << nums[0];
     10
 
 
-```C++17
+```python
 // each element can be used like a single variable
 nums[1] = nums[2] + nums[3];
 ```
 
 
-```C++17
+```python
 // traverse an array
 for(int i=0; i<5; i++) {
     cout << i << " -> " << nums[i] << endl;
@@ -113,14 +119,14 @@ for(int i=0; i<5; i++) {
 
 
 
-```C++17
+```python
 // declaring and initializing an array
 // size is optinal; will be determined with the no. of values it's initialzed with
 float grades[] = {90.5f, 34.5f, 56, 81.f, 99.f, 100, 89.9};
 ```
 
 
-```C++17
+```python
 cout << grades;
 ```
 
@@ -132,7 +138,7 @@ cout << grades;
 - e.g. how can you quickly tell the size or length of an array?
 
 
-```C++17
+```python
 grades.size();
 ```
 
@@ -146,20 +152,20 @@ grades.size();
 
 
 
-```C++17
+```python
 // finding the size of the array
 size_t arr_size = sizeof(grades)/float(sizeof(float));
 ```
 
 
-```C++17
+```python
 cout << "array's size or length = " << arr_size;
 ```
 
     array's size or length = 7
 
 
-```C++17
+```python
 cout << "last grade = " << grades[arr_size-1] << endl;
 ```
 
@@ -171,7 +177,7 @@ cout << "last grade = " << grades[arr_size-1] << endl;
 - what happens when the array is full?
 
 
-```C++17
+```python
 // grades doesn't have index 7 as the size is 7
 grades[7] = 67;
 ```
@@ -189,26 +195,26 @@ grades[7] = 67;
     - they can be used interchangebly as desired
 
 
-```C++17
+```python
 int ids[] = {100, 200, 300, 400};
 ```
 
 
-```C++17
+```python
 cout << ids;
 ```
 
     0x7b07fbba0070
 
 
-```C++17
+```python
 // copy the base address of array
 // which is the address of element at index 0; which is &ids[0];
 int * ptr = ids;
 ```
 
 
-```C++17
+```python
 // print the base memory addresses
 cout << ptr << " equals to " << &ids[0] << " equals to " << ids;
 ```
@@ -216,7 +222,7 @@ cout << ptr << " equals to " << &ids[0] << " equals to " << ids;
     0x7b07fbba0070 equals to 0x7b07fbba0070 equals to 0x7b07fbba0070
 
 
-```C++17
+```python
 // print the data located at the base memory addresses
 cout << *ptr << " equals to " << ids[0] << " equals to " << *ids;
 ```
@@ -224,14 +230,14 @@ cout << *ptr << " equals to " << ids[0] << " equals to " << *ids;
     100 equals to 100 equals to 100
 
 
-```C++17
+```python
 // using pointers to traverse array
 // point to the second element
 ptr++;
 ```
 
 
-```C++17
+```python
 // dereference the value at that location
 cout << *ptr << endl;
 ```
@@ -240,7 +246,7 @@ cout << *ptr << endl;
 
 
 
-```C++17
+```python
 ptr = ids; // copy the base address
 for(int i=0; i<4; i++) {
     cout << i << "-> " << *(ptr+i) << " == " << ptr[i] << " == " << ids[i] << endl;
@@ -272,12 +278,12 @@ delete[] arrayName;
 ### Visualize dynamic array in [pythontutor.com](http://pythontutor.com/cpp.html#code=//%20pass%20by%20value%20demo%0A%23include%20%3Ciostream%3E%0Ausing%20namespace%20std%3B%0A%0Aint%20main%28%29%20%7B%0A%20%20size_t%20arr_size%20%3D%205%3B%0A%20%20int%20*%20nums%20%3D%20new%20int%5Barr_size%5D%3B%0A%20%20nums%5B0%5D%20%3D%2010%3B%0A%20%20nums%5B1%5D%20%3D%2020%3B%0A%20%20nums%5B2%5D%20%3D%2030%3B%0A%20%20nums%5B3%5D%20%3D%2040%3B%0A%20%20nums%5B4%5D%20%3D%2050%3B%0A%20%20nums%5B1%5D%20%3D%20nums%5B2%5D%20%2B%20nums%5B3%5D%3B%0A%20%20for%28int%20i%3D0%3B%20i%3C5%3B%20i%2B%2B%29%0A%20%20%20%20cout%20%3C%3C%20nums%5Bi%5D%20%3C%3C%20endl%3B%0A%20%20%0A%20%20delete%5B%5D%20nums%3B%0A%20%20return%200%3B%0A%7D&curInstr=0&mode=display&origin=opt-frontend.js&py=cpp&rawInputLstJSON=%5B%5D)
 
 
-```C++17
+```python
 size_t capacity;
 ```
 
 
-```C++17
+```python
 cout << "How many integers would you like to enter? ";
 cin >> capacity;
 ```
@@ -285,12 +291,12 @@ cin >> capacity;
     How many integers would you like to enter? 
 
 
-```C++17
+```python
 int * some_array = new int[capacity];
 ```
 
 
-```C++17
+```python
 // prompt user to store capacity number of integers and store them into array
 for(int i=0; i<capacity; i++) {
     cout << "Enter a number: ";
@@ -301,7 +307,7 @@ for(int i=0; i<capacity; i++) {
     Enter a number: Enter a number: Enter a number: Enter a number: Enter a number: 
 
 
-```C++17
+```python
 // output some values
 cout << capacity << " " << some_array[0] << " " << some_array[capacity-1];
 ```
@@ -326,18 +332,18 @@ cout << capacity << " " << some_array[0] << " " << some_array[capacity-1];
 ### Visualize shallow copy using [pythontutor.com](http://pythontutor.com/cpp.html#code=//%20shallow%20copy%20array%0A%23include%20%3Ciostream%3E%0Ausing%20namespace%20std%3B%0A%0Aint%20main%28%29%20%7B%0A%20%20int%20array1%5B%5D%20%3D%20%7B1,%202,%203,%204%7D%3B%0A%20%20int%20*%20array2%20%3D%20new%20int%5B4%5D%3B%0A%20%20array2%20%3D%20array1%3B%0A%20%20array2%5B0%5D%20%3D%20100%3B%0A%20%20array1%5B3%5D%20%3D%20400%3B%0A%20%20return%200%3B%0A%7D&curInstr=0&mode=display&origin=opt-frontend.js&py=cpp&rawInputLstJSON=%5B%5D)
 
 
-```C++17
+```python
 int * copy_array = new int[capacity];
 ```
 
 
-```C++17
+```python
 // try to copy some_array into copy_array as a whole
 copy_array = some_array;
 ```
 
 
-```C++17
+```python
 // let's see some values
 cout << some_array[0] << " == " << copy_array[0];
 ```
@@ -345,13 +351,13 @@ cout << some_array[0] << " == " << copy_array[0];
     10 == 10
 
 
-```C++17
+```python
 // let's update some_array
 some_array[0] = 100;
 ```
 
 
-```C++17
+```python
 // now, let's see the value of copy_array[0]
 cout << some_array[0] << " == " << copy_array[0];
 ```
@@ -367,21 +373,21 @@ cout << some_array[0] << " == " << copy_array[0];
     - destination array size must be at least as big as the source array size
 
 
-```C++17
+```python
 // let's copy some_array created above
 // let's create an empty array to deep copy data to
 int * deep_copy = new int[capacity];
 ```
 
 
-```C++17
+```python
 // let's deep copy 
 for(int i=0; i<capacity; i++)
     deep_copy[i] = some_array[i];
 ```
 
 
-```C++17
+```python
 // if one array is modified it doesn't affect the other array
 deep_copy[0] *= 2; // update the first element with twice its value
 ```
@@ -394,7 +400,7 @@ deep_copy[0] *= 2; // update the first element with twice its value
 
 
 
-```C++17
+```python
 // let's print the copied data side by side
 for(int i=0; i<capacity; i++) {
     cout << i << " -> " << deep_copy[i] << " " << some_array[i] << endl;
@@ -409,7 +415,7 @@ for(int i=0; i<capacity; i++) {
 
 
 
-```C++17
+```python
 deep_copy
 ```
 
@@ -427,7 +433,7 @@ deep_copy
     - arrays can't be passed by value
 
 
-```C++17
+```python
 // since actual size of the array is not easy to determine,
 // size of the array is typically passed as an argument
 void updateArray(int array[], int size) {
@@ -438,7 +444,7 @@ void updateArray(int array[], int size) {
 ```
 
 
-```C++17
+```python
 // print array function; notice passing pointer
 void printArray(int * array, int size) {
     cout << "{";
@@ -449,7 +455,7 @@ void printArray(int * array, int size) {
 ```
 
 
-```C++17
+```python
 printArray(some_array, capacity);
 ```
 
@@ -457,12 +463,12 @@ printArray(some_array, capacity);
 
 
 
-```C++17
+```python
 updateArray(some_array, capacity);
 ```
 
 
-```C++17
+```python
 printArray(some_array, capacity);
 ```
 
@@ -490,33 +496,33 @@ printArray(some_array, capacity);
         - the exploitation of the vulnerability compromises the confidentiality of the program
 
 
-```C++17
+```python
 // declaration and initialization is easier
 // NULL character is automatically added at the end!
 char name[] = "John Smith";
 ```
 
 
-```C++17
+```python
 char name[] = {'J', 'o', 'h', 'n'};
 ```
 
 
-```C++17
+```python
 cout << "Hello " << name << "!";
 ```
 
     Hello John!
 
 
-```C++17
+```python
 // once declared; working with C-string is a little cumbersome
 // you've to work one character at a time or use functions provided in <cstring> library
 char f_name[10];
 ```
 
 
-```C++17
+```python
 f_name[0] = 'M';
 f_name[1] = 'i';
 f_name[2] = 'c';
@@ -528,7 +534,7 @@ f_name[7] = '\0';
 ```
 
 
-```C++17
+```python
 // C-strings must end with null-character '\0'
 cout << "Hello " << f_name << "!";
 ```
@@ -536,7 +542,7 @@ cout << "Hello " << f_name << "!";
     Hello Michael!
 
 
-```C++17
+```python
 f_name[0] = 'J';
 f_name[1] = 'o';
 f_name[2] = 'h';
@@ -552,7 +558,7 @@ f_name[3] = 'n';
 
 
 
-```C++17
+```python
 cout << f_name;
 ```
 
@@ -565,7 +571,7 @@ cout << f_name;
 - we can declare array of any type (fundamental and advanced)
 
 
-```C++17
+```python
 #include <iostream>
 #include <string>
 
@@ -573,13 +579,13 @@ using namespace std;
 ```
 
 
-```C++17
+```python
 // array of C++ string
 string names[] = {"John", "Jake", "Dave", "Jenny"};
 ```
 
 
-```C++17
+```python
 // first element and first character of first element
 cout << names[0] << " first char = " << names[0][0];
 ```
@@ -592,23 +598,23 @@ cout << names[0] << " first char = " << names[0][0];
 - a parameter for **main( int argc, char\* argv[] )** is always an array of `char*`
 
 
-```C++17
+```python
 // create array of char * that stores 4 C-strings
 char * stuff[4];
 ```
 
 
-```C++17
+```python
 char val1[] = "ball";
 ```
 
 
-```C++17
+```python
 char val2[] = "test";
 ```
 
 
-```C++17
+```python
 stuff[0] = val1;
 stuff[1] = val2;
 stuff[2] = "cat";
@@ -626,7 +632,7 @@ stuff[3] = "dog";
 ### Passing array of char * to function
 
 
-```C++17
+```python
 // write a function similar to main
 // main is not allowed to be defined in Jupyter Notebook C++
 int my_main(int argc, char* argv[]) {
@@ -641,7 +647,7 @@ int my_main(int argc, char* argv[]) {
 ```
 
 
-```C++17
+```python
 my_main(4, stuff);
 ```
 
@@ -684,26 +690,26 @@ my_main(4, stuff);
     - can be customized to sort data in descending order
 
 
-```C++17
+```python
 // let's declare an array of float
 float stu_grades[] = {100, 99.6, 55, 100, 65, 15.5};
 ```
 
 
-```C++17
+```python
 #include <algorithm> // sort()
 #include <iterator> // begin() and end()
 #include <functional> //greater<>()
 ```
 
 
-```C++17
+```python
 // sort stu_grades in ascending order
 sort(begin(stu_grades), end(stu_grades));
 ```
 
 
-```C++17
+```python
 // now let's see the sorted values
 stu_grades
 ```
@@ -716,7 +722,7 @@ stu_grades
 
 
 
-```C++17
+```python
 // let's sort stu_grades in descending order
 // pass greater<type> function template that is used to compare the data
 // with greater value towards the beginning
@@ -724,7 +730,7 @@ sort(begin(stu_grades), end(stu_grades), greater<float>());
 ```
 
 
-```C++17
+```python
 stu_grades
 ```
 
@@ -736,19 +742,19 @@ stu_grades
 
 
 
-```C++17
+```python
 // sort array of strings
 string words[] = {"zebra", "yoyo", "x-ray", "ball", "apple"};
 ```
 
 
-```C++17
+```python
 // sort in ascending order
 sort(begin(words), end(words));
 ```
 
 
-```C++17
+```python
 words
 ```
 
@@ -768,7 +774,7 @@ words
     
 
 
-```C++17
+```python
 #include <iostream>
 #include <string>
 
@@ -776,7 +782,7 @@ using namespace std;
 ```
 
 
-```C++17
+```python
 template<class T>
 void printArray(T * arr, int size) {
     cout << "{";
@@ -787,7 +793,7 @@ void printArray(T * arr, int size) {
 ```
 
 
-```C++17
+```python
 template<class T>
 void bubbleSort(T * array, int size) {
     bool swapped;
@@ -814,17 +820,17 @@ void bubbleSort(T * array, int size) {
 ```
 
 
-```C++17
+```python
 int numbers[] = {100, 99, 55, 100, 65, 15};
 ```
 
 
-```C++17
+```python
 bubbleSort<int>(numbers, 6);
 ```
 
 
-```C++17
+```python
 numbers
 ```
 
@@ -836,17 +842,17 @@ numbers
 
 
 
-```C++17
+```python
 float values[] = {7.9, 3.5, 5.5, 6.5, 7.5, 7.6};
 ```
 
 
-```C++17
+```python
 bubbleSort<float>(values, 6);
 ```
 
 
-```C++17
+```python
 values
 ```
 
@@ -877,7 +883,7 @@ type arrayName[rowSize][colSize];
 ![](resources/tic-tac-toe.png)
 
 
-```C++17
+```python
 #include <iostream>
 #include <iomanip>
 #include <string>
@@ -886,14 +892,14 @@ using namespace std;
 ```
 
 
-```C++17
+```python
 // declare a 2-d tic-tac board;
 // tic_tac_toe[0][0] represents top left box
 char tic_tac_toe[3][3];
 ```
 
 
-```C++17
+```python
 // define a function to initialize empty tic_tac_toe board
 // Note: must provide the column_width inside []
 void initTicTacToe(char board[][3], int row) {
@@ -904,7 +910,7 @@ void initTicTacToe(char board[][3], int row) {
 ```
 
 
-```C++17
+```python
 void printTicTacToe(char board[][3], int row) {
     cout << endl << setfill('-') << setw(14) << " " << endl;
     for(int i=0; i<row; i++) {
@@ -917,13 +923,13 @@ void printTicTacToe(char board[][3], int row) {
 ```
 
 
-```C++17
+```python
 // let's initialize our board
 initTicTacToe(tic_tac_toe, 3);
 ```
 
 
-```C++17
+```python
 // let's print the empty board
 printTicTacToe(tic_tac_toe, 3);
 ```
@@ -939,7 +945,7 @@ printTicTacToe(tic_tac_toe, 3);
 
 
 
-```C++17
+```python
 // let's fill Xs and Os as shown in the above figure
 // assuming a game play
 tic_tac_toe[0][0] = 'X';
@@ -951,7 +957,7 @@ tic_tac_toe[2][2] = 'X';
 ```
 
 
-```C++17
+```python
 printTicTacToe(tic_tac_toe, 3);
 ```
 
@@ -966,7 +972,7 @@ printTicTacToe(tic_tac_toe, 3);
 
 
 
-```C++17
+```python
 // let's determine winner!
 char findWinner(char board[][3], int row) {
     char winner; // is it O or X?
@@ -996,17 +1002,17 @@ char findWinner(char board[][3], int row) {
 ```
 
 
-```C++17
+```python
 char winner;
 ```
 
 
-```C++17
+```python
 winner = findWinner(tic_tac_toe, 3);
 ```
 
 
-```C++17
+```python
 if (winner == '-')
     cout << "Oops! it's a tie...\n";
 else
@@ -1029,12 +1035,12 @@ else
 
 
 
-```C++17
+```python
 #include <cassert>
 ```
 
 
-```C++17
+```python
 template<class T>
 T max(T * array, int size) {
     assert(size >= 1); // make sure array is not empty!
@@ -1049,7 +1055,7 @@ T max(T * array, int size) {
 ```
 
 
-```C++17
+```python
 void test_max() {
     assert(max({1, 2, 3} == 3));
     assert(max({10, -5, -30} == 10));
@@ -1059,7 +1065,7 @@ void test_max() {
 ```
 
 
-```C++17
+```python
 test_max();
 ```
 

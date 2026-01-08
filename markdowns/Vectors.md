@@ -1,4 +1,4 @@
-# Vectors
+# Vector Containers
 
 ## Topics
 - what is and why vectors
@@ -6,6 +6,13 @@
 - various operations and methods provided by vectors
 - applications and examples using vectors
 - sorting vectors
+
+## External Resources
+
+- YouTube Video - [https://youtu.be/PiOTav8LPso](https://youtu.be/PiOTav8LPso)
+- YouTube Podcast - [https://youtu.be/tfFzPUF7Krk](https://youtu.be/tfFzPUF7Krk)
+- C++ Reference for Vectors: [https://en.cppreference.com/w/cpp/container/vector](https://en.cppreference.com/w/cpp/container/vector)
+- NotebookLM learning materials - [https://notebooklm.google.com/notebook/9216396a-3848-4e83-83de-f76cf6ce1e54](https://notebooklm.google.com/notebook/9216396a-3848-4e83-83de-f76cf6ce1e54)
 
 ## Vectors
 - vector is a collection of values where each value is identified by a number (index)
