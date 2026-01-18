@@ -30,7 +30,7 @@ In order to learn coding, it's very important to actually type code on your own 
 You can launch an interactive session of this project using online [Binder](http://mybinder.org/) service:
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/rambasnet/CPP-Fundamentals/HEAD?filepath=Ch00-TableOfContents.ipynb)
 
-### On a local system
+### On a local system or on GitHub Codespaces
 
 To run these notebooks interactively and save your work locally, you need the following environment and programs installed.
 
