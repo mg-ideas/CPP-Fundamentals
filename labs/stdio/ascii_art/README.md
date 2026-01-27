@@ -5,7 +5,7 @@
 - write a C++ program that produces the following output on console:
 
 ```text
-    |\_/|       *******************************     (\_/)
+     |\_/|      *******************************     (\_/)
     / @ @ \     *      ASCII Art              *    (='.'=)
    ( > 0 < )    *      Author: <Your Name>    *  ( " )_( " )
      >>x<<      *      CS Foundation Course   *
