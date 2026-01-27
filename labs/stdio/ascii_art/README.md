@@ -9,7 +9,7 @@
     / @ @ \     *      ASCII Art              *    (='.'=)
    ( > 0 < )    *      Author: <Your Name>    *  ( " )_( " )
      >>x<<      *      CS Foundation Course   *
-     / O \       *******************************
+     / O \      *******************************
 ```
 
 - Always write algorithm steps as comments before coding.
@@ -31,14 +31,7 @@ ascii_art/
 2. Type the contents provided in `.h` and `.cpp` files and fix all fixmes. Write #fixed# after each #fixme.
 3. Follow best programming practices by using proper white spaces, comments, etc.
 
-### Input and Output format
-
-- Never prompt user telling what data to enter for Kattis problems. Kattis knows what to enter.
-- Directly read the input. Print only the answer as displayed in the sample output.
-- Print as asked: nothing less; nothing more!
-- Kattis is a computer program that provides specific input and expects exact output – to a space to give the correct verdict.
-
-## Whole program test with Kattis-cli
+## Whole program test
 
 1. Build, run and manually test the whole program using the Makefile provided
 2. Create screenshots of the output console showing the correct output as shown above.
