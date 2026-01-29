@@ -9,6 +9,8 @@ PROGRAM = thelastproblem.exe
 SRC = $(wildcard src/*.cpp)
 TESTS = $(wildcard tests/*.cpp)
 
+.PHONY: all build run clean unittest
+
 all: build run clean
 
 build:

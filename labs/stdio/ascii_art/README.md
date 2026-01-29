@@ -21,10 +21,10 @@
 
 ```bash
 ascii_art/
-├── data/
-├── ascii_art.cpp
+├── main.cpp
+├── util.cpp
+├── util.h
 ├── Makefile
-├── README.md
 └── screenshots/
 ```
 

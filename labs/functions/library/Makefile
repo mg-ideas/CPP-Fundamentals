@@ -17,6 +17,8 @@ CPPFILES = src/main.cpp src/my_math.cpp
 # first compile each file to object file
 # then make a single binary program
 
+.PHONY: all build run asserttest clean
+
 all: build run clean
 
 build:

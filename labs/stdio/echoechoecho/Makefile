@@ -1,3 +1,8 @@
 # FIXME 7
-# Write at 3 rules to build run and clean targets
+# Write at at least 3 more rules: all, run, and clean
 
+.PHONY: build
+
+build:
+	g++ -c -g -Wall -std=c++17 src/*.cpp
+	g++ -o echoechoecho.exe *.o
