@@ -33,7 +33,7 @@ ls
 ```bash
 echoechoecho/
 ├── data/
-├── echoechoecho.cpp
+├── src/echoechoecho.cpp
 ├── Makefile
 ├── README.md
 └── screenshots/
