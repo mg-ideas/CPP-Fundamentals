@@ -46,7 +46,8 @@ int main()
     const string jerry1 = "(\\_/)";
     const string tom2 = "/ @ @ \\";
     const string jerry2 = "(='.'=)";
-    string asterics = string(middle_width, '*'); // create a string with 50 asterics
+    // create a string with middle_width number of asterics
+    string asterics = string(middle_width, '*');
 
     // create the first line of the ASCII art
     string tom_line1 = center_text(tom_width, tom1);
