@@ -33,7 +33,7 @@ ascii_art/
 
 ## Whole program test
 
-1. Build, run and manually test the whole program fixing and using the Makefile provided
+1. Build, run, and manually test the whole program by fixing and using the Makefile provided
 
 ````bash
 make all

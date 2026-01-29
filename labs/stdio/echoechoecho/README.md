@@ -51,7 +51,7 @@ echoechoecho/
 
 ## Local test
 
-- Use Makefile to build and run the program locally fixing any issues.
+- Fix and use the provided Makefile to build, run, and test the program locally fixing any issues.
 
 ````bash
 make all
