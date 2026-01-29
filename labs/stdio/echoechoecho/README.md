@@ -39,7 +39,7 @@ echoechoecho/
 └── screenshots/
 ```
 
-2. Type the contents provided in `.h` and `.cpp` files and fix all fixmes. Write #fixed# after each #fixme.
+2. Type the contents provided in `.h`, `.cpp` and Makefile files and fix all fixmes. Write #fixed# after each #fixme.
 3. Follow best programming practices by using proper white spaces, comments, etc.
 
 ### Input and Output format
@@ -48,6 +48,17 @@ echoechoecho/
 - Directly read the input. Print only the answer as displayed in the sample output.
 - Print as asked: nothing less; nothing more!
 - Kattis is a computer program that provides specific input and expects exact output – to a space to give the correct verdict.
+
+## Local test
+
+- Use Makefile to build and run the program locally fixing any issues.
+
+````bash
+make all
+make build
+make run
+make clean
+```
 
 ## Whole program test with Kattis-cli
 
@@ -78,3 +89,4 @@ git status
 ```
 
 3. Make sure the files are actually pushed to your remote GitHub repo.
+````

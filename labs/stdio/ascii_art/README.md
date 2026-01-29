@@ -34,6 +34,14 @@ ascii_art/
 ## Whole program test
 
 1. Build, run and manually test the whole program fixing and using the Makefile provided
+
+````bash
+make all
+make build
+make run
+make clean
+```
+
 2. Create screenshots of the output console showing the output as shown above.
 
 ## Submission
@@ -51,6 +59,6 @@ git status
 git commit -m "write brief description of what was done"
 git push
 git status
-```
+````
 
 3. Make sure the files are actually pushed to your remote GitHub repo.
