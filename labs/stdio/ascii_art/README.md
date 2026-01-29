@@ -1,4 +1,4 @@
-# CS1 Lab - Standard Input and Output - 1
+# CS1 Lab - Standard Input and Output - A
 
 ## Possible Points: 100
 
