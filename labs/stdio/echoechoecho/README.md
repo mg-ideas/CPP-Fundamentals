@@ -53,7 +53,7 @@ echoechoecho/
 
 - Fix and use the provided Makefile to build, run, and test the program locally fixing any issues.
 
-````bash
+```bash
 make all
 make build
 make run
@@ -89,4 +89,3 @@ git status
 ```
 
 3. Make sure the files are actually pushed to your remote GitHub repo.
-````

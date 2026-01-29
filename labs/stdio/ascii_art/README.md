@@ -35,7 +35,7 @@ ascii_art/
 
 1. Build, run, and manually test the whole program by fixing and using the Makefile provided
 
-````bash
+```bash
 make all
 make build
 make run
@@ -59,6 +59,6 @@ git status
 git commit -m "write brief description of what was done"
 git push
 git status
-````
+```
 
 3. Make sure the files are actually pushed to your remote GitHub repo.
