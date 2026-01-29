@@ -28,13 +28,13 @@ ascii_art/
 └── screenshots/
 ```
 
-2. Type the contents provided in `.h` and `.cpp` files and fix all fixmes. Write #fixed# after each #fixme.
+2. Type the contents provided in `.h`, `.cpp` and Makefile files and fix all fixmes. Write #fixed# after each #fixme.
 3. Follow best programming practices by using proper white spaces, comments, etc.
 
 ## Whole program test
 
-1. Build, run and manually test the whole program using the Makefile provided
-2. Create screenshots of the output console showing the correct output as shown above.
+1. Build, run and manually test the whole program fixing and using the Makefile provided
+2. Create screenshots of the output console showing the output as shown above.
 
 ## Submission
 
