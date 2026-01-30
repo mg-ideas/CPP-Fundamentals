@@ -66,7 +66,7 @@ kattis submit
 
 ## Unit testing with basic assert function
 
-1. Set the unittest target in the Makefile and run the tests. Fix any issues if found.
+1. Fix and use Makefile to run the unittest. Fix any issues if found.
 
 ```bash
 make unittest
@@ -75,7 +75,7 @@ make unittest
 ## Submission
 
 1. Create at least 3 screenshots showing your local tests (kattis test and make unittest) and the kattis final **Accept** verdict and save them to the **screenshots** folder. (10 points).
-2. Update the `README.md` file (10 points) as shown here: https://github.com/rambasnet/csXXX-rbasnet
+2. Update the `README.md` file (10 points) with self-grade as shown here: https://github.com/rambasnet/csXXX-rbasnet
 
 ```bash
 cd <main repo folder>

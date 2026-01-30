@@ -28,7 +28,7 @@ library/
 
 ## Manual Whole program test
 
-1. Use Makefile to build, run, test the program manuall. Fix any issues if found.
+1. Fix and use Makefile to build, run, test the program manuall. Fix any issues if found.
 2. Create screenshots of your tests showing all the results and save them to the **screenshots** folder.
 
 ## Unit testing with assert function
@@ -43,8 +43,8 @@ make asserttest
 
 ## Submission
 
-1. Create at least 2 screenshots showing your local manual tests and make assert test and save them to the **screenshots** folder. (10 points).
-2. Update the `README.md` file (10 points) as shown here: https://github.com/rambasnet/csXXX-rbasnet
+1. Add at least 2 screenshots showing your local manual tests and automated make assert unittest and save them to the **screenshots** folder. (10 points).
+2. Update the `README.md` file (10 points) with self-grade as shown here: https://github.com/rambasnet/csXXX-rbasnet
 
 ```bash
 cd <main repo folder>

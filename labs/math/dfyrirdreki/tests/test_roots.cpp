@@ -1,29 +1,37 @@
-#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-#include "../../../doctest/doctest.h" // FIXME: adjust the path as needed
+// #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+// #include "../../../doctest/doctest.h" // FIXME: adjust the path as needed
 #include "../src/roots.h"
+#include <iostream>
+#include <cassert>
 
-TEST_CASE("Testing find_discriminant function")
+using namespace std;
+
+// Test function for find_discriminant
+void test_find_discriminant()
 {
-    SUBCASE("Discriminant is positive")
-    {
-        CHECK(find_discriminant(1, 5, 6) == 1); // 5^2 - 4*1*6 = 25 - 24 = 1
-    }
-    SUBCASE("Discriminant is zero")
-    {
-        CHECK(find_discriminant(1, 2, 1) == 0); // 2^2 - 4*1*1 = 4 - 4 = 0
-    }
-    // FIXME4: Add 6 more test cases to cover edge cases
+    int ans = find_discriminant(1, 5, 6);
+    int expected = 1;
+    assert(ans == expected);
 }
 
-TEST_CASE("Testing find_roots function")
+// FIXME1 - define 2 more test functions for find_discriminant
+
+// Test function for find_roots
+void test_find_roots()
 {
-    SUBCASE("No real roots when discriminant is negative")
-    {
-        CHECK(find_roots(-1) == 0);
-    }
-    SUBCASE("One real root when discriminant is zero")
-    {
-        CHECK(find_roots(0) == 1);
-    }
-    // FIXME5: Add 3 more test cases to cover edge cases
+    int ans = find_roots(-1);
+    int expected = 0;
+    assert(ans == expected);
+}
+
+// FIXME2 - define 2 more test functions for find_roots
+
+int main()
+{
+    cerr << "Roots Function Test Runner" << endl;
+    test_find_discriminant();
+    test_find_roots();
+    // FIXME3: call the rest of the test functions
+    cerr << "All test cases passed!" << endl;
+    return 0;
 }
