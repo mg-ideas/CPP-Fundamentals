@@ -1,6 +1,6 @@
-#include "../src/roots.h"
 #include <iostream>
 #include <cassert>
+#include "../src/roots.h"
 
 using namespace std;
 
