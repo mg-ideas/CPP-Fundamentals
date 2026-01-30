@@ -3,8 +3,8 @@
 long long find_discriminant(int a, int b, int c)
 {
     long long discriminant = 0; // placeholder return
-    // discriminant = implement b^2 - 4ac
     // FIXME2: implement the function to calculate and return the discriminant
+    // as stated in the algorithm steps
     return discriminant;
 }
 
