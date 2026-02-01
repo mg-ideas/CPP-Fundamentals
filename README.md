@@ -72,8 +72,8 @@ To run these notebooks interactively and save your work locally, you need the fo
 ```bash
     cd <CPP Fundamentals repo folder>
     conda activate cpp # activate virtualenv cpp if created
-    jupyter notebook # run notebook
-    jupyter retro # run retrolab
+    jupyter notebook --ip 0.0.0.0 # run notebook
+    jupyter retro --ip 0.0.0.0 # run retrolab
 ```
 
 - Enter ctrl+c to stop jupyter notebook from the terminal where its running from

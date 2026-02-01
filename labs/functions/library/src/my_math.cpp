@@ -1,5 +1,5 @@
 #include <cmath>
-#include "my_math.h"
+#include "my_math.hpp"
 using namespace std;
 
 float square_root(float x)

@@ -8,21 +8,31 @@ Program prompts user to enter a decimal number. It then finds various trig and m
 of the number using library functions and prints the results using cstdio's printf function.
 
 Algorithm:
-    1. Prompt user to enter a decmial number
+    1. Prompt user to enter a decimal number
     2. Store the number into a variable
-    3. Find and print various results form the number
+    3. Find and print various results form the number using library functions
 */
 
 #include <iostream>
 #include <cstdio>
 #include <cassert>
 #include <cmath> // various math functions: https://cplusplus.com/reference/cmath
-#include "my_math.h"
+#include "my_math.hpp"
+#include "../tests/test.hpp"
 
 using namespace std;
 
-int main()
+int main(int argc, char *argv[])
 {
+    if (argc > 1 and string(argv[1]) == "test")
+    {
+        cerr << "My Math Library Test Runner" << endl;
+        test_square_root();
+        test_log_base_2();
+        // FIXME9: call the rest of the test functions
+        cerr << "All test cases passed!" << endl;
+        return 0;
+    }
     double number, result;
 
     cout << "Program calculates various results from a given number" << endl;
