@@ -3,7 +3,7 @@
 #include <iostream>
 #include <cmath>
 #include <cassert>
-#include "../src/my_math.hpp"
+#include "../include/my_math.hpp"
 using namespace std;
 
 const float EPSILON = 1e-6; // accuracy upto 6 decimal points

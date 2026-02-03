@@ -17,8 +17,8 @@ Algorithm:
 #include <cstdio>
 #include <cassert>
 #include <cmath> // various math functions: https://cplusplus.com/reference/cmath
-#include "my_math.hpp"
-#include "../tests/test.hpp"
+#include "../include/my_math.hpp"
+#include "../include/test.hpp"
 
 using namespace std;
 
