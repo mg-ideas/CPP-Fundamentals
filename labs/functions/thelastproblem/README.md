@@ -32,8 +32,9 @@ kattis test
 ```bash
 thelastproblem/
 ├── data/
+├── include/
+│   └── helper.h
 ├── src/
-│   ├── helper.h
 │   └── thelastproblem.cpp
 │   └── helper.cpp
 ├── tests/
