@@ -33,7 +33,7 @@ kattis test
 thelastproblem/
 ├── data/
 ├── include/
-│   └── helper.h
+│   └── helper.hpp
 ├── src/
 │   └── thelastproblem.cpp
 │   └── helper.cpp
