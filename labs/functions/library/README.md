@@ -12,8 +12,9 @@ Goal of the lab is to learn to modularize your code using user-defined functions
 ```bash
 library/
 ├── data/
+├── include/
+│   └── my_math.hpp
 ├── src/
-│   ├── my_math.h
 │   └── my_math.cpp
 │   └── main.cpp
 ├── tests/

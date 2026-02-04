@@ -27,10 +27,10 @@ kattis test
 
 ## Type and fix the code
 
-1. Create the directory structure similar to this lab as shown below:
+1. Create the Pitch-fork directory structure similar to this lab as shown below:
 
 ```bash
-mclimbroad/
+thelastproblem/
 ├── data/
 ├── src/
 │   ├── helper.h
