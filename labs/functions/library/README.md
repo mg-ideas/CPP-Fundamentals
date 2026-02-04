@@ -29,12 +29,12 @@ library/
 
 ## Manual Whole program test
 
-1. Fix and use Makefile to build, run, test the program manuall. Fix any issues if found.
+1. Fix and use Makefile to build, run, test the program manuall. Fix any issues found.
 2. Create screenshots of your tests showing all the results and save them to the **screenshots** folder.
 
 ## Unit testing with assert function
 
-1. Set the asserttest target in the Makefile and run the tests. Fix any issues if found.
+1. Set the asserttest target in the Makefile and run the tests. Fix any issues found.
 
 ```bash
 make asserttest
