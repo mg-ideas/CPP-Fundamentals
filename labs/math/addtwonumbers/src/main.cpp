@@ -14,7 +14,7 @@ Algorithm steps:
 */
 
 #include <iostream>
-#include "addtwo.h"
+#include "../include/addtwo.h"
 
 using namespace std;
 
