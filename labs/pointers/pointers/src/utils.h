@@ -1,5 +1,6 @@
 #pragma once
 
+// note system call is NOT the secure way to make system calls!
 // macro function
 #ifdef _WIN32
 #define clear() system("cls")
