@@ -1,6 +1,6 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "../../../doctest/doctest.h" // FIXME: adjust the path as needed
-#include "../src/utils.h"
+#include "../includes/utils.h"
 
 TEST_CASE("Testing find_larger function")
 {

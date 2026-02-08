@@ -1,4 +1,4 @@
-#include "../include/addtwo.h"
+#include "addtwo.h"
 
 long add_two_numbers(int num1, int num2)
 {

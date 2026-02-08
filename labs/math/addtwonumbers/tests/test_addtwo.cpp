@@ -1,6 +1,6 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "../../../doctest/doctest.h" // FIXME: adjust the path as needed
-#include "../include/addtwo.h"
+#include "../src/addtwo.h"
 
 TEST_CASE("Testing add_two_numbers function")
 {
