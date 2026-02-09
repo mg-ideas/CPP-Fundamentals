@@ -1,9 +1,6 @@
 #pragma once
 
-const float MAX_ERROR = 0.00000001;
-
 // FUNCTION PROTOTYPES
 // Function finds the area of a right triangle given height and base
+const float MAX_ERROR = 1e-7; // maximum area of triangle to be calculated
 float area_of_triangle(const unsigned, const unsigned);
-
-void test_area_with_assert();

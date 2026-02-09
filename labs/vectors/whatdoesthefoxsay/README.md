@@ -1,8 +1,8 @@
-# CS1 Lab - Fruitful Functions and Unittest - A
+# CS1 Lab - Vector - What Does the Fox Say - B
 
 Possible Points: 100
 
-Write a C++ program to solve the Kattis problemid mclimbroad: [https://open.kattis.com/problems/mclimbroad](https://open.kattis.com/problems/mclimbroad). Note that the last part of the URL, e.g. `mclimbroad` is the problem id. Read the problem statement carefully to design a correct solution.
+Write a C++ program to solve the Kattis problemid whatdoesthefoxsay: [https://open.kattis.com/problems/whatdoesthefoxsay](https://open.kattis.com/problems/whatdoesthefoxsay). Note that the last part of the URL, e.g. `whatdoesthefoxsay` is the problem id. Read the problem statement carefully to design a correct solution.
 
 ## Kattis Setup
 
@@ -18,9 +18,9 @@ If not done before:
 ```bash
 cd <current lab directory>
 ls
-kattis get <problemid>
+kattis get whatdoesthefoxsay
 ls
-cd <problemid>
+cd whatdoesthefoxsay
 ls
 kattis test
 ```
@@ -30,7 +30,7 @@ kattis test
 1. Create the directory structure similar to this lab as shown below:
 
 ```bash
-mclimbroad/
+whatdoesthefoxsay/
 ├── data/
 ├── src/
 │   ├── util.hpp
@@ -43,7 +43,7 @@ mclimbroad/
 └── screenshots/
 ```
 
-2. Type the contents provided in `.h` and `.cpp` files and fix all fixmes. Write #fixed# after each #fixme.
+2. Type the contents provided in `*.hpp` and `*.cpp` files and fix all fixmes. Write #fixed# after each #fixme.
 3. Follow best programming practices by using proper white spaces, comments, etc.
 
 ### Input and Output format

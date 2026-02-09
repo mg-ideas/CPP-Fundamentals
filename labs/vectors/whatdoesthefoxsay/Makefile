@@ -1,20 +1,20 @@
 CXX = g++
-CXXFLAGS = -c -g -Wall -std=c++17
+CXXFLAGS = -c -g -Wall -std=gnu++17
 
-PROGRAM = mclimbroad.exe
+# the build target executable file; .exe is not required
+PROGRAM = foxsays.exe
 
 # list .cpp files separated by space
-SRC = $(wildcard src/*.cpp)
+CPPFILES = $(wildcard src/*.cpp)
 TEST_FILES = $(wildcard tests/*.cpp)
-all: build run
+
+all: build doctest sampletest clean
+	@printf "All good!\n"
 
 build:
-	$(CXX) $(CXXFLAGS) $(SRC)
+	$(CXX) $(CXXFLAGS) $(CPPFILES)
 	$(CXX) -o $(PROGRAM) *.o
 
-run:
-	./$(PROGRAM)
-	
 # make clean rule
 # delete object and binary files
 clean:
@@ -24,11 +24,11 @@ clean:
 	find . -name "*.out" -delete
 	find . -name "*.pch" -delete
 
-assert_test: build
-	./$(PROGRAM) test
-	@echo "Assert tests passed!"
-
+# run the test cases
 doctest: clean
-	$(CXX) -std=c++17 $(TEST_FILES) src/mclimbroad.cpp -o doctest_runner.exe
+	$(CXX) -std=c++17 $(TEST_FILES) src/util.cpp -o doctest_runner.exe
 	./doctest_runner.exe
-	
+
+# test the kattis provided samples
+sampletest:
+	kattis test

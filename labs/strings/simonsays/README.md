@@ -1,8 +1,8 @@
-# CS1 Lab - Fruitful Functions and Unittest - A
+# CS1 Lab - Stirngs and Unittest - B
 
 Possible Points: 100
 
-Write a C++ program to solve the Kattis problemid mclimbroad: [https://open.kattis.com/problems/mclimbroad](https://open.kattis.com/problems/mclimbroad). Note that the last part of the URL, e.g. `mclimbroad` is the problem id. Read the problem statement carefully to design a correct solution.
+Write a C++ program to solve the Kattis problemid simonsays: [https://open.kattis.com/problems/simonsays](https://open.kattis.com/problems/simonsays). Note that the last part of the URL, e.g. `simonsays` is the problem id. Read the problem statement carefully to design a correct solution.
 
 ## Kattis Setup
 
@@ -30,7 +30,7 @@ kattis test
 1. Create the directory structure similar to this lab as shown below:
 
 ```bash
-mclimbroad/
+timeloop/
 ├── data/
 ├── src/
 │   ├── util.hpp
@@ -41,6 +41,12 @@ mclimbroad/
 ├── Makefile
 └── README.md
 └── screenshots/
+```
+
+- kattis template command may create some of these files and folders for you.
+
+```bash
+kattis template -l cpp -p <problemid> -s
 ```
 
 2. Type the contents provided in `.h` and `.cpp` files and fix all fixmes. Write #fixed# after each #fixme.

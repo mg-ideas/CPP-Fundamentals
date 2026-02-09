@@ -36,4 +36,4 @@ doctest:
 
 # test the kattis provided samples
 sampletest:
-	katis test
+	kattis test

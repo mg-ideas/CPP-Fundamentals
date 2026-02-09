@@ -18,17 +18,13 @@ Algorithm:
 #include <iostream>
 #include <cstdio>
 #include <string>
+// #include <iomanip>
 #include "triarea.h"
 
 using namespace std;
 
 int main(int argc, char **argv)
 {
-    if (argc > 1 && string(argv[1]) == "test")
-    {
-        test_area_with_assert();
-        return 0;
-    }
     unsigned height, base;
     float answer;
     // read height and base into corresponding variables
@@ -38,5 +34,7 @@ int main(int argc, char **argv)
     answer = 0.0f;
     // print answer
     printf("%.7f\n", answer);
+    // alternative way to print answer with 7 decimal places
+    // cout << fixed << setprecision(7) << answer << endl;
     return 0;
 }
