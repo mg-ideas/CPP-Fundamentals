@@ -10,7 +10,6 @@ Write a C++ program to perform basic math operations using namespaces and enum t
 
 ```bash
 namespace/
-├── data/
 ├── includes/
 │   └── utils.h
 ├── src/
@@ -29,7 +28,7 @@ namespace/
 kattis template -l cpp -p <problemid> -s
 ```
 
-2. Type the contents provided in `.h` and `.cpp` files and fix all fixmes. Write #fixed# after each #fixme.
+2. Type the contents provided in `.h`, `.hpp` and `.cpp` files and fix all fixmes. Write #fixed# after each #fixme.
 3. Follow best programming practices by using proper white spaces, comments, etc.
 
 ## Whole program test
