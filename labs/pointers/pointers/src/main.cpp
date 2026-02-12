@@ -17,11 +17,13 @@ int main(int argc, char *argv[])
 {
 
     char *input;
+
     big_int *num1;                  // a pointer variable to point to big_int data
     num1 = new big_int;             // allocate memory in heap and store the address in num1
     big_int *num2 = new big_int;    // declare num2 as a dynamic variable
     large_int *sum = new large_int; // declare sum as a dynamic variable
     large_int *prod = new large_int;
+    // FIXME0 - create a dynamic memory to store a char and store its address in input pointer
     // FIXME1 - declare dynamic variables to store difference and larger values
     // Must use these variables to store the returned values from functions
 
