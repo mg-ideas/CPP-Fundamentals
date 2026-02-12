@@ -15,9 +15,7 @@ using namespace my_space;
 
 int main(int argc, char *argv[])
 {
-
     char *input;
-
     big_int *num1;                  // a pointer variable to point to big_int data
     num1 = new big_int;             // allocate memory in heap and store the address in num1
     big_int *num2 = new big_int;    // declare num2 as a dynamic variable
