@@ -34,17 +34,13 @@ int main(int argc, char *argv[])
         {
         case ADD:
             cout << "Enter two whole numbers separated by space: ";
-            // store the data by dereferencing pointers
             cin >> num1 >> num2;
-            // passing pointers to find_sum function
             sum = my_functions::find_sum(num1, num2);
             printf("%lld + %lld = %lld\n", num1, num2, sum);
             break;
         case MULTIPLY:
             cout << "Enter two whole numbers separated by space: ";
-            // store the data by dereferencing pointers
             cin >> num1 >> num2;
-            // passing dereferences (actural addresses) of num1 and num2
             prod = my_functions::find_product(num1, num2);
             printf("%lld * %lld = %lld\n", num1, num2, prod);
             break;
