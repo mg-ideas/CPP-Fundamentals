@@ -1,5 +1,5 @@
 // Implementation of utility functions for No Stragglers problem
-#include "utils.h"
+#include "utils.hpp"
 
 int total_stragglers(int students, int visitors, int faculty)
 {

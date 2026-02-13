@@ -1,9 +1,3 @@
-#include <iostream>
-#include <string>
-#include "twostones.h"
-
-using namespace std;
-
 /*
 Kattis - Take Two Stones
 Conditional Logic Lab
@@ -19,6 +13,12 @@ Algorithm Steps:
   3.a. If the number is odd, Alice wins.
   3.b. Otherwise, Bob wins.
 */
+
+#include <iostream>
+#include <string>
+#include "twostones.hpp"
+
+using namespace std;
 
 int main(int argc, char *argv[])
 {
