@@ -12,7 +12,7 @@ Write a C++ program to implement a menu-driven program that performs various ope
 menu/
 ├── data/
 ├── includes/
-│   └── utils.h
+│   └── utils.hpp
 ├── src/
 │   └── utils.cpp
 │   └── main.cpp
@@ -29,7 +29,7 @@ menu/
 kattis template -l cpp -p <problemid> -s
 ```
 
-2. Type the contents provided in `.h` and `.cpp` files and fix all fixmes. Write #fixed# after each #fixme.
+2. Type the contents provided in `.hpp` and `.cpp` files and fix all fixmes. Write #fixed# after each #fixme.
 3. Follow best programming practices by using proper white spaces, comments, etc.
 
 ## Manual Whole program test
