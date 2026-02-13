@@ -1,10 +1,8 @@
-# compiler name
 CXX = g++
 CXXFLAGS = -c -g -Wall -std=c++17
 
 PROGRAM = doggopher.exe
 
-# list .cpp files separated by space
 SOURCEFILES = $(wildcard src/*.cpp)
 TESTFILES = $(wildcard tests/*.cpp)
 
