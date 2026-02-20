@@ -30,7 +30,7 @@ kattis test
 1. Create the directory structure similar to this lab as shown below:
 
 ```bash
-timeloop/
+simonsays/
 ├── data/
 ├── src/
 │   ├── util.hpp
@@ -49,7 +49,7 @@ timeloop/
 kattis template -l cpp -p <problemid> -s
 ```
 
-2. Type the contents provided in `.h` and `.cpp` files and fix all fixmes. Write #fixed# after each #fixme.
+2. Type the contents provided in `.hpp` and `.cpp` files and fix all fixmes. Write #fixed# after each #fixme.
 3. Follow best programming practices by using proper white spaces, comments, etc.
 
 ### Input and Output format
