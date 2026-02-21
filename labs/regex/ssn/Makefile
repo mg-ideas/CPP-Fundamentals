@@ -2,24 +2,23 @@ CXX = g++
 CXXFLAGS = -c -g -Wall -std=c++17
 
 # the build target executable file; .exe is not required
-PROGRAM = hissing.exe
+PROGRAM = ssn.exe
 
 # list .cpp files separated by space
-CPPFILES = $(wildcard src/*.cpp)
+FILES = $(wildcard src/*.cpp)
 TEST_FILES = $(wildcard tests/*.cpp)
 
-all: build doctest test clean
+all: build doctest clean
 	@printf "All good!\n"
 
 # make build rule/default rule that'll be run when we run "make" or make build
 # first compile each file to object file
 # then make a single binary program
 build:
-	$(CXX) $(CXXFLAGS) $(CPPFILES)
+	$(CXX) $(CXXFLAGS) $(FILES)
 	$(CXX) -o $(PROGRAM) *.o
 
-run:
-	./$(PROGRAM)
+# FIXME - add a rule to run the program
 	
 # make clean rule
 # delete object and binary files
@@ -31,9 +30,5 @@ clean:
 
 # run the test cases
 doctest:
-	$(CXX) -std=c++17 $(TEST_FILES) src/util.cpp -o doctest_runner.exe
-	./doctest_runner.exe
+	@echo "FIXME"
 
-# test the kattis provided samples
-test:
-	kattis test

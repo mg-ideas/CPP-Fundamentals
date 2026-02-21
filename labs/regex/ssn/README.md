@@ -1,8 +1,8 @@
-# CS1 Lab - Strings and Unittest - C
+# CS1 Lab - Regular Expressions and Unittest
 
 Possible Points: 100
 
-Write a C++ program to check if the given phrase is palindrome or not.
+Write a C++ program to check if the given phrase has email address, social security, and credit card numbers in it using regular expressions.
 
 ## Type and fix the code
 
@@ -27,7 +27,7 @@ namespace/
 
 ## Whole program test
 
-- Test the program mannually by running the executable file and take a screenshot of the output and save it to the **screenshots** folder (10 points).
+- Test the program mannually by running the executable file.
 
 ```bash
 make all
@@ -35,7 +35,7 @@ make all
 
 ## Unit testing with Doctest
 
-1. Create **doctest** folder in the **labs** root folder and copy the `doctest.h` file into it from [https://github.com/doctest/doctest/tree/master/doctest ](https://github.com/doctest/doctest/tree/master/doctest) if not already done in previous labs.
+1. Create **doctest** folder in the **labs** root folder and copy the `doctest.h` file into it from [https://github.com/doctest/doctest/tree/master/doctest ](https://github.com/doctest/doctest/tree/master/doctest), if not already done in previous labs.
 2. Set the doctest rule in the Makefile and run the tests. Fix any issues if found.
 
 ```bash

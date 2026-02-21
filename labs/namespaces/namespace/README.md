@@ -22,18 +22,12 @@ namespace/
 └── screenshots/
 ```
 
-- kattis template command may create some of these files and folders for you.
-
-```bash
-kattis template -l cpp -p <problemid> -s
-```
-
 2. Type the contents provided in `.h`, `.hpp` and `.cpp` files and fix all fixmes. Write #fixed# after each #fixme.
 3. Follow best programming practices by using proper white spaces, comments, etc.
 
 ## Whole program test
 
-- Test the program mannually by running the executable file.
+- Test the program mannually by running the executable file. Take a screenshot of the output and save it to the **screenshots** folder (10 points).
 
 ```bash
 make all
