@@ -20,9 +20,7 @@ run: build
 clean:
 	find . -name "*.o" -delete
 	find . -name "*.dSYM" -type d -exec rm -rf {} + 2>/dev/null || true
-	find . -name "*.exe" -delete
-	find . -name "*.out" -delete
-	find . -name "*.pch" -delete
+	
 
 assert_test: build
 	./$(PROGRAM) test

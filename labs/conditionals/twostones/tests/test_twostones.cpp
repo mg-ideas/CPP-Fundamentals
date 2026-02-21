@@ -18,7 +18,15 @@ TEST_CASE("Testing odd_or_even function")
         string result = odd_or_even(number);
         CHECK(result == expected);
     }
-    // FIXME8: Write 3rd and 4th test cases for odd_or_even function
+    SUBCASE("Sub Case 3: Zero")
+    {
+        CHECK(odd_or_even(0)=="even");
+    }
+    SUBCASE("Sub Case 4: Big Num")
+    {
+        CHECK(odd_or_even(1111)=="odd");
+    }
+    // FIXED 8: Write 3rd and 4th test cases for odd_or_even function
 }
 
 TEST_CASE("Testing answer function")

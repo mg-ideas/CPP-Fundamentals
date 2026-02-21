@@ -8,5 +8,6 @@ using namespace std;
 string odd_or_even(const int unsigned);
 // function to test odd_or_even function
 void test_odd_or_even();
+void test_answer();
 // given a positive integer, function returns the answer as expected by Kattis
 string answer(const int unsigned);

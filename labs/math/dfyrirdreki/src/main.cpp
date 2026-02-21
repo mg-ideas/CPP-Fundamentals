@@ -31,10 +31,14 @@ int main()
     // declare variables to store input data and answer
     int a, b, c;
     long long discriminant;
+    int root;
     cin >> a >> b >> c;
-
+    
     // calculate the discriminant
     discriminant = find_discriminant(a, b, c);
+    root = find_roots(discriminant);
+    cout << root;
+
     // FIXME1: determine the number of real roots using function and print the result
     return 0;
 }

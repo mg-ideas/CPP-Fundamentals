@@ -1,5 +1,6 @@
 // solution to Exercise 1
 #include <string>
+#include <iostream>
 using namespace std;
 
 int main() {

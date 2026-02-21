@@ -33,7 +33,7 @@ int main()
     printf("ceiling(%f) = %.1f\n", number, result);
     // Find floor of the number
     result = floor(number);
-    printf("Floor(%f) = %.1f\n", number, result);
+    printf("Floor(%f) = %.0f\n", number, result);
     // FIXME4 - Find square root of the number and print the result with 4 decimal points
     // FIXME5 - Find log base two of the number and print the result with 3 decimal points
     // Pretend the number is in degree, convert it to radian and print the result with 5 decimal points

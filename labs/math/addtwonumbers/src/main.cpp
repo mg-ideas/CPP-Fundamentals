@@ -27,8 +27,11 @@ int main()
     // declare variables to store input data and answer
     int a, b, ans;
     cin >> a;
-    // FIXME1: Read the 2nd number
+    // FIXED 1: Read the 2nd number
+    cin >> b;
+    
     // FIXME2: add two numbers using function and store the result into ans variable
+    
     // FIXME3: print the answer
     return 0;
 }

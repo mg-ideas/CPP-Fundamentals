@@ -21,6 +21,8 @@ all:
 	$(CXX) -o $(PROGRAM) *.o # build the binary program using object file(s)
 	# ./$(PROGRAM) # uncomment it if you want to run the program if successfully built
 
+run:
+	./$(PROGRAM)
 # make clean rule
 # delete object and binary files
 clean:
