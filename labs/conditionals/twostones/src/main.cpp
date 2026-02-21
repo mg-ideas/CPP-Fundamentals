@@ -1,9 +1,3 @@
-#include <iostream>
-#include <string>
-#include "twostones.h"
-
-using namespace std;
-
 /*
 Kattis - Take Two Stones
 Conditional Logic Lab
@@ -19,6 +13,11 @@ Algorithm Steps:
   3.a. If the number is odd, Alice wins.
   3.b. Otherwise, Bob wins.
 */
+#include <iostream>
+#include <string>
+#include "twostones.h"
+
+using namespace std;
 
 int main(int argc, char *argv[])
 {
@@ -26,7 +25,7 @@ int main(int argc, char *argv[])
     cin.tie(NULL);
 
     // Your solution here
-    if (argc == 2 and string(argv[1]) == string("test"))
+    if (argc == 2 && string(argv[1]) == string("test"))//changes and to && due to error
     {
         test_odd_or_even();
         test_answer();
@@ -36,8 +35,8 @@ int main(int argc, char *argv[])
     else
     {
         unsigned int stones = 0;
-        
-        // FIXME3: readin the stones
+        cin>>stones;
+        // FIXED 3: readin the stones
         cout << answer(stones) << endl;
     }
 

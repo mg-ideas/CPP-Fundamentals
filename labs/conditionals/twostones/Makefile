@@ -16,8 +16,7 @@ build:
 run: build
 	./$(PROGRAM)
 	
-# make clean rule
-# delete object and binary files
+
 clean:
 	find . -name "*.o" -delete
 	find . -name "*.dSYM" -type d -exec rm -rf {} + 2>/dev/null || true

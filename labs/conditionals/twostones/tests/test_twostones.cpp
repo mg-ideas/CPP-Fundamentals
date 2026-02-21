@@ -45,5 +45,13 @@ TEST_CASE("Testing answer function")
         string result = answer(stones);
         CHECK(result == expected);
     }
-    // FIXME9: Write 3rd and 4th test cases for answer function
+    SUBCASE("Sub Case 3: Zero")
+    {
+        CHECK(answer(0)=="Bob");
+    }
+    SUBCASE("Subcase 4: Bignum")
+    {
+        CHECK(answer(1111)== "Alice");
+    }
+    // FIXED 9: Write 3rd and 4th test cases for answer function
 }
