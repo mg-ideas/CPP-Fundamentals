@@ -9,7 +9,7 @@ Write a C++ program to check if the given phrase has email address, social secur
 1. Create the directory structure similar to this lab as shown below:
 
 ```bash
-namespace/
+regex/
 ├── includes/
 │   └── utils.h
 ├── src/
