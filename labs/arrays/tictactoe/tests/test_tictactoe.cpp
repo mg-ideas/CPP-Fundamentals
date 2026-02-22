@@ -4,7 +4,7 @@
 #include <iostream>
 
 #include "../../../doctest/doctest.h"
-#include "../includes/tictactoe.hpp"
+#include "../includes/tictactoe.hpp" // FIXME - Adjust the path as needed
 
 TEST_CASE("Test init boad")
 {
