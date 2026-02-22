@@ -27,6 +27,6 @@ clean:
 
 
 doctest:
-	$(CXX) -std=c++17 $(TEST_FILES) src/utils.cpp -o doctest_runner.exe
+	$(CXX) -std=c++17 $(TEST_FILES) src/tictactoe.cpp -o doctest_runner.exe
 	./doctest_runner.exe
 	

@@ -9,7 +9,7 @@ The lab demostrates the use of array and some operations on array.
 #include <fstream>
 #include <cstdlib>
 #include <cstdio>
-#include "utils.h"
+#include "../includes/utils.h"
 
 using namespace std;
 
