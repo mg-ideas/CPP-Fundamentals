@@ -16,7 +16,7 @@ In this lab, you will implement a simple game of tic tac toe. You will use array
 ```bash
 tictactoe/
 ├── includes/
-│   ├── tictactoe.hpp
+│   └── tictactoe.hpp
 ├── src/
 │   └── tictactoe.cpp
 │   └── main.cpp
