@@ -1,4 +1,4 @@
-# CS1 Lab - Standard Input and Output - 1
+# CS1 Lab - Standard Input and Output - A
 
 ## Possible Points: 100
 
@@ -21,25 +21,33 @@
 
 ```bash
 ascii_art/
-├── data/
-├── ascii_art.cpp
+├── main.cpp
+├── util.cpp
+├── util.h
 ├── Makefile
-├── README.md
 └── screenshots/
 ```
 
-2. Type the contents provided in `.h` and `.cpp` files and fix all fixmes. Write #fixed# after each #fixme.
+2. Type the contents provided in `.h`, `.cpp` and Makefile files and fix all fixmes. Write #fixed# after each #fixme.
 3. Follow best programming practices by using proper white spaces, comments, etc.
 
 ## Whole program test
 
-1. Build, run and manually test the whole program using the Makefile provided
-2. Create screenshots of the output console showing the correct output as shown above.
+1. Build, run, and manually test the whole program by fixing and using the Makefile provided
+
+```bash
+make all
+make build
+make run
+make clean
+```
+
+2. Create screenshots of the output console showing the output as shown above.
 
 ## Submission
 
 1. Create at least 1 screenshot showing your local tests and save it to the **screenshots** folder. (10 points).
-2. Update the `README.md` file (10 points) as shown here: https://github.com/rambasnet/csXXX-rbasnet
+2. Update the `README.md` file (10 points) with self-grade as shown here: https://github.com/rambasnet/csXXX-rbasnet
 
 ```bash
 cd <main repo folder>

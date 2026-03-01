@@ -1,6 +1,4 @@
-# CS1 Lab - Arrays and Unittest
-
-Possible Points: 100
+# CS1 Lab - Arrays and Unittest - B
 
 Write a C++ program to manage an array of integers. The program should allow the user to read integers into the array, find the maximum and minimum values, calculate the sum and average of the integers, and delete the array when done. Implement unit tests for each functionality using the Doctest framework.
 
@@ -9,10 +7,10 @@ Write a C++ program to manage an array of integers. The program should allow the
 1. Create the directory structure similar to this lab as shown below:
 
 ```bash
-modulo/
-├── data/
-├── src/
+numbers/
+├── includes/
 │   ├── utils.h
+├── src/
 │   └── utils.cpp
 │   └── main.cpp
 ├── tests/

@@ -1,7 +1,7 @@
 // Test file for utils.cpp
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "../../../doctest/doctest.h" // FIXME: adjust the path as needed
-#include "../src/utils.h"
+#include "../includes/utils.hpp"
 
 TEST_CASE("Test find_difference Functionality")
 {

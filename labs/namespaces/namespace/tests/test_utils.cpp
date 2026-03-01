@@ -1,6 +1,6 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "../../../doctest/doctest.h" // FIXME: adjust the path as needed
-#include "../src/utils.h"
+#include "../includes/utils.h"
 
 TEST_CASE("Testing find_larger function")
 {
@@ -40,7 +40,5 @@ TEST_CASE("Testing find_area_of_circle function")
     }
     // FIXME8: Add 2 more test cases to cover edge cases
 }
-// FIXME8: Write test cases (with at least 2 subcases) for find_product function declared in utils.h --- IGNORE ---
-// FIXME8: Write test cases (with at least 2 subcases) for find_product function declared in utils.h --- IGNORE ---
-// FIXME9: Write test cases for find_sum function (with at least 2 subcases) declared in utils.h --- IGNORE ---
-// FIXME10: Write test cases for find_product function (with at least 2 subcases) declared in utils.h --- IGNORE ---
+// FIXME9: Write test cases (with at least 2 subcases) for find_product function declared in utils.h
+// FIXME10: Write test cases for find_difference function (with at least 2 subcases) declared in utils.h

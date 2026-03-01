@@ -1,8 +1,8 @@
-# CS1 Lab - Fruitful Functions and Unittest
+# CS1 Lab - Fruitful Functions and Unittest - A
 
 Possible Points: 100
 
-Write a C++ program to solve the Kattis problemid thelastproblem: [https://open.kattis.com/problems/thelastproblem](https://open.kattis.com/problems/thelastproblem). Note that the last part of the URL, e.g. `thelastproblem` is the problem id. Read the problem statement carefully to design a correct solution.
+Write a C++ program to solve the Kattis problemid mclimbroad: [https://open.kattis.com/problems/mclimbroad](https://open.kattis.com/problems/mclimbroad). Note that the last part of the URL, e.g. `mclimbroad` is the problem id. Read the problem statement carefully to design a correct solution.
 
 ## Kattis Setup
 
@@ -30,14 +30,14 @@ kattis test
 1. Create the directory structure similar to this lab as shown below:
 
 ```bash
-thelastproblem/
+mclimbroad/
 ├── data/
 ├── src/
-│   ├── thelastproblem.h
-│   └── thelastproblem.cpp
+│   ├── util.hpp
+│   └── util.cpp
 │   └── main.cpp
 ├── tests/
-│   └── test_thelastproblem.cpp
+│   └── test_util.cpp
 ├── Makefile
 └── README.md
 └── screenshots/

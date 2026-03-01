@@ -30,8 +30,8 @@ int main()
     // create a string with 75 = signs; center the string and print it out
     cout << center_text(100, string(50, '=')) << endl
          << endl;
-    string lab_title; // declare a variable to store your name
-    // prompt to enter your name from standard input
+    string lab_title; // declare a variable to store lab title
+    // prompt user to enter name from standard input
     cout << "Enter Lab Title: ";
     // store the entered data/title into lab_title variable
     getline(cin, lab_title);
@@ -44,9 +44,10 @@ int main()
 
     const string tom1 = "|\\_/|";
     const string jerry1 = "(\\_/)";
-    const string tom2 = "/  @  @ \\";
+    const string tom2 = "/ @ @ \\";
     const string jerry2 = "(='.'=)";
-    string asterics = string(middle_width, '*'); // create a string with 50 asterics
+    // create a string with middle_width number of asterics
+    string asterics = string(middle_width, '*');
 
     // create the first line of the ASCII art
     string tom_line1 = center_text(tom_width, tom1);
@@ -71,7 +72,7 @@ int main()
     // Note: You can add more lines or print more ASCII arts of your choice ... if you'd like to...
 
     cout << "\nGood bye... hit enter to exit the program.\n";
-    // FIXME8: make the console wait for user input
-
+    // FIXME8: make the console wait for user input #fixed#
+    cin.get();
     return 0; // exit program by returning 0 status to the system
 }

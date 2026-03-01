@@ -1,6 +1,4 @@
-# CS1 Lab - Arrays and Unittest
-
-Possible Points: 100
+# CS1 Lab - Arrays and Unittest - A
 
 Write a C++ program to solve the Kattis problemid modulo: [https://open.kattis.com/problems/modulo](https://open.kattis.com/problems/modulo). Note that the last part of the URL, e.g. `modulo` is the problem id. Read the problem statement carefully to design a correct solution.
 

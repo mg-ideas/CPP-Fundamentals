@@ -33,11 +33,11 @@ kattis test
 nostragglers/
 ├── data/
 ├── src/
-│   ├── nostragglers.h
-│   └── nostragglers.cpp
+│   ├── utils.hpp
+│   └── utils.cpp
 │   └── main.cpp
 ├── tests/
-│   └── test_nostragglers.cpp
+│   └── test_utils.cpp
 ├── Makefile
 └── README.md
 └── screenshots/
@@ -49,8 +49,9 @@ nostragglers/
 kattis template -l cpp -p <problemid> -s
 ```
 
-2. Type the contents provided in `.h` and `.cpp` files and fix all fixmes. Write #fixed# after each #fixme.
+2. Type the contents provided in `.hpp` and `.cpp` files and fix all fixmes. Write #fixed# after each #fixme.
 3. Follow best programming practices by using proper white spaces, comments, etc.
+4. Fix and use Makefile for all important tasks.
 
 ### Input and Output format
 
@@ -73,7 +74,6 @@ kattis submit
 ## Unit testing with Doctest
 
 1. Create **doctest** folder in the **labs** root folder and copy the `doctest.h` file into it from [https://github.com/doctest/doctest/tree/master/doctest ](https://github.com/doctest/doctest/tree/master/doctest)
-2. Set the doctest rule in the Makefile and run the tests. Fix any issues if found.
 
 ```bash
 make doctest

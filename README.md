@@ -24,12 +24,19 @@ Depending on their skill and interest level, learners can move as swiftly as app
 
 In order to learn coding, it's very important to actually type code on your own from scratch and NOT copy paste! You can run provided cells to see the output, follow along and learn from it. However, it's very important that you either start a new notebook or add cells and write your own code from scratch to practice the concepts covered with many similar examples and solve the exercises provided.
 
-### Online services
+### On GitHub Codespace
 
-You can launch an interactive session of this project using online [Binder](http://mybinder.org/) service:
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/rambasnet/CPP-Fundamentals/HEAD?filepath=Ch00-TableOfContents.ipynb)
+- conda is already installed
 
-### On a local system or on GitHub Codespaces
+```bash
+    python -m pip install ipykernel
+    python -m ipykernel install --user
+    conda install -c conda-forge xeus-cling -y # C++ kernel
+```
+
+- open any notebook file in the Codespace; select the xeus-cling C++ kernel from Jupyter Kernel selection dropdown
+
+### On a local system
 
 To run these notebooks interactively and save your work locally, you need the following environment and programs installed.
 
@@ -56,10 +63,13 @@ To run these notebooks interactively and save your work locally, you need the fo
 - NOTE - xeus-cling C++ kernel doesn't work on Mac Silicon (M chips) as of Nov. 4 2025
 
 ```bash
+    python -m pip install ipykernel
+    python -m ipykernel install --user
     conda update conda -y
     conda create -n cpp python=3.12 -c conda-forge -y
-    source activate cpp
+    conda init
     conda activate cpp
+    # if you cpp not activated, close and open the Termainl
     conda install -c conda-forge retrolab -y # jupyter notebook/retro
     conda install -c conda-forge xeus-cling -y # C++ kernel
 ```
@@ -72,8 +82,8 @@ To run these notebooks interactively and save your work locally, you need the fo
 ```bash
     cd <CPP Fundamentals repo folder>
     conda activate cpp # activate virtualenv cpp if created
-    jupyter notebook # run notebook
-    jupyter retro # run retrolab
+    jupyter notebook --ip 0.0.0.0 # run notebook
+    jupyter retro --ip 0.0.0.0 # run retrolab
 ```
 
 - Enter ctrl+c to stop jupyter notebook from the terminal where its running from

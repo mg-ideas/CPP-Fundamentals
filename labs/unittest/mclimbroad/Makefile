@@ -28,7 +28,7 @@ assert_test: build
 	./$(PROGRAM) test
 	@echo "Assert tests passed!"
 
-doctest:
-	$(CXX) -std=c++17 -I tests $(TEST_FILES) src/mclimbroad.cpp -o doctest_runner.exe
+doctest: clean
+	$(CXX) -std=c++17 $(TEST_FILES) src/mclimbroad.cpp -o doctest_runner.exe
 	./doctest_runner.exe
 	

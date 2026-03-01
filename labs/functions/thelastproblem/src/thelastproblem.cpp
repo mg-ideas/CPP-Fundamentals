@@ -16,7 +16,7 @@ Algorithm:
 #include <cstdio>
 #include <cassert>
 #include <string>
-#include "helper.h"
+#include "../include/helper.hpp"
 
 using namespace std;
 
@@ -38,6 +38,6 @@ string read_data()
 {
 	string input;
 	// FIXME2: using getline read and store the data into input variable
-	// FIXME3 return input data
+	// FIXME3: return input data
 	return "FIXME";
 }

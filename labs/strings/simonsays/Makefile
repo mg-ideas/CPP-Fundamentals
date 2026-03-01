@@ -11,11 +11,12 @@ CXXFLAGS = -c -g -Wall -std=c++17
 PROGRAM = simonsays.exe
 
 # list .cpp files separated by space
-CPPFILES = main.cpp
+CPPFILES = $(wildcard src/*.cpp)
+TEST_FILES = $(wildcard tests/*.cpp)
 
-# make build rule/default rule that'll be run when we run "make" or make build
-# first compile each file to object file
-# then make a single binary program
+all: build doctest clean
+	@printf "All good!\n"
+
 build:
 	@$(CXX) $(CXXFLAGS) $(CPPFILES)
 	@$(CXX) -o $(PROGRAM) *.o
@@ -23,21 +24,16 @@ build:
 run:
 	@./$(PROGRAM)
 	
-# make clean rule
-# delete object and binary files
+
+doctest: clean
+	$(CXX) -std=c++17 $(TEST_FILES) src/util.cpp -o doctest_runner.exe
+	./doctest_runner.exe
+	
+
 clean:
-	@rm -f $(PROGRAM) *.o
+	find . -name "*.o" -delete
+	find . -name "*.dSYM" -type d -exec rm -rf {} + 2>/dev/null || true
+	find . -name "*.exe" -delete
+	find . -name "*.out" -delete
+	find . -name "*.pch" -delete
 
-# run the test cases
-unittest:
-	@./$(PROGRAM) test
-
-# test the kattis provided samples
-kattistest:
-	cat ./sample_tests/1.in | ./$(PROGRAM) | diff - ./sample_tests/1.ans
-	cat ./sample_tests/2.in | ./$(PROGRAM) | diff - ./sample_tests/2.ans
-	cat ./sample_tests/3.in | ./$(PROGRAM) | diff - ./sample_tests/3.ans
-	@echo "All Test Cases Passed!"
-
-all: build unittest clean
-	@printf "All good!\n"

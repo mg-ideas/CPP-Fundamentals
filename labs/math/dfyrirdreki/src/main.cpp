@@ -3,7 +3,7 @@ Lab: Basic Math
 Updated By: [Your Name]
 Date: [Today's Date]
 CSCI 111 - Foundations of Computer Science
-Instructor: [Instructor's Name]
+Semester: [Current Semester]
 
 Read and Solve: https://open.kattis.com/problems/dfyrirdreki
 

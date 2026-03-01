@@ -1,4 +1,4 @@
-# CS1 Lab - Functions and Unittest
+# CS1 Lab - Fruitful Functions and Unittest - B
 
 Possible Points: 100
 

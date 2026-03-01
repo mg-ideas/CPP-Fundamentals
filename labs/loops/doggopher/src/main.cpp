@@ -8,15 +8,18 @@ Date: [Today's Date]
 Read and solve the Kattis problem: https://open.kattis.com/problems/doggopher
 
 Algorithm Steps:
-        1. Read gopher and dog's coordinates
-        2. Define a function to find and return the Euclidean distance between the two points
+    1. Read gopher and dog's coordinates
+    2. Define a function to find and return the Euclidean distance between the two points
     3. For each gopher hole coordinate:
-      3.a find the distance between the gopher position and the hole
-      3.b find the distance between the dog position and the hole
-      4.c if the dog's distance is larger or equal to twice the distance of gopher,
+      a. find the distance between the gopher position and the hole
+      b. find the distance between the dog position and the hole
+      c. if the dog's distance is larger or equal to twice the distance of gopher,
           gopher can get away through that hole.
-          4.c.1 Stop testing other holes.
+          c.1 - set the answer accordingly
+          c.2 Stop testing the rest of the holes.
     4. If no safe hole is found, the gopher cannot escape.
+        a. ste the answer accordingly
+    5. print the answer
 */
 
 #include <iostream>
@@ -25,12 +28,13 @@ Algorithm Steps:
 #include <iomanip>
 #include <cmath>
 #include <sstream>
-#include "doggopher.h"
+#include "doggopher.hpp"
 
 using namespace std;
 
 int main(int argc, char *argv[])
 {
+    // do not sync C++ streams with C streams for faster I/O
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 

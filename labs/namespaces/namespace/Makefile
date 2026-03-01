@@ -30,6 +30,6 @@ assert_test: build
 	@echo "Assert tests passed!"
 
 doctest:
-	$(CXX) -std=c++17 -I tests $(TEST_FILES) src/utils.cpp -o doctest_runner.exe
+	$(CXX) -std=c++17 $(TEST_FILES) src/utils.cpp -o doctest_runner.exe
 	./doctest_runner.exe
 	

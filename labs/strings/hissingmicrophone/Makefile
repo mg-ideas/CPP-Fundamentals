@@ -1,17 +1,15 @@
-# compiler name
 CXX = g++
-# c++ compiler flags
-# -g: adds debugging information to the executable file
-# - Wall turns on most, but not  all, compiler warnings
-# -std=C++17 uses c++17 standard
-# add all the required flags separated by space
 CXXFLAGS = -c -g -Wall -std=c++17
 
 # the build target executable file; .exe is not required
 PROGRAM = hissing.exe
 
 # list .cpp files separated by space
-CPPFILES = main.cpp
+CPPFILES = $(wildcard src/*.cpp)
+TEST_FILES = $(wildcard tests/*.cpp)
+
+all: build doctest test clean
+	@printf "All good!\n"
 
 # make build rule/default rule that'll be run when we run "make" or make build
 # first compile each file to object file
@@ -26,18 +24,16 @@ run:
 # make clean rule
 # delete object and binary files
 clean:
-	rm -f $(PROGRAM) *.o
+	find . -name "*.o" -delete
+	find . -name "*.dSYM" -type d -exec rm -rf {} + 2>/dev/null || true
+	find . -name "*.exe" -delete
+	find . -name "*.out" -delete
 
 # run the test cases
-unittest:
-	./$(PROGRAM) test
+doctest:
+	$(CXX) -std=c++17 $(TEST_FILES) src/util.cpp -o doctest_runner.exe
+	./doctest_runner.exe
 
 # test the kattis provided samples
-kattistest:
-	cat ./sample_tests/1.in | ./$(PROGRAM) | diff - ./sample_tests/1.ans
-	cat ./sample_tests/2.in | ./$(PROGRAM) | diff - ./sample_tests/2.ans
-	cat ./sample_tests/3.in | ./$(PROGRAM) | diff - ./sample_tests/3.ans
-	@echo "All test cases passed!"
-
-all: build unittest kattistest clean
-	@printf "All good!\n"
+test:
+	kattis test

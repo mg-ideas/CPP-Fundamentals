@@ -1,4 +1,4 @@
-# CS1 Lab - Standard Input and Output - 2
+# CS1 Lab - Standard Input and Output - B
 
 Possible Points: 100
 
@@ -33,13 +33,13 @@ ls
 ```bash
 echoechoecho/
 ├── data/
-├── echoechoecho.cpp
+├── src/echoechoecho.cpp
 ├── Makefile
 ├── README.md
 └── screenshots/
 ```
 
-2. Type the contents provided in `.h` and `.cpp` files and fix all fixmes. Write #fixed# after each #fixme.
+2. Type the contents provided in `.h`, `.cpp` and Makefile files and fix all fixmes. Write #fixed# after each #fixme.
 3. Follow best programming practices by using proper white spaces, comments, etc.
 
 ### Input and Output format
@@ -48,6 +48,17 @@ echoechoecho/
 - Directly read the input. Print only the answer as displayed in the sample output.
 - Print as asked: nothing less; nothing more!
 - Kattis is a computer program that provides specific input and expects exact output – to a space to give the correct verdict.
+
+## Local test
+
+- Fix and use the provided Makefile to build, run, and test the program locally fixing any issues.
+
+```bash
+make all
+make build
+make run
+make clean
+```
 
 ## Whole program test with Kattis-cli
 
@@ -63,7 +74,7 @@ kattis submit
 ## Submission
 
 1. Create at least 3 screenshots showing your local tests (kattis test and make doctest) and the kattis final **Accept** verdict and save them to the **screenshots** folder. (10 points).
-2. Update the `README.md` file (10 points) as shown here: https://github.com/rambasnet/csXXX-rbasnet
+2. Update the `README.md` file (10 points) with self-grade as shown here: https://github.com/rambasnet/csXXX-rbasnet
 
 ```bash
 cd <main repo folder>

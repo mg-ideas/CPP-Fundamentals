@@ -1,4 +1,4 @@
 #pragma once
 
-long long find_discriminant(int a, int b, int c);
-int find_roots(long long discriminant);
+long long find_discriminant(int, int, int);
+int find_roots(long long);

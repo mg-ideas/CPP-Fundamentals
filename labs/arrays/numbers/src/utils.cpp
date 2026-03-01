@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cstdio>
-#include "utils.h"
+#include "../includes/utils.h"
 using namespace std;
 
 // read data from a file and store it in into given nums array.

@@ -24,11 +24,7 @@ clean:
 	find . -name "*.out" -delete
 	find . -name "*.pch" -delete
 
-assert_test: build
-	./$(PROGRAM) test
-	@echo "Assert tests passed!"
-
-doctest:
-	$(CXX) -std=c++17 -I tests $(TEST_FILES) src/roots.cpp -o doctest_runner.exe
-	./doctest_runner.exe
+unittest: build
+	$(CXX) -o test_runner.exe $(TEST_FILES) src/roots.cpp
+	./test_runner.exe
 	

@@ -10,9 +10,9 @@ Write a C++ program to perform basic math operations using namespaces and enum t
 
 ```bash
 pointers/
-├── data/
+├── includes/
+│   └── utils.h
 ├── src/
-│   ├── utils.h
 │   └── utils.cpp
 │   └── main.cpp
 ├── tests/
@@ -28,7 +28,7 @@ pointers/
 kattis template -l cpp -p <problemid> -s
 ```
 
-2. Type the contents provided in `.h` and `.cpp` files and fix all fixmes. Write #fixed# after each #fixme.
+2. Type the contents provided in `.h`, `.hpp`, and `.cpp` files and fix all fixmes. Write #fixed# after each #fixme.
 3. Follow best programming practices by using proper white spaces, comments, etc.
 
 ## Whole program test
@@ -41,7 +41,7 @@ make all
 
 ## Unit testing with Doctest
 
-1. Create **doctest** folder in the **labs** root folder and copy the `doctest.h` file into it from [https://github.com/doctest/doctest/tree/master/doctest ](https://github.com/doctest/doctest/tree/master/doctest)
+1. Create **doctest** folder in the **labs** root folder and copy the `doctest.h` file into it from [https://github.com/doctest/doctest/tree/master/doctest](https://github.com/doctest/doctest/tree/master/doctest)
 2. Set the doctest rule in the Makefile and run the tests. Fix any issues if found.
 
 ```bash

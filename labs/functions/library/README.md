@@ -11,9 +11,9 @@ Goal of the lab is to learn to modularize your code using user-defined functions
 
 ```bash
 library/
-├── data/
+├── include/
+│   └── my_math.hpp
 ├── src/
-│   ├── my_math.h
 │   └── my_math.cpp
 │   └── main.cpp
 ├── tests/
@@ -23,17 +23,17 @@ library/
 └── screenshots/
 ```
 
-2. Type the contents provided in `.h` and `.cpp` files and fix all fixmes. Write #fixed# after each #fixme.
+2. Type the contents provided in `.hpp` and `.cpp` files and fix all fixmes. Write #fixed# after each #fixme.
 3. Follow best programming practices by using proper white spaces, comments, etc.
 
 ## Manual Whole program test
 
-1. Use Makefile to build, run, test the program manuall. Fix any issues if found.
+1. Fix and use Makefile to build, run, test the program manuall. Fix any issues found.
 2. Create screenshots of your tests showing all the results and save them to the **screenshots** folder.
 
 ## Unit testing with assert function
 
-1. Set the asserttest target in the Makefile and run the tests. Fix any issues if found.
+1. Set the asserttest target in the Makefile and run the tests. Fix any issues found.
 
 ```bash
 make asserttest
@@ -43,8 +43,8 @@ make asserttest
 
 ## Submission
 
-1. Create at least 2 screenshots showing your local manual tests and make assert test and save them to the **screenshots** folder. (10 points).
-2. Update the `README.md` file (10 points) as shown here: https://github.com/rambasnet/csXXX-rbasnet
+1. Add at least 2 screenshots showing your local manual tests and automated make assert unittest and save them to the **screenshots** folder. (10 points).
+2. Update the `README.md` file (10 points) with self-grade as shown here: https://github.com/rambasnet/csXXX-rbasnet
 
 ```bash
 cd <main repo folder>
