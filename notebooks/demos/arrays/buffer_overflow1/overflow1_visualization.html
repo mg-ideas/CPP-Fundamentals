@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>buffer_overflow1 Stack Corruption Visualizer</title>
+  <style>
+    :root {
+      --bg-1: #f4efe3;
+      --bg-2: #d9e7d6;
+      --ink: #1b1f24;
+      --muted: #4e5764;
+      --panel: rgba(255, 255, 255, 0.76);
+      --border: rgba(22, 30, 36, 0.14);
+      --pass: #7fc4a8;
+      --social: #f7aa87;
+      --corrupt: #c94040;
+      --safe: #2f8f4e;
+      --shadow: 0 14px 40px rgba(30, 38, 46, 0.18);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 10% 12%, #f7d59a 0, rgba(247, 213, 154, 0) 42%),
+        radial-gradient(circle at 92% 20%, #9fd5c2 0, rgba(159, 213, 194, 0) 36%),
+        linear-gradient(160deg, var(--bg-1), var(--bg-2));
+      min-height: 100vh;
+      line-height: 1.4;
+    }
+
+    .wrap {
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 28px 18px 40px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-family: "Alegreya", Georgia, serif;
+      font-size: clamp(1.7rem, 3vw, 2.6rem);
+      letter-spacing: 0.02em;
+    }
+
+    .subtitle {
+      margin: 0 0 24px;
+      color: var(--muted);
+      max-width: 78ch;
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: 1.15fr 1fr;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      padding: 18px;
+      backdrop-filter: blur(4px);
+    }
+
+    .controls {
+      display: grid;
+      gap: 10px;
+    }
+
+    label {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: 1rem;
+      background: #ffffff;
+      color: var(--ink);
+    }
+
+    .quick {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 2px;
+    }
+
+    button {
+      border: 1px solid var(--border);
+      background: #ffffff;
+      border-radius: 999px;
+      padding: 6px 12px;
+      cursor: pointer;
+      transition: transform 140ms ease, box-shadow 140ms ease;
+      font-size: 0.92rem;
+    }
+
+    button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(38, 44, 51, 0.14);
+    }
+
+    .result {
+      margin-top: 8px;
+      display: grid;
+      gap: 8px;
+      font-size: 0.95rem;
+    }
+
+    .value {
+      font-family: "IBM Plex Mono", "Consolas", monospace;
+      padding: 8px 10px;
+      border-radius: 8px;
+      background: #fff;
+      border: 1px solid var(--border);
+      overflow-wrap: anywhere;
+    }
+
+    .value.bad {
+      border-color: rgba(201, 64, 64, 0.45);
+      background: rgba(201, 64, 64, 0.08);
+    }
+
+    .status {
+      margin-top: 8px;
+      font-weight: 700;
+    }
+
+    .status.safe {
+      color: var(--safe);
+    }
+
+    .status.bad {
+      color: var(--corrupt);
+    }
+
+    .stack-title {
+      margin: 0 0 12px;
+      font-size: 1rem;
+      color: var(--muted);
+      font-weight: 650;
+    }
+
+    .stack {
+      display: grid;
+      grid-template-columns: 72px repeat(20, minmax(0, 1fr));
+      gap: 6px;
+      align-items: center;
+      font-family: "IBM Plex Mono", "Consolas", monospace;
+    }
+
+    .stack .head {
+      font-size: 0.75rem;
+      color: #4b5662;
+      text-align: center;
+    }
+
+    .stack .row-label {
+      font-size: 0.78rem;
+      color: #2a3138;
+      white-space: nowrap;
+    }
+
+    .cell {
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      min-height: 40px;
+      padding: 2px;
+      text-align: center;
+      display: grid;
+      place-items: center;
+      font-size: 0.72rem;
+      position: relative;
+      background: #fff;
+    }
+
+    .cell.password {
+      background: color-mix(in srgb, var(--pass) 32%, #fff);
+    }
+
+    .cell.social {
+      background: color-mix(in srgb, var(--social) 30%, #fff);
+    }
+
+    .cell.corrupt {
+      outline: 2px solid rgba(201, 64, 64, 0.6);
+      box-shadow: 0 0 0 2px rgba(201, 64, 64, 0.1) inset;
+      animation: pulse 820ms ease;
+    }
+
+    .byte {
+      display: inline-block;
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-weight: 700;
+    }
+
+    .legend {
+      margin-top: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 0.86rem;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 6px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      vertical-align: middle;
+    }
+
+    .code {
+      margin-top: 12px;
+      font-family: "IBM Plex Mono", "Consolas", monospace;
+      background: #101419;
+      color: #d6dbe0;
+      border-radius: 10px;
+      padding: 12px;
+      font-size: 0.82rem;
+      overflow-x: auto;
+    }
+
+    .code .bad-line {
+      color: #ff8972;
+    }
+
+    .note {
+      margin-top: 12px;
+      color: #33414f;
+      font-size: 0.88rem;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(0.98); }
+      50% { transform: scale(1.02); }
+      100% { transform: scale(1); }
+    }
+
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stack {
+        overflow-x: auto;
+        grid-template-columns: 72px repeat(20, 40px);
+        padding-bottom: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>Buffer Overflow Visualizer: <code>buffer_overflow1.cpp</code></h1>
+    <p class="subtitle">
+      This models a common classroom stack layout where <code>password[8]</code> and <code>social_security[12]</code>
+      sit next to each other in memory. Typing more than 7 characters causes <code>cin >> password</code>
+      to keep writing bytes past the end of <code>password</code>, corrupting <code>social_security</code>.
+    </p>
+
+    <section class="grid">
+      <div class="card">
+        <div class="controls">
+          <label for="pw">Input to <code>cin >> password</code></label>
+          <input id="pw" type="text" value="ABCDEFG" spellcheck="false" autocomplete="off" />
+
+          <div class="quick">
+            <button data-val="ABCDEFG">7 chars (safe)</button>
+            <button data-val="ABCDEFGH">8 chars (starts corruption)</button>
+            <button data-val="ABCDEFGHIJKL">12 chars (clear overwrite)</button>
+            <button data-val="AAAAAAAAAAAAAAAA">16 chars (heavy overwrite)</button>
+          </div>
+        </div>
+
+        <div class="result">
+          <div>
+            <strong>Program would print:</strong>
+            <div id="shown-password" class="value"></div>
+          </div>
+          <div>
+            <strong>your SSN is</strong>
+            <div id="shown-ssn" class="value"></div>
+          </div>
+          <div id="status" class="status"></div>
+        </div>
+
+        <pre class="code"><code>char social_security[] = "123-45-6789";
+char password[8];
+
+cout &lt;&lt; "Enter your password: ";
+<span class="bad-line">cin &gt;&gt; password;  // no bounds check</span>
+cout &lt;&lt; "your SSN is " &lt;&lt; social_security &lt;&lt; endl;</code></pre>
+
+        <p class="note">
+          Note: real stack layout can vary by compiler, optimization, and platform.
+          This is a teaching visualization aligned with the demo's intended behavior.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2 class="stack-title">Stack Byte View (increasing addresses left to right)</h2>
+        <div id="stack" class="stack"></div>
+        <div class="legend">
+          <span><span class="dot" style="background: color-mix(in srgb, var(--pass) 32%, #fff);"></span>password[8]</span>
+          <span><span class="dot" style="background: color-mix(in srgb, var(--social) 30%, #fff);"></span>social_security[12]</span>
+          <span><span class="dot" style="background: #ffd7d7;"></span>corrupted social bytes</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const PASSWORD_SIZE = 8;
+    const SOCIAL_INIT = "123-45-6789"; // 11 chars + '\0' = 12 bytes
+    const SOCIAL_SIZE = SOCIAL_INIT.length + 1;
+    const TOTAL = PASSWORD_SIZE + SOCIAL_SIZE;
+
+    const input = document.getElementById("pw");
+    const stackEl = document.getElementById("stack");
+    const shownPassword = document.getElementById("shown-password");
+    const shownSsn = document.getElementById("shown-ssn");
+    const status = document.getElementById("status");
+
+    function toDisplay(byteVal) {
+      if (byteVal === 0) return "\\0";
+      if (byteVal === 32) return "sp";
+      const c = String.fromCharCode(byteVal);
+      if (/^[A-Za-z0-9-]$/.test(c)) return c;
+      return "0x" + byteVal.toString(16).padStart(2, "0");
+    }
+
+    function cStringFrom(memory, start, size) {
+      let out = "";
+      for (let i = 0; i < size; i += 1) {
+        const b = memory[start + i];
+        if (b === 0) break;
+        out += String.fromCharCode(b);
+      }
+      return out;
+    }
+
+    function simulate(userText) {
+      const memory = new Uint8Array(TOTAL);
+
+      for (let i = 0; i < SOCIAL_INIT.length; i += 1) {
+        memory[PASSWORD_SIZE + i] = SOCIAL_INIT.charCodeAt(i);
+      }
+      memory[PASSWORD_SIZE + SOCIAL_INIT.length] = 0;
+
+      const bytes = Array.from(userText).map((ch) => ch.charCodeAt(0));
+      const writeSeq = bytes.concat(0); // operator>> appends null terminator
+
+      for (let i = 0; i < writeSeq.length; i += 1) {
+        if (i >= TOTAL) break;
+        memory[i] = writeSeq[i];
+      }
+
+      const socialStart = PASSWORD_SIZE;
+      const socialEnd = PASSWORD_SIZE + SOCIAL_SIZE;
+      const corruptIndices = [];
+
+      for (let i = socialStart; i < socialEnd; i += 1) {
+        const original = i === socialEnd - 1
+          ? 0
+          : SOCIAL_INIT.charCodeAt(i - socialStart);
+        if (memory[i] !== original) corruptIndices.push(i);
+      }
+
+      return {
+        memory,
+        corruptIndices,
+        printedPassword: cStringFrom(memory, 0, PASSWORD_SIZE),
+        printedSSN: cStringFrom(memory, PASSWORD_SIZE, SOCIAL_SIZE),
+      };
+    }
+
+    function render(userText) {
+      const { memory, corruptIndices, printedPassword, printedSSN } = simulate(userText);
+
+      shownPassword.textContent = printedPassword.length ? printedPassword : "(empty)";
+      shownSsn.textContent = printedSSN.length ? printedSSN : "(empty / null overwritten)";
+
+      const corrupted = corruptIndices.length > 0;
+      shownSsn.className = "value" + (corrupted ? " bad" : "");
+      status.className = "status " + (corrupted ? "bad" : "safe");
+      status.textContent = corrupted
+        ? "Corruption detected: social_security bytes were overwritten."
+        : "No corruption: input stayed within password[8] including null terminator.";
+
+      const header = ["idx"].concat([...Array(TOTAL).keys()].map((i) => i.toString()));
+      const region = ["var"]
+        .concat([...Array(PASSWORD_SIZE).keys()].map(() => "pw"))
+        .concat([...Array(SOCIAL_SIZE).keys()].map(() => "ssn"));
+
+      stackEl.innerHTML = "";
+
+      header.forEach((h, i) => {
+        const el = document.createElement("div");
+        el.className = i === 0 ? "row-label" : "head";
+        el.textContent = h;
+        stackEl.appendChild(el);
+      });
+
+      region.forEach((r, i) => {
+        const el = document.createElement("div");
+        el.className = i === 0 ? "row-label" : "head";
+        el.textContent = r;
+        stackEl.appendChild(el);
+      });
+
+      const rowLabel = document.createElement("div");
+      rowLabel.className = "row-label";
+      rowLabel.textContent = "byte";
+      stackEl.appendChild(rowLabel);
+
+      for (let i = 0; i < TOTAL; i += 1) {
+        const cell = document.createElement("div");
+        const social = i >= PASSWORD_SIZE;
+        cell.className = "cell " + (social ? "social" : "password");
+        if (corruptIndices.includes(i)) cell.classList.add("corrupt");
+
+        const span = document.createElement("span");
+        span.className = "byte";
+        span.textContent = toDisplay(memory[i]);
+
+        cell.appendChild(span);
+        stackEl.appendChild(cell);
+      }
+    }
+
+    input.addEventListener("input", () => render(input.value));
+
+    document.querySelectorAll("button[data-val]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        input.value = btn.getAttribute("data-val") || "";
+        render(input.value);
+      });
+    });
+
+    render(input.value);
+  </script>
+</body>
+</html>
