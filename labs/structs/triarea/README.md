@@ -1,4 +1,4 @@
-# CS1 Lab - Struct and Unittest - B
+# CS1 Lab - Struct and Unittest - C
 
 Possible Points: 100
 
