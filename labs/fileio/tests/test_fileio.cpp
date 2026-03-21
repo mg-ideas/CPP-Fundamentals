@@ -1,14 +1,14 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "../../doctest/doctest.h" // FIXME: adjust the path as needed
-#include "../src/fileio.h"
+#include "../src/fileio.hpp"
 
 TEST_CASE("Testing read_data function")
 {
     SUBCASE("Sub Case 1: Valid file with numbers")
     {
         // assume data/input1.txt exists with 7 test data
-        vector<int> numbers(7, 0);
-        string input_file = "data/input1.txt"; // make sure this file exists with test data
+        int *
+            string input_file = "data/input1.txt"; // make sure this file exists with test data
         read_data(numbers, input_file);
         CHECK(numbers.size() == 7); // assuming input1.txt has 7 numbers
         CHECK(numbers[0] == 100);   // adjust expected values as per your input test file

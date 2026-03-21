@@ -13,19 +13,21 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "fileio.h"
+#include "fileio.hpp"
+const int MAX_NUMBERS = 1000; // assuming we will read at most 100 numbers from the file
 
 using namespace std;
 
 int main(int argc, char *argv[])
 {
-    vector<int> numbers;
+    int *numbers = new int[MAX_NUMBERS]; // assuming we will read at most 100 numbers from the file
     string input_file;
     cout << "Enter input file name: ";
     getline(cin, input_file);
-    read_data(numbers, input_file);
-    write_data(numbers);
+    size_t array_len = read_data(numbers, input_file);
+    write_data(numbers, array_len);
     cout << "All done. Enter to exit...";
+    // FIXME - free memory allocated for numbers array
     cin.get();
     return 0;
 }
