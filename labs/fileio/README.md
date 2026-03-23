@@ -1,4 +1,4 @@
-# CS1 Lab - Conditionals and Unittest
+# CS1 Lab - FileIO and Unittest
 
 Possible Points: 100
 
@@ -27,7 +27,7 @@ Write a C++ program to read numbers from a file, perform various operations such
 1. Create the directory structure similar to this lab as shown below:
 
 ```bash
-modulo/
+fileio/
 ├── data/
 ├── src/
 │   ├── fileio.hpp
@@ -40,13 +40,7 @@ modulo/
 └── screenshots/
 ```
 
-- kattis template command may create some of these files and folders for you.
-
-```bash
-kattis template -l cpp -p <problemid> -s
-```
-
-2. Type the contents provided in `.h` and `.cpp` files and fix all fixmes. Write #fixed# after each #fixme.
+2. Type the contents provided in `.hpp` and `.cpp` files and fix all fixmes. Write #fixed# after each #fixme.
 3. Follow best programming practices by using proper white spaces, comments, etc.
 
 ## Manual Whole program test
