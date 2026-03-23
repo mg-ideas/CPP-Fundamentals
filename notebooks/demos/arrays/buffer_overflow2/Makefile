@@ -21,7 +21,7 @@ build:
 	$(CXX) $(CXXFLAGS) $(CPPFILES)
 	$(CXX) -o $(PROGRAM) *.o
 
-run:
+run: build
 	./$(PROGRAM)
 	
 # make clean rule

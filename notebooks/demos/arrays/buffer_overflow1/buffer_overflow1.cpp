@@ -1,7 +1,7 @@
 // Buffer overflow Example 1
 // a simple program to demonstrate buffer overflow vulnerability by corrupting data in memory
 // Run the program with various length of passwords (any characters!) and notice the output of SSN
-// TODO: 
+// TODO:
 // 1. compile and run the program with 7 characters
 // 2. run the program with 8 characters
 // 3. run the program with more than 8 characters
@@ -12,7 +12,8 @@
 
 using namespace std;
 
-int main() {
+int main()
+{
     char social_security[] = "123-45-6789";
     char password[8]; // supposed to store only 8 characters or bytes including the null byte
     cout << "Enter your password: ";
