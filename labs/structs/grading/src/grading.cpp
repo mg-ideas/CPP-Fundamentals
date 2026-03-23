@@ -1,10 +1,10 @@
 #include "grading.hpp"
 
-char find_grade(const Grading &g)
+char Grading::find_grade() const
 {
-    if (g.exam_score >= g.a)
+    if (this->exam_score >= this->a)
         return 'A';
-    else if (g.exam_score >= g.b)
+    else if (this->exam_score >= this->b)
         return 'B';
     else
         return 'F';

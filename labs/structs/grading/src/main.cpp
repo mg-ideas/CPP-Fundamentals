@@ -28,8 +28,7 @@ int main()
     // FIXME1 - read 5 grading criteria and grade from stdio into g #FIXED#
     cin >> g->a >> g->b >> g->c >> g->d >> (*g).e;
     // FIXME2 - read grade into g's exam_score field
-    // FIXME3 - find final grade using find_grade function and store it in g's final_grade field
-    cout << g->final_grade << endl;
+    cout << g->find_grade() << endl;
     // free memory allocated for g
     delete g;
     return 0;

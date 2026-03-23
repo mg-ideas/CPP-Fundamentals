@@ -4,12 +4,12 @@ using ui = unsigned int;
 
 struct Grading
 {
-    ui a;
-    ui b;
-    ui c;
-    ui d;
-    ui e;
+    ui a; // grading criteria for A grade
+    ui b; // grading criteria for B grade
+    ui c; // grading criteria for C grade
+    ui d; // grading criteria for D grade
+    ui e; // grading criteria for E grade
     ui exam_score;
-    char final_grade;
+    // constant member function to find and return final grade based on grading criteria and exam score
+    char find_grade() const;
 };
-char find_grade(const Grading &);
