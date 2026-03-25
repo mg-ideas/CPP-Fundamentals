@@ -38,10 +38,10 @@ int main(int argc, char *argv[])
     char password[10]; // c-string; buffer
 
     cout << "Enter username: ";
-    readData(username, 10); // read data checking bounds/size
-                            // equivalent to
-                            // reads upto 9 chars + '\0' char
-                            // cin.getline(username, 10);
+    // readData(username, 10); // read data checking bounds/size
+    //  equivalent to
+    //  reads upto 9 chars + '\0' char
+    cin.getline(username, 10);
     cout << "Enter password: ";
     readData(password, 10);
     // read data checking bounds/size

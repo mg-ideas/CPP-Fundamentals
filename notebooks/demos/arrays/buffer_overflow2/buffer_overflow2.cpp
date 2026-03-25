@@ -12,8 +12,8 @@ using namespace std;
 
 int main()
 {
-    // volatile bool valid = false;
-    bool valid = false;
+    volatile bool valid = false;
+    // bool valid = false;
     char username[10];
     char password[10];
 
