@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>buffer_overflow2 valid-flag corruption visualizer</title>
+    <style>
+      :root {
+        --bg-a: #fbf3e8;
+        --bg-b: #d6e7ed;
+        --ink: #1b2026;
+        --muted: #50606f;
+        --panel: rgba(255, 255, 255, 0.78);
+        --border: rgba(20, 32, 43, 0.18);
+        --user: #9ed0f3;
+        --pass: #f7c88b;
+        --flag: #e99aa3;
+        --safe: #2b8d48;
+        --risk: #b73737;
+        --shadow: 0 12px 34px rgba(30, 37, 44, 0.16);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(
+            circle at 8% 16%,
+            #f7ddae 0,
+            rgba(247, 221, 174, 0) 40%
+          ),
+          radial-gradient(
+            circle at 94% 14%,
+            #b6dfeb 0,
+            rgba(182, 223, 235, 0) 36%
+          ),
+          linear-gradient(145deg, var(--bg-a), var(--bg-b));
+      }
+
+      .wrap {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 28px 16px 40px;
+      }
+
+      h1 {
+        margin: 0 0 10px;
+        font-family: "Alegreya", Georgia, serif;
+        font-size: clamp(1.75rem, 3.1vw, 2.6rem);
+        letter-spacing: 0.01em;
+      }
+
+      .subtitle {
+        margin: 0 0 22px;
+        color: var(--muted);
+        max-width: 80ch;
+      }
+
+      .grid {
+        display: grid;
+        gap: 18px;
+        grid-template-columns: 1.1fr 1fr;
+      }
+
+      .card {
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 18px;
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(3px);
+      }
+
+      .controls {
+        display: grid;
+        gap: 10px;
+      }
+
+      label {
+        font-size: 0.94rem;
+        font-weight: 650;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        border-radius: 10px;
+        border: 1px solid var(--border);
+        background: #fff;
+        padding: 10px 12px;
+        font-size: 1rem;
+        color: var(--ink);
+      }
+
+      .quick {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 2px;
+      }
+
+      button {
+        border: 1px solid var(--border);
+        background: #fff;
+        border-radius: 999px;
+        padding: 6px 11px;
+        cursor: pointer;
+        transition:
+          transform 150ms ease,
+          box-shadow 150ms ease;
+        font-size: 0.9rem;
+      }
+
+      button:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 16px rgba(32, 41, 49, 0.15);
+      }
+
+      .output {
+        margin-top: 10px;
+        display: grid;
+        gap: 8px;
+        font-size: 0.95rem;
+      }
+
+      .value {
+        border: 1px solid var(--border);
+        background: #fff;
+        border-radius: 8px;
+        padding: 8px 10px;
+        font-family: "IBM Plex Mono", "Consolas", monospace;
+        overflow-wrap: anywhere;
+      }
+
+      .status {
+        margin-top: 8px;
+        font-weight: 700;
+      }
+
+      .status.safe {
+        color: var(--safe);
+      }
+
+      .status.risk {
+        color: var(--risk);
+      }
+
+      .stack-title {
+        margin: 0 0 10px;
+        font-size: 1rem;
+        color: var(--muted);
+      }
+
+      .stack-wrap {
+        overflow-x: auto;
+      }
+
+      .stack {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 6px;
+        font-family: "IBM Plex Mono", "Consolas", monospace;
+        table-layout: fixed;
+        min-width: 470px;
+      }
+
+      .stack th {
+        text-align: center;
+        font-size: 0.74rem;
+        color: #4e5a67;
+        font-weight: 700;
+        padding: 2px 4px;
+      }
+
+      .stack td {
+        min-height: 40px;
+        height: 40px;
+        border-radius: 6px;
+        border: 1px solid var(--border);
+        text-align: center;
+        font-size: 0.72rem;
+        background: #fff;
+        padding: 2px;
+      }
+
+      .row-label {
+        white-space: nowrap;
+        font-size: 0.79rem;
+        color: #2c353e;
+        background: rgba(255, 255, 255, 0.7);
+        font-weight: 700;
+      }
+
+      .cell.user {
+        background: color-mix(in srgb, var(--user) 30%, #fff);
+      }
+
+      .cell.pass {
+        background: color-mix(in srgb, var(--pass) 32%, #fff);
+      }
+
+      .cell.flag {
+        background: color-mix(in srgb, var(--flag) 36%, #fff);
+        font-weight: 700;
+      }
+
+      .cell.corrupt {
+        outline: 2px solid rgba(183, 55, 55, 0.65);
+        box-shadow: 0 0 0 2px rgba(183, 55, 55, 0.1) inset;
+        animation: ping 850ms ease;
+      }
+
+      .legend {
+        margin-top: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        font-size: 0.86rem;
+      }
+
+      .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 6px;
+        border: 1px solid rgba(0, 0, 0, 0.25);
+        vertical-align: middle;
+      }
+
+      .code {
+        margin-top: 12px;
+        font-family: "IBM Plex Mono", "Consolas", monospace;
+        background: #121820;
+        color: #d6dde6;
+        border-radius: 10px;
+        padding: 12px;
+        font-size: 0.82rem;
+        overflow-x: auto;
+      }
+
+      .bad-line {
+        color: #ff8f7f;
+      }
+
+      .note {
+        margin-top: 12px;
+        font-size: 0.88rem;
+        color: #344452;
+      }
+
+      @keyframes ping {
+        0% {
+          transform: scale(0.97);
+        }
+        45% {
+          transform: scale(1.03);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      @media (max-width: 930px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+
+        .stack-wrap {
+          padding-bottom: 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <h1>Buffer Overflow Visualizer: password overflow corrupts valid</h1>
+      <p class="subtitle">
+        Teaching model for buffer_overflow2.cpp: memory is shown as
+        username[10], password[10], then valid (1 byte). When password input is
+        longer than 9 characters, operator &gt;&gt; keeps writing and can
+        overwrite valid. Any non-zero byte in valid is treated as true, so
+        access can be granted even with wrong credentials.
+      </p>
+
+      <section class="grid">
+        <div class="card">
+          <div class="controls">
+            <label for="user">Input for username</label>
+            <input
+              id="user"
+              type="text"
+              value="guest"
+              spellcheck="false"
+              autocomplete="off"
+            />
+
+            <label for="pass">Input for password</label>
+            <input
+              id="pass"
+              type="text"
+              value="123456"
+              spellcheck="false"
+              autocomplete="off"
+            />
+
+            <div class="quick">
+              <button data-user="guest" data-pass="123456">
+                Wrong user, no overflow
+              </button>
+              <button data-user="guest" data-pass="AAAAAAAAAAA">
+                Wrong user, overflow by 1
+              </button>
+              <button data-user="guest" data-pass="AAAAAAAAAAAAAAAAAAAA">
+                Wrong user, large overflow
+              </button>
+              <button data-user="backdoor" data-pass="123456">
+                Correct credentials
+              </button>
+            </div>
+          </div>
+
+          <div class="output">
+            <div>
+              <strong>username buffer interpreted as string</strong>
+              <div id="shown-user" class="value"></div>
+            </div>
+            <div>
+              <strong>password buffer interpreted as string</strong>
+              <div id="shown-pass" class="value"></div>
+            </div>
+            <div>
+              <strong>valid byte value (decimal)</strong>
+              <div id="shown-valid" class="value"></div>
+            </div>
+            <div id="status" class="status"></div>
+            <div id="program-output" class="value"></div>
+          </div>
+
+          <pre class="code"><code>bool valid = false;
+char username[10];
+char password[10];
+
+cin &gt;&gt; username;
+<span class="bad-line">cin &gt;&gt; password; // no bounds check</span>
+
+if (string(username) == "backdoor" and strcmp(password, "123456") == 0)
+    valid = true;
+
+if (valid) {
+    cout &lt;&lt; "Your SSN is 123-45-5678";
+}</code></pre>
+
+          <p class="note">
+            Real stack layout can vary by compiler/platform. This is a
+            purpose-built classroom visualization to show how overflowing
+            password can corrupt valid.
+          </p>
+        </div>
+
+        <div class="card">
+          <h2 class="stack-title">
+            Stack Byte View (increasing addresses top to bottom, 4 bytes per
+            row)
+          </h2>
+          <div class="stack-wrap">
+            <table id="stack" class="stack"></table>
+          </div>
+          <div class="legend">
+            <span
+              ><span
+                class="dot"
+                style="background: color-mix(in srgb, var(--user) 30%, #fff)"
+              ></span
+              >username[10]</span
+            >
+            <span
+              ><span
+                class="dot"
+                style="background: color-mix(in srgb, var(--pass) 32%, #fff)"
+              ></span
+              >password[10]</span
+            >
+            <span
+              ><span
+                class="dot"
+                style="background: color-mix(in srgb, var(--flag) 36%, #fff)"
+              ></span
+              >valid (bool)</span
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const USER_SIZE = 10;
+      const PASS_SIZE = 10;
+      const VALID_SIZE = 1;
+      const TOTAL = USER_SIZE + PASS_SIZE + VALID_SIZE;
+
+      const USER_START = 0;
+      const PASS_START = USER_START + USER_SIZE;
+      const VALID_INDEX = PASS_START + PASS_SIZE;
+
+      const userInput = document.getElementById("user");
+      const passInput = document.getElementById("pass");
+      const shownUser = document.getElementById("shown-user");
+      const shownPass = document.getElementById("shown-pass");
+      const shownValid = document.getElementById("shown-valid");
+      const status = document.getElementById("status");
+      const programOutput = document.getElementById("program-output");
+      const stackEl = document.getElementById("stack");
+
+      function toDisplay(byteVal) {
+        if (byteVal === 0) return "\\0";
+        const c = String.fromCharCode(byteVal);
+        if (/^[A-Za-z0-9-]$/.test(c)) return c;
+        return "0x" + byteVal.toString(16).padStart(2, "0");
+      }
+
+      function readCString(memory, start, size) {
+        let out = "";
+        for (let i = 0; i < size; i += 1) {
+          const b = memory[start + i];
+          if (b === 0) break;
+          out += String.fromCharCode(b);
+        }
+        return out;
+      }
+
+      function regionForIndex(index) {
+        if (index < PASS_START) return "usr";
+        if (index < VALID_INDEX) return "pwd";
+        return "val";
+      }
+
+      function writeUnbounded(memory, start, text) {
+        const bytes = Array.from(text).map((c) => c.charCodeAt(0));
+        const seq = bytes.concat(0);
+        for (let i = 0; i < seq.length; i += 1) {
+          const idx = start + i;
+          if (idx >= TOTAL) break;
+          memory[idx] = seq[i];
+        }
+      }
+
+      function simulate(userText, passText) {
+        const memory = new Uint8Array(TOTAL);
+        memory[VALID_INDEX] = 0;
+
+        writeUnbounded(memory, USER_START, userText);
+        writeUnbounded(memory, PASS_START, passText);
+
+        const userStr = readCString(memory, USER_START, USER_SIZE);
+        const passStr = readCString(memory, PASS_START, PASS_SIZE);
+
+        if (userStr === "backdoor" && passStr === "123456") {
+          memory[VALID_INDEX] = 1;
+        }
+
+        const validByte = memory[VALID_INDEX];
+        const validBool = validByte !== 0;
+        const validCorruptedByOverflow = passText.length >= PASS_SIZE;
+
+        return {
+          memory,
+          userStr,
+          passStr,
+          validByte,
+          validBool,
+          validCorruptedByOverflow,
+        };
+      }
+
+      function render() {
+        const userText = userInput.value;
+        const passText = passInput.value;
+        const sim = simulate(userText, passText);
+
+        shownUser.textContent = sim.userStr || "(empty)";
+        shownPass.textContent = sim.passStr || "(empty)";
+        shownValid.textContent =
+          String(sim.validByte) + (sim.validBool ? " (true)" : " (false)");
+
+        const granted = sim.validBool;
+        const forced =
+          sim.validCorruptedByOverflow &&
+          !(sim.userStr === "backdoor" && sim.passStr === "123456") &&
+          granted;
+
+        status.className = "status " + (forced ? "risk" : "safe");
+        if (forced) {
+          status.textContent =
+            "Corruption exploit: password overflow changed valid to non-zero (true).";
+        } else if (granted) {
+          status.textContent = "Access granted by normal credentials check.";
+        } else {
+          status.textContent = "Access denied: valid remains zero (false).";
+        }
+
+        programOutput.textContent = granted
+          ? "Program path: You have now access to top secret part of the program! | Your SSN is 123-45-5678"
+          : "Program path: Invalid username or password!";
+
+        stackEl.innerHTML = "";
+
+        const thead = document.createElement("thead");
+        const headerRow = document.createElement("tr");
+        ["addr", "var", "b0", "b1", "b2", "b3"].forEach((label) => {
+          const th = document.createElement("th");
+          th.textContent = label;
+          headerRow.appendChild(th);
+        });
+        thead.appendChild(headerRow);
+        stackEl.appendChild(thead);
+
+        const tbody = document.createElement("tbody");
+        for (let rowStart = 0; rowStart < TOTAL; rowStart += 4) {
+          const tr = document.createElement("tr");
+
+          const addr = document.createElement("td");
+          addr.className = "row-label";
+          addr.textContent = rowStart.toString().padStart(2, "0");
+          tr.appendChild(addr);
+
+          const vars = new Set();
+          for (let k = 0; k < 4; k += 1) {
+            const idx = rowStart + k;
+            if (idx < TOTAL) vars.add(regionForIndex(idx));
+          }
+          const varCell = document.createElement("td");
+          varCell.className = "row-label";
+          varCell.textContent = Array.from(vars).join("/");
+          tr.appendChild(varCell);
+
+          for (let k = 0; k < 4; k += 1) {
+            const idx = rowStart + k;
+            const byteCell = document.createElement("td");
+            if (idx >= TOTAL) {
+              byteCell.textContent = "-";
+              tr.appendChild(byteCell);
+              continue;
+            }
+
+            if (idx < PASS_START) {
+              byteCell.className = "cell user";
+            } else if (idx < VALID_INDEX) {
+              byteCell.className = "cell pass";
+            } else {
+              byteCell.className = "cell flag";
+            }
+
+            if (
+              idx === VALID_INDEX &&
+              sim.validCorruptedByOverflow &&
+              sim.validByte !== 0
+            ) {
+              byteCell.classList.add("corrupt");
+            }
+
+            byteCell.textContent = toDisplay(sim.memory[idx]);
+            tr.appendChild(byteCell);
+          }
+
+          tbody.appendChild(tr);
+        }
+        stackEl.appendChild(tbody);
+      }
+
+      userInput.addEventListener("input", render);
+      passInput.addEventListener("input", render);
+
+      document
+        .querySelectorAll("button[data-user][data-pass]")
+        .forEach((btn) => {
+          btn.addEventListener("click", () => {
+            userInput.value = btn.getAttribute("data-user") || "";
+            passInput.value = btn.getAttribute("data-pass") || "";
+            render();
+          });
+        });
+
+      render();
+    </script>
+  </body>
+</html>
