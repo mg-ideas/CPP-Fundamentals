@@ -1,4 +1,4 @@
-# CS1 Lab - Vector - What Does the Fox Say - B
+# CS1 Lab - Vector - What Does the Fox Say - A
 
 Possible Points: 100
 

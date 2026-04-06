@@ -1,0 +1,720 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recursion Basics in C++ - Interactive Animation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #f7f4ea;
+        --panel: #fffef7;
+        --ink: #1f2937;
+        --muted: #5f636e;
+        --accent: #0e7490;
+        --accent-soft: #ccfbf1;
+        --accent-2: #be123c;
+        --accent-2-soft: #ffe4e6;
+        --line: #d6d3c6;
+        --shadow: 0 10px 30px rgba(18, 24, 40, 0.12);
+        --radius: 16px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Space Grotesk", sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(
+            circle at 12% 18%,
+            #fff4cc 0%,
+            rgba(255, 244, 204, 0) 28%
+          ),
+          radial-gradient(
+            circle at 88% 7%,
+            #d8f3ff 0%,
+            rgba(216, 243, 255, 0) 26%
+          ),
+          linear-gradient(145deg, #f8f2dc 0%, #eff8ff 50%, #f7f4ea 100%);
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+
+      .shell {
+        max-width: 1150px;
+        margin: 0 auto;
+        padding: 24px 16px 64px;
+      }
+
+      .hero {
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.85),
+          rgba(245, 251, 255, 0.95)
+        );
+        box-shadow: var(--shadow);
+        padding: clamp(20px, 4vw, 34px);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        right: -100px;
+        top: -80px;
+        width: 240px;
+        height: 240px;
+        border-radius: 50%;
+        background: conic-gradient(
+          from 220deg,
+          #7dd3fc,
+          #fef08a,
+          #f9a8d4,
+          #7dd3fc
+        );
+        opacity: 0.3;
+        filter: blur(18px);
+        animation: drift 11s ease-in-out infinite alternate;
+      }
+
+      @keyframes drift {
+        from {
+          transform: translateY(-8px) rotate(0deg);
+        }
+        to {
+          transform: translateY(14px) rotate(90deg);
+        }
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(1.7rem, 4vw, 2.7rem);
+        line-height: 1.12;
+      }
+
+      .subtitle {
+        margin: 10px 0 0;
+        color: var(--muted);
+        max-width: 75ch;
+      }
+
+      .grid {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 14px;
+      }
+
+      .card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        padding: 16px;
+      }
+
+      .controls {
+        grid-column: span 12;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 10px;
+        align-items: end;
+      }
+
+      .control {
+        grid-column: span 3;
+        min-width: 0;
+      }
+
+      .control label {
+        display: block;
+        font-size: 0.86rem;
+        color: var(--muted);
+        margin-bottom: 6px;
+      }
+
+      input[type="range"],
+      select,
+      button {
+        width: 100%;
+        border: 1px solid #c6ccd6;
+        border-radius: 10px;
+        background: white;
+        font: inherit;
+        padding: 10px 12px;
+        color: var(--ink);
+      }
+
+      button {
+        cursor: pointer;
+        font-weight: 600;
+        transition:
+          transform 0.15s ease,
+          background-color 0.2s ease;
+      }
+
+      button:hover {
+        transform: translateY(-1px);
+      }
+
+      .btn-primary {
+        background: linear-gradient(120deg, #0e7490, #0284c7);
+        color: #f8fbff;
+        border-color: #0b6a88;
+      }
+
+      .btn-alt {
+        background: #f4f4f5;
+      }
+
+      .panel-code {
+        grid-column: span 5;
+      }
+
+      .panel-stack {
+        grid-column: span 4;
+      }
+
+      .panel-story {
+        grid-column: span 3;
+      }
+
+      h2 {
+        margin: 0 0 12px;
+        font-size: 1.08rem;
+      }
+
+      pre {
+        margin: 0;
+        background: #101827;
+        color: #e5e7eb;
+        border-radius: 12px;
+        border: 1px solid #1f2a3e;
+        padding: 12px;
+        overflow: auto;
+        font-family: "IBM Plex Mono", monospace;
+        line-height: 1.5;
+        font-size: 0.92rem;
+        min-height: 230px;
+      }
+
+      .line {
+        display: block;
+        padding: 1px 6px;
+        border-radius: 6px;
+        transition: background-color 0.25s ease;
+      }
+
+      .line.active {
+        background: rgba(14, 165, 233, 0.27);
+      }
+
+      .stack {
+        min-height: 230px;
+        max-height: 360px;
+        overflow: auto;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 8px;
+        padding-right: 4px;
+      }
+
+      .frame {
+        border: 1px solid #b7d5e0;
+        background: linear-gradient(120deg, #f0fbff, #ffffff);
+        border-radius: 12px;
+        padding: 10px;
+        animation: frameIn 0.33s ease;
+      }
+
+      .frame.returning {
+        border-color: #fda4af;
+        background: linear-gradient(120deg, #fff1f2, #fff8f8);
+      }
+
+      @keyframes frameIn {
+        from {
+          transform: translateY(7px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      .frame-title {
+        font-family: "IBM Plex Mono", monospace;
+        font-weight: 500;
+        font-size: 0.9rem;
+      }
+
+      .frame-meta {
+        margin-top: 6px;
+        font-size: 0.83rem;
+        color: var(--muted);
+      }
+
+      .story {
+        min-height: 230px;
+        display: grid;
+        grid-template-rows: auto auto 1fr;
+        gap: 10px;
+      }
+
+      .badge {
+        display: inline-block;
+        width: fit-content;
+        border-radius: 999px;
+        padding: 5px 10px;
+        font-size: 0.76rem;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        background: var(--accent-soft);
+        color: #115e59;
+        border: 1px solid #6ee7b7;
+      }
+
+      .badge.return {
+        background: var(--accent-2-soft);
+        border-color: #fda4af;
+        color: #9f1239;
+      }
+
+      .metrics {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .metric {
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: white;
+        padding: 10px;
+      }
+
+      .metric .k {
+        font-size: 0.76rem;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+      }
+
+      .metric .v {
+        margin-top: 3px;
+        font-size: 1.15rem;
+        font-weight: 700;
+      }
+
+      .event {
+        margin: 0;
+        border: 1px dashed #cad3e2;
+        border-radius: 12px;
+        padding: 10px;
+        background: #fcfcfd;
+        color: #334155;
+      }
+
+      .notes {
+        margin-top: 14px;
+        color: #334155;
+        line-height: 1.55;
+        font-size: 0.95rem;
+      }
+
+      .notes strong {
+        color: #0f172a;
+      }
+
+      .footer {
+        margin-top: 18px;
+        color: #475569;
+        font-size: 0.88rem;
+      }
+
+      @media (max-width: 980px) {
+        .control {
+          grid-column: span 6;
+        }
+
+        .panel-code,
+        .panel-stack,
+        .panel-story {
+          grid-column: span 12;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .shell {
+          padding: 14px 10px 48px;
+        }
+
+        .hero {
+          border-radius: 16px;
+        }
+
+        .control {
+          grid-column: span 12;
+        }
+
+        .metrics {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <section class="hero">
+        <h1>
+          Recursion Basics in C++<br />Watch the Call Stack Build and Unwind
+        </h1>
+        <p class="subtitle">
+          Use this animation to understand three essentials: the
+          <strong>base case</strong>, the <strong>recursive case</strong>, and
+          how values return when calls unwind.
+        </p>
+      </section>
+
+      <section class="grid">
+        <div class="card controls">
+          <div class="control">
+            <label for="nInput">Input n</label>
+            <input id="nInput" type="range" min="1" max="8" value="5" />
+          </div>
+          <div class="control">
+            <label for="nLabel">Current n</label>
+            <input id="nLabel" type="text" value="5" readonly />
+          </div>
+          <div class="control">
+            <label for="speedInput">Speed</label>
+            <select id="speedInput">
+              <option value="1200">Slow</option>
+              <option value="750" selected>Medium</option>
+              <option value="420">Fast</option>
+            </select>
+          </div>
+          <div class="control">
+            <button class="btn-primary" id="playBtn">Play</button>
+          </div>
+          <div class="control">
+            <button class="btn-alt" id="stepBtn">Step</button>
+          </div>
+          <div class="control">
+            <button class="btn-alt" id="resetBtn">Reset</button>
+          </div>
+        </div>
+
+        <div class="card panel-code">
+          <h2>C++ Function</h2>
+          <pre id="codePanel" aria-label="C++ factorial code"></pre>
+        </div>
+
+        <div class="card panel-stack">
+          <h2>Call Stack Animation</h2>
+          <div id="stackPanel" class="stack" aria-live="polite"></div>
+        </div>
+
+        <div class="card panel-story">
+          <h2>Execution Story</h2>
+          <div class="story">
+            <span id="eventType" class="badge">Ready</span>
+            <p id="eventText" class="event">
+              Press Play to animate factorial recursion.
+            </p>
+            <div class="metrics">
+              <div class="metric">
+                <div class="k">Depth</div>
+                <div id="depthValue" class="v">0</div>
+              </div>
+              <div class="metric">
+                <div class="k">Return</div>
+                <div id="returnValue" class="v">-</div>
+              </div>
+              <div class="metric">
+                <div class="k">Calls</div>
+                <div id="callsValue" class="v">0</div>
+              </div>
+              <div class="metric">
+                <div class="k">Status</div>
+                <div id="statusValue" class="v">Idle</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="notes">
+        <strong>How to read this:</strong> New frames appear when the function
+        calls itself. The deepest frame hits the base case and starts returning
+        values upward. Each return multiplies by its own <em>n</em>, building
+        the final result.
+        <div class="footer">
+          Example uses: factorial to learn recursion flow, debugging recursive
+          functions, teaching stack behavior in C++.
+        </div>
+      </section>
+    </div>
+
+    <script>
+      const codeLines = [
+        "long long fact(int n) {",
+        "    if (n <= 1)",
+        "        return 1;",
+        "    return n * fact(n - 1);",
+        "}",
+      ];
+
+      const nInput = document.getElementById("nInput");
+      const nLabel = document.getElementById("nLabel");
+      const speedInput = document.getElementById("speedInput");
+      const playBtn = document.getElementById("playBtn");
+      const stepBtn = document.getElementById("stepBtn");
+      const resetBtn = document.getElementById("resetBtn");
+
+      const codePanel = document.getElementById("codePanel");
+      const stackPanel = document.getElementById("stackPanel");
+      const eventType = document.getElementById("eventType");
+      const eventText = document.getElementById("eventText");
+      const depthValue = document.getElementById("depthValue");
+      const returnValue = document.getElementById("returnValue");
+      const callsValue = document.getElementById("callsValue");
+      const statusValue = document.getElementById("statusValue");
+
+      let frames = [];
+      let stepIndex = 0;
+      let timer = null;
+      let activeStack = [];
+
+      function renderCode(activeLine) {
+        codePanel.innerHTML = codeLines
+          .map(
+            (line, i) =>
+              `<span class="line ${activeLine === i ? "active" : ""}">${line}</span>`,
+          )
+          .join("");
+      }
+
+      function buildEvents(n) {
+        const events = [];
+        let calls = 0;
+
+        function walk(value, depth) {
+          calls += 1;
+          events.push({
+            type: "enter",
+            n: value,
+            depth,
+            line: 0,
+            text: `Call fact(${value})`,
+          });
+
+          events.push({
+            type: "check",
+            n: value,
+            depth,
+            line: 1,
+            text: `Check base case: n <= 1 ?`,
+          });
+
+          if (value <= 1) {
+            events.push({
+              type: "base",
+              n: value,
+              depth,
+              line: 2,
+              result: 1,
+              text: `Base case hit. Return 1.`,
+            });
+            return 1;
+          }
+
+          events.push({
+            type: "recurse",
+            n: value,
+            depth,
+            line: 3,
+            text: `Need fact(${value - 1}) before returning.`,
+          });
+
+          const child = walk(value - 1, depth + 1);
+          const result = value * child;
+
+          events.push({
+            type: "return",
+            n: value,
+            depth,
+            line: 3,
+            result,
+            text: `Return ${value} * ${child} = ${result}`,
+          });
+
+          return result;
+        }
+
+        const finalResult = walk(n, 1);
+        return { events, calls, finalResult };
+      }
+
+      function renderStack() {
+        stackPanel.innerHTML = activeStack
+          .map((frame) => {
+            const cls = frame.phase === "return" ? "frame returning" : "frame";
+            const returned =
+              frame.result !== undefined
+                ? `<div class="frame-meta">return = ${frame.result}</div>`
+                : "";
+            return `<article class="${cls}">
+              <div class="frame-title">fact(${frame.n})</div>
+              <div class="frame-meta">depth ${frame.depth}</div>
+              ${returned}
+            </article>`;
+          })
+          .join("");
+      }
+
+      function setEventView(event) {
+        const isReturn = event.type === "return" || event.type === "base";
+        eventType.textContent = isReturn ? "Returning" : "Calling";
+        eventType.className = isReturn ? "badge return" : "badge";
+        eventText.textContent = event.text;
+        depthValue.textContent = String(event.depth || 0);
+        statusValue.textContent = event.type;
+        renderCode(event.line);
+        if (event.result !== undefined) {
+          returnValue.textContent = String(event.result);
+        }
+      }
+
+      function applyEvent(event) {
+        if (event.type === "enter") {
+          activeStack.push({ n: event.n, depth: event.depth, phase: "call" });
+        }
+
+        if (event.type === "base") {
+          const top = activeStack[activeStack.length - 1];
+          if (top) {
+            top.phase = "return";
+            top.result = event.result;
+          }
+        }
+
+        if (event.type === "return") {
+          const top = activeStack[activeStack.length - 1];
+          if (top) {
+            top.phase = "return";
+            top.result = event.result;
+          }
+        }
+
+        renderStack();
+        setEventView(event);
+
+        if (event.type === "base" || event.type === "return") {
+          setTimeout(
+            () => {
+              activeStack.pop();
+              renderStack();
+            },
+            Math.max(160, getSpeed() * 0.45),
+          );
+        }
+      }
+
+      function getSpeed() {
+        return Number(speedInput.value);
+      }
+
+      function pausePlayback() {
+        if (timer) {
+          clearInterval(timer);
+          timer = null;
+        }
+        playBtn.textContent = "Play";
+      }
+
+      function playPlayback() {
+        if (timer) {
+          pausePlayback();
+          return;
+        }
+
+        playBtn.textContent = "Pause";
+        timer = setInterval(() => {
+          if (stepIndex >= frames.length) {
+            pausePlayback();
+            statusValue.textContent = "done";
+            return;
+          }
+
+          applyEvent(frames[stepIndex]);
+          stepIndex += 1;
+        }, getSpeed());
+      }
+
+      function stepOnce() {
+        pausePlayback();
+        if (stepIndex >= frames.length) {
+          statusValue.textContent = "done";
+          return;
+        }
+        applyEvent(frames[stepIndex]);
+        stepIndex += 1;
+      }
+
+      function resetSimulation() {
+        pausePlayback();
+        const n = Number(nInput.value);
+        nLabel.value = String(n);
+
+        const simulation = buildEvents(n);
+        frames = simulation.events;
+        stepIndex = 0;
+        activeStack = [];
+
+        callsValue.textContent = String(simulation.calls);
+        returnValue.textContent = "-";
+        depthValue.textContent = "0";
+        statusValue.textContent = "idle";
+        eventType.textContent = "Ready";
+        eventType.className = "badge";
+        eventText.textContent = `Press Play to animate fact(${n}). Expected final value: ${simulation.finalResult}.`;
+
+        renderCode(-1);
+        renderStack();
+      }
+
+      nInput.addEventListener("input", () => {
+        nLabel.value = nInput.value;
+      });
+
+      nInput.addEventListener("change", resetSimulation);
+      speedInput.addEventListener("change", () => {
+        if (timer) {
+          pausePlayback();
+          playPlayback();
+        }
+      });
+
+      playBtn.addEventListener("click", playPlayback);
+      stepBtn.addEventListener("click", stepOnce);
+      resetBtn.addEventListener("click", resetSimulation);
+
+      resetSimulation();
+    </script>
+  </body>
+</html>
