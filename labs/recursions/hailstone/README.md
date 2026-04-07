@@ -1,8 +1,8 @@
-# CS1 Lab - Vector - What Does the Fox Say - A
+# CS1 Lab - Recursion and Unittest
 
 Possible Points: 100
 
-Write a C++ program to solve the Kattis problemid whatdoesthefoxsay: [https://open.kattis.com/problems/whatdoesthefoxsay](https://open.kattis.com/problems/whatdoesthefoxsay). Note that the last part of the URL, e.g. `whatdoesthefoxsay` is the problem id. Read the problem statement carefully to design a correct solution.
+Write a C++ program to solve the Kattis problemid hailstone: [https://open.kattis.com/problems/hailstone](https://open.kattis.com/problems/hailstone). Note that the last part of the URL, e.g. `hailstone` is the problem id. Read the problem statement carefully to design a correct solution.
 
 ## Kattis Setup
 
@@ -18,9 +18,9 @@ If not done before:
 ```bash
 cd <current lab directory>
 ls
-kattis get whatdoesthefoxsay
+kattis get <problemid>
 ls
-cd whatdoesthefoxsay
+cd <problemid>
 ls
 kattis test
 ```
@@ -30,20 +30,26 @@ kattis test
 1. Create the directory structure similar to this lab as shown below:
 
 ```bash
-whatdoesthefoxsay/
+hailstone/
 ├── data/
 ├── src/
-│   ├── util.hpp
-│   └── util.cpp
+│   ├── hailstone.h
+│   └── hailstone.cpp
 │   └── main.cpp
 ├── tests/
-│   └── test_util.cpp
+│   └── test_hailstone.cpp
 ├── Makefile
 └── README.md
 └── screenshots/
 ```
 
-2. Type the contents provided in `*.hpp` and `*.cpp` files and fix all fixmes. Write #fixed# after each #fixme.
+- kattis template command may create some of these files and folders for you.
+
+```bash
+kattis template -l cpp -p <problemid> -s
+```
+
+2. Type the contents provided in `.h` and `.cpp` files and fix all fixmes. Write #fixed# after each #fixme.
 3. Follow best programming practices by using proper white spaces, comments, etc.
 
 ### Input and Output format
