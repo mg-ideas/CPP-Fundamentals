@@ -14,7 +14,7 @@
 #include <string>
 #include <vector>
 #include "fileio.hpp"
-const int MAX_NUMBERS = 1000; // assuming we will read at most 100 numbers from the file
+const int MAX_NUMBERS = 100; // assuming we will read at most 100 numbers from the file
 
 using namespace std;
 
