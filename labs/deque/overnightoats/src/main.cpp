@@ -33,6 +33,10 @@ using namespace std;
 
 int main()
 {
+    // Disable synchronization with C I/O for faster input/output
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr); // Untie cin from cout for faster input
+
     int N, X;
     // FIXME: create a refrigerator object dynamically (using pointer) and set the shelf life
     cin >> N >> X;
