@@ -6,8 +6,8 @@ Updated by: [Your Name]
 Date: [Date]
 
 Algorithm Steps:
-1. Read numver of commands
-3. Create unordered set to store the names of the guests
+1. Read number of commands
+3. Create unordered set to store the names of the guests in a struct/class called Guests
 3. For each command, read the command and the name of the guest
     i. If the command is "+", add the guest to the set of guests
     ii. If the command is "-", remove the guest from the set of guests
