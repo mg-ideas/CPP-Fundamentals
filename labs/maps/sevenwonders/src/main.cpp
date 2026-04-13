@@ -22,10 +22,21 @@ using namespace std;
 
 int main()
 {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+  ios::sync_with_stdio(false);
+  cin.tie(NULL);
 
-    // FIXME0: Call the correct function to solve the problem
-
-    return 0;
+  // FIXME0: Call the correct function to solve the problem
+  cerr << "FIXME\n";
+  string cards;
+  cin >> cards;
+  // FIXME1: create a SevenWonders object dynamically (using pointer)
+  for (char card : cards)
+  {
+    // FIXME1: update the card count for each card in the input string
+    cerr << "FIXME\n";
+  }
+  // FIXME2: calculate the regular points using the card count and print it
+  cerr << "FIXME\n";
+  // cout << wonders.calculate_bonus() << endl;
+  return 0;
 }
