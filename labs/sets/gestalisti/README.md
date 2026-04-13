@@ -1,4 +1,4 @@
-# CS1 Lab - STL - Stack and Unittest - A
+# CS1 Lab - STL - Unordered Set and Unittest - A
 
 s
 Possible Points: 100
@@ -38,7 +38,7 @@ gestalisti/
 │   └── guests.cpp
 │   └── main.cpp
 ├── tests/
-│   └── test_infix.cpp
+│   └── test_guests.cpp
 ├── Makefile
 └── README.md
 └── screenshots/
