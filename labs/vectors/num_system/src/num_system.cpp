@@ -30,7 +30,8 @@ string decToOct(ull num)
     3. reverse the order of the remainders
         - the first remainder is the last digit in octal
     */
-    vector<int> octal;
+    vector<int> octal; // vector is used like a stack here...
+    // so, stack would be natural to reverse the contents
     int divisor = 8; // base 8
     ull quotient = num;
     int remainder;

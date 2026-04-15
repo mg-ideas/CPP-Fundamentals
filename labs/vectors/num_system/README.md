@@ -9,7 +9,7 @@ Write a C++ program to that converts decimal number to various number systems (b
 1. Create the directory structure similar to this lab as shown below:
 
 ```bash
-whatdoesthefoxsay/
+num_system/
 ├── data/
 ├── includes/
 │   └── num_system.hpp
