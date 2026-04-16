@@ -9,14 +9,14 @@ using namespace std;
 
 string decToBin(ull num)
 {
-    // FIXME3 - implement algorithm step in Data Types and Type Casting notebook
+    // FIXME3 - implement algorithm step in Data Types and Variables and Type Casting notebooks
     // or use hint from decToOct function
     return to_string(num);
 }
 
 ull binToDec(string binaryNumber)
 {
-    // FIXME4 - implement algorithm described in Data Types and Type Casting notebook
+    // FIXME4 - implement algorithm described in Data Types and Variables and Type Casting notebooks
     // or use hints from binToOct function
     return 0;
 }
