@@ -2,7 +2,7 @@
 
 Possible Points: 100
 
-Write a C++ program that converts decimal number to various number systems (binary, octal, and hexadecimal) and vice versa.
+Write a C++ program that converts decimal number to various number systems (binary, octal, and hexadecimal) and vice versa. See example and algorithm steps in `Data Types and Type Casting` chapter of the course notebooks.
 
 ## Type and fix the code
 
