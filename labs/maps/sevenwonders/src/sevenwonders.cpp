@@ -5,49 +5,24 @@
 
 using namespace std;
 
-// solving the problem for kattis
-void solve()
+void SevenWonders::update_card_count(char card)
 {
-    string cards;
-    pos_int points = 0;
-    // string consists of only uppercase letters (no spaces) upto 50 chars
-    // FIXME1
-    // read played cards into cards variable
-    // FIXME2
-    // count cards - call count_cards function passing cards and card_count
-    // FIXME3
-    // count points - call count_points function and update points
-    // FIXME4
-    // add bonus points - call count_bonus function and update points
-    cout << points << endl;
-}
-
-unordered_map<char, pos_int> count_cards(const string &cards)
-{
-
-    unordered_map<char, pos_int> card_count;
-    // step 2: update card_count map with count of each card played
-    // for each card in cards
-    for (char card : cards)
+    // check if a card is already in wonders map
+    auto find = card_count.find(card);
+    if (find == card_count.end()) // card not found
+        // add it to the wonders map
+        card_count[card] = 1;
+    else
     {
-        // check if a card is already in wonders map
-        auto find = card_count.find(card);
-        if (find == card_count.end()) // card not found
-            // add it to the wonders map
-            card_count[card] = 1;
-        else
-        {
-            // FIXME5: update value/count of card
-            cerr << "FIXME\n";
-        }
+        // FIXME5: update value/count of card
+        cerr << "FIXME\n";
     }
-    return card_count;
 }
 
-pos_int count_points(const unordered_map<char, pos_int> &card_count)
+size_t SevenWonders::calculate_points() const
 {
     // algorithm step 3 - calculate regular points
-    pos_int points = 0;
+    size_t points = 0;
     for (auto pair : card_count)
     { // pair = <card, count>
         // FIXME6 - Update the points by adding count^2
@@ -56,14 +31,14 @@ pos_int count_points(const unordered_map<char, pos_int> &card_count)
     return points;
 }
 
-pos_int count_bonus(const unordered_map<char, pos_int> &card_count)
+size_t SevenWonders::calculate_bonus() const
 {
     // algorithm step 4 - calculate bonus points
     // find # of sets of three different cards and mulitiply it by 7
     // and add it to the total bonus
-    pos_int bonus = 0;
-    pos_int min_card_count = 999999;
-    pos_int unique_cards = card_count.size();
+    size_t bonus = 0;
+    size_t min_card_count = 999999;
+    size_t unique_cards = this->card_count.size();
     if (unique_cards == 3)
     {
         for (auto pair : card_count)
@@ -71,6 +46,16 @@ pos_int count_bonus(const unordered_map<char, pos_int> &card_count)
             min_card_count = pair.second < min_card_count ? pair.second : min_card_count;
         }
         // FIXME7: set bonus to min_card_count x 7
+        cerr << "FIXME\n";
     }
     return bonus;
+}
+
+size_t SevenWonders::calculate_total_points() const
+{
+    // calculate total points by adding regular points and bonus points
+    size_t total_points = 0;
+    // FIXME8: set total_points to the sum of regular points and bonus points
+    cerr << "FIXME\n";
+    return total_points;
 }

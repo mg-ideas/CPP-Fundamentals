@@ -9,14 +9,14 @@ using namespace std;
 
 string decToBin(ull num)
 {
-    // FIXME3 - implement algorithm step in Ch03-StdInputOutput chapter
+    // FIXME3 - implement algorithm step in Data Types and Variables and Type Casting notebooks
     // or use hint from decToOct function
     return to_string(num);
 }
 
 ull binToDec(string binaryNumber)
 {
-    // FIXME4 - implement algorithm described in Ch03-StdInputOutput chapter
+    // FIXME4 - implement algorithm described in Data Types and Variables and Type Casting notebooks
     // or use hints from binToOct function
     return 0;
 }
@@ -30,7 +30,8 @@ string decToOct(ull num)
     3. reverse the order of the remainders
         - the first remainder is the last digit in octal
     */
-    vector<int> octal;
+    vector<int> octal; // vector is used like a stack here...
+    // so, stack would be natural to reverse the contents
     int divisor = 8; // base 8
     ull quotient = num;
     int remainder;

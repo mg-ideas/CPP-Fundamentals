@@ -4,10 +4,13 @@ using namespace std;
 
 using ull = unsigned long long int;
 
+// System specific macro function clear_screen that
+// clears console text
+// NOTE: system call is not security best practice!
 #ifdef _WIN32
-#define clearScreen() system("cls") // not secure!
+#define clear_screen() system("cls") // not secure!
 #else
-#define clearScreen() system("clear") // not secure!
+#define clear_screen() system("clear") // not secure!
 #endif
 
 // converts decimal number to binary representation

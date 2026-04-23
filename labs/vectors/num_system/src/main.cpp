@@ -20,10 +20,6 @@
 
 using namespace std;
 
-// System specific macro function sysclear that
-// clears console text
-// NOTE: system call is not security best practice!
-
 int main()
 {
     ull decimalNum;
